@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "66f02940b1b144c0e6500073"
+  },
+  "uid": "uid001",
+  "name": "bue",
+  "age": 123,
+  "gender": "Female",
+  "otherFields": {
+    "phone": "899999",
+    "address": "hh",
+    "email": "h@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f05fc951e875c55f295edb"
+  },
+  "uid": "uid002",
+  "name": "iusfhu",
+  "age": 151,
+  "gender": "Male",
+  "otherFields": {},
+  "__v": 0
+}]

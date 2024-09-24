@@ -1,0 +1,199 @@
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.nav-links li a:hover {
+  background-color: #1abc9c;
+}
+
+/* Form styling (Login/Register) */
+form {
+  background-color: #ecf0f1;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+form input {
+  width: calc(100% - 24px); /* Adjust width to fit padding */
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+form input:focus {
+  border-color: #3498db;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+/* Dashboard styles */
+.dashboard-container {
+  background-color: #e67e22;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Patients, Prescriptions, Reports page styles */
+.data-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.data-item {
+  background-color: #f39c12;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.data-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Individual page background colors */
+.patients-container {
+  background-color: #16a085;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prescriptions-container {
+  background-color: #8e44ad;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.reports-container {
+  background-color: #2ecc71;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+button {
+  background-color: #00cec9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #81ecec;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+  }
+
+  .navbar {
+      justify-content: center;
+  }
+
+  .page-container {
+      padding: 20px;
+  }
+
+  .data-list-container {
+      grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,182 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #2c3e50;
+  padding: 15px 0;
+  color: #ecf0f1;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* PatientList Styles */
+.patient-list {
+  padding: 20px;
+  background-color: #ecf0f1;
+}
+
+.patient-list h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.patient-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.patient-item h3 {
+  margin-top: 0;
+}
+
+.patient-item p {
+  margin: 5px 0;
+}
+
+/* PrescriptionList Styles */
+.prescription-list {
+  padding: 20px;
+  background-color: #ecf0f1;
+}
+
+.prescription-list h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.prescription-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.prescription-item h3 {
+  margin-top: 0;
+}
+
+.prescription-item p {
+  margin: 5px 0;
+}
+
+/* ReportList Styles */
+.report-list {
+  padding: 20px;
+  background-color: #ecf0f1;
+}
+
+.report-list h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.report-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.report-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.report-link {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.report-link:hover {
+  text-decoration: underline;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Reports Page Styles */
+.reports-page {
+  padding: 20px;
+  background-color: #ecf0f1;
+}
+
+.reports-page h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #27ae60;
+}
+
+.message {
+  margin-top: 15px;
+  color: #e74c3c;
+}
