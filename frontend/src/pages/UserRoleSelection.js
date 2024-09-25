@@ -68,7 +68,7 @@ const styles = {
     fontSize: '18px',
     cursor: 'pointer',
     backgroundColor: '#007bff',
-    color: 'white',
+    color: 'blac',
     border: 'none',
     borderRadius: '5px',
     transition: 'background-color 0.3s ease'
