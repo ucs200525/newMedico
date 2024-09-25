@@ -39,6 +39,7 @@ const Patients = () => {
       console.log('Patient added successfully:', response.data);
       // Clear form or show success message
       resetForm(); // Optional: Reset form after submission
+      alert("Patient Added Successfully");
     } catch (error) {
       console.error('Error adding patient:', error.response ? error.response.data : error.message);
     }

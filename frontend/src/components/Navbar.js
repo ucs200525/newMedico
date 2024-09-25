@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import './Navbar.css';
+import image from "../context/logo.jpg";
 
 const Navbar = () => {
   const { isLoggedIn, role, uid, logout } = useContext(AuthContext);
@@ -24,26 +25,32 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <h1 className="logo">Hospital Management</h1>
+      <img src={image} alt="logo" width="75" height="60"/>
+        <h1 className="logo">MEDICO</h1>
         <ul className="nav-links">
           {isLoggedIn ? (
             <>
-              {role === 'admin' && (
+              {role === 'admin' ? (
                 <>
                   <li><button onClick={() => handleNavigation('/dashboard')}>Dashboard</button></li>
-                  <li><button onClick={() => handleNavigation('/patients')}>Add Patients</button></li>
                   <li><button onClick={() => handleNavigation('/prescriptions')}>Prescriptions</button></li>
                   <li><button onClick={() => handleNavigation('/reports')}>Reports</button></li>
+                  <li><button onClick={() => navigate('/patients')}>Add Patients</button></li>
+                  <li><button onClick={handleLogout}>Logout</button></li>
                 </>
-              )}
-              {role === 'user' && (
+              ) : role === 'user' ? (
                 <>
                   <li><button onClick={() => handleNavigation('/dashboardUser')}>Dashboard User</button></li>
                   <li><button onClick={() => handleNavigation('/PrescriptionsUser')}>Prescriptions User</button></li>
                   <li><button onClick={() => handleNavigation('/ReportsUser')}>Reports User</button></li>
+                  <li><button onClick={handleLogout}>Logout</button></li>
                 </>
-              )}
+              ) :                <>
+              <li><button onClick={() => handleNavigation('/dashboardUser')}>Dashboard User</button></li>
+              <li><button onClick={() => handleNavigation('/PrescriptionsUser')}>Prescriptions User</button></li>
+              <li><button onClick={() => handleNavigation('/ReportsUser')}>Reports User</button></li>
               <li><button onClick={handleLogout}>Logout</button></li>
+            </>}
             </>
           ) : (
             <>

@@ -1908,3 +1908,445 @@
 2024-09-24T20:02:26.123Z [INFO]: Fetched prescriptions for UID: uid
 2024-09-24T20:02:27.017Z [INFO]: Fetched reports for UID: uid
 2024-09-24T20:02:27.028Z [INFO]: Fetched reports for UID: uid
+2024-09-25T12:58:35.736Z [WARN]: Login attempt failed: User not found for email testUser@gmail.com
+2024-09-25T12:59:01.954Z [WARN]: Login attempt failed: User not found for email testUser@gmail.com
+2024-09-25T12:59:11.809Z [INFO]: User registered successfully: testUser@gmail.com
+2024-09-25T12:59:16.248Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T12:59:24.920Z [WARN]: UID verification failed: UID uid001 not found
+2024-09-25T12:59:42.514Z [WARN]: UID verification failed: UID uid001 not found
+2024-09-25T13:43:29.524Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T13:43:33.098Z [INFO]: UID verified: uid001
+2024-09-25T13:43:37.048Z [WARN]: No prescriptions found for UID: uid001
+2024-09-25T13:43:37.208Z [WARN]: No prescriptions found for UID: uid001
+2024-09-25T13:44:05.174Z [INFO]: New prescription added for patient UID: uid001
+2024-09-25T13:44:27.574Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:44:27.748Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:44:41.886Z [INFO]: New report uploaded for patient UID: uid001
+2024-09-25T13:44:42.129Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T13:44:58.823Z [INFO]: Report updated successfully for UID: uid001
+2024-09-25T13:44:59.027Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T13:45:02.818Z [INFO]: Report deleted successfully for UID: uid001
+2024-09-25T13:45:03.021Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:45:05.273Z [WARN]: Report not found for deletion by UID: uid001
+2024-09-25T13:45:09.266Z [WARN]: Report not found for deletion by UID: uid001
+2024-09-25T13:45:14.800Z [WARN]: Report not found for deletion by UID: uid001
+2024-09-25T13:45:28.783Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T13:45:30.670Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:45:30.844Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:45:35.968Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:45:36.044Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:45:39.200Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:45:39.371Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:45:44.237Z [INFO]: User logged in successfully
+2024-09-25T13:45:47.495Z [INFO]: UID verified: uid001
+2024-09-25T13:45:59.431Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:45:59.575Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:46:01.651Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:46:01.900Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:53:07.049Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T13:53:11.379Z [INFO]: UID verified: uid001
+2024-09-25T13:53:13.837Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:53:14.143Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:53:15.706Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:53:15.873Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:53:27.060Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:53:27.239Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:55:59.162Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:55:59.406Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:58:06.280Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:58:06.458Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:58:34.046Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:58:34.125Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:58:35.506Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:58:35.582Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:58:42.192Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T13:58:49.228Z [INFO]: UID verified: uid001
+2024-09-25T13:58:56.095Z [INFO]: User logged in successfully
+2024-09-25T13:58:59.365Z [INFO]: UID verified: uid001
+2024-09-25T13:59:07.291Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:59:07.371Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T13:59:08.613Z [WARN]: No reports found for UID: uid001
+2024-09-25T13:59:08.691Z [WARN]: No reports found for UID: uid001
+2024-09-25T14:40:23.114Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:40:29.997Z [INFO]: UID verified: uid001
+2024-09-25T14:49:04.007Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:49:07.840Z [INFO]: UID verified: uid001
+2024-09-25T14:49:20.639Z [WARN]: Login attempt failed: User not found for email testUser1@gmail.com
+2024-09-25T14:49:40.173Z [WARN]: Registration attempt failed: User with email testUser@gmail.com already exists
+2024-09-25T14:49:51.112Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:50:00.519Z [WARN]: UID verification failed: UID uid not found
+2024-09-25T14:50:56.500Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:51:00.473Z [INFO]: UID verified: uid001
+2024-09-25T14:51:05.770Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:51:07.136Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T14:51:07.140Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T14:51:10.413Z [INFO]: UID verified: uid001
+2024-09-25T14:51:23.269Z [WARN]: Login attempt failed: User not found for email testUser1@gmail.com
+2024-09-25T14:51:32.738Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:51:37.448Z [INFO]: UID verified: uid001
+2024-09-25T14:51:40.114Z [WARN]: No reports found for UID: uid001
+2024-09-25T14:51:40.159Z [INFO]: User registered successfully: testUser1@gmail.com
+2024-09-25T14:51:40.201Z [WARN]: No reports found for UID: uid001
+2024-09-25T14:51:41.494Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T14:51:41.647Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T14:51:45.025Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:51:49.940Z [INFO]: UID verified: uid001
+2024-09-25T14:51:58.953Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:52:05.601Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:52:05.639Z [WARN]: UID verification failed: UID uid not found
+2024-09-25T14:52:09.603Z [INFO]: UID verified: uid001
+2024-09-25T14:52:11.862Z [INFO]: UID verified: uid001
+2024-09-25T14:52:14.029Z [INFO]: User logged in successfully
+2024-09-25T14:52:26.187Z [INFO]: User logged in successfully
+2024-09-25T14:52:28.238Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:52:28.329Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:52:31.884Z [WARN]: UID verification failed: UID uid not found
+2024-09-25T14:52:33.460Z [WARN]: UID verification failed: UID uid not found
+2024-09-25T14:52:39.864Z [INFO]: UID verified: uid001
+2024-09-25T14:53:04.385Z [INFO]: New patient added: uid
+2024-09-25T14:53:04.799Z [ERROR]: Error adding patient: Patients validation failed: uid: Path `uid` is required., name: Path `name` is required., age: Path `age` is required., gender: Path `gender` is required.
+2024-09-25T14:53:08.483Z [INFO]: User logged in successfully
+2024-09-25T14:53:15.097Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T14:53:19.340Z [INFO]: User logged in successfully
+2024-09-25T14:53:22.980Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T14:53:26.560Z [WARN]: UID verification failed: UID uid' not found
+2024-09-25T14:53:27.387Z [INFO]: UID verified: uid
+2024-09-25T14:54:34.455Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:54:37.533Z [INFO]: User logged in successfully
+2024-09-25T14:54:59.514Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T14:55:05.779Z [INFO]: UID verified: uid001
+2024-09-25T14:55:11.259Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T14:55:11.361Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T14:55:38.281Z [INFO]: User logged in successfully
+2024-09-25T15:03:33.111Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:03:37.731Z [INFO]: UID verified: uid001
+2024-09-25T15:03:41.007Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:03:41.212Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:03:42.509Z [WARN]: No reports found for UID: uid001
+2024-09-25T15:03:42.590Z [WARN]: No reports found for UID: uid001
+2024-09-25T15:03:50.738Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:03:53.965Z [INFO]: UID verified: uid
+2024-09-25T15:03:59.541Z [WARN]: No reports found for UID: uid001
+2024-09-25T15:03:59.616Z [WARN]: No reports found for UID: uid001
+2024-09-25T15:04:03.846Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:04:06.263Z [INFO]: UID verified: uid
+2024-09-25T15:04:07.123Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:04:08.911Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:04:08.914Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:04:10.088Z [WARN]: No reports found for UID: uid
+2024-09-25T15:04:10.092Z [WARN]: No reports found for UID: uid
+2024-09-25T15:04:11.525Z [INFO]: UID verified: uid001
+2024-09-25T15:04:19.202Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:04:19.306Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:04:20.835Z [WARN]: No reports found for UID: uid001
+2024-09-25T15:04:20.908Z [WARN]: No reports found for UID: uid001
+2024-09-25T15:04:34.838Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:04:46.710Z [INFO]: UID verified: uid
+2024-09-25T15:05:55.810Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:06:11.683Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:06:17.672Z [INFO]: UID verified: uid001
+2024-09-25T15:08:41.634Z [WARN]: No reports found for UID: uid
+2024-09-25T15:08:41.646Z [WARN]: No reports found for UID: uid
+2024-09-25T15:08:53.674Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:08:53.891Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:09:03.923Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:09:04.133Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:09:19.132Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:09:19.335Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:09:43.495Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:09:46.787Z [INFO]: UID verified: uid
+2024-09-25T15:09:53.129Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:09:53.132Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:09:56.311Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:09:56.316Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:10:28.824Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:10:28.930Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:10:39.924Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:10:39.999Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:10:41.508Z [WARN]: Report not found for deletion by UID: uid
+2024-09-25T15:10:45.827Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:10:45.903Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:10:46.277Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:10:46.471Z [WARN]: No reports found for UID: uid
+2024-09-25T15:10:52.004Z [WARN]: Report not found for deletion by UID: uid
+2024-09-25T15:10:52.560Z [WARN]: No reports found for UID: uid
+2024-09-25T15:10:52.562Z [WARN]: No reports found for UID: uid
+2024-09-25T15:10:53.011Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:10:53.014Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:10:54.438Z [WARN]: No reports found for UID: uid
+2024-09-25T15:10:54.445Z [WARN]: No reports found for UID: uid
+2024-09-25T15:11:01.083Z [WARN]: No reports found for UID: uid
+2024-09-25T15:11:01.086Z [WARN]: No reports found for UID: uid
+2024-09-25T15:11:06.410Z [WARN]: No reports found for UID: uid
+2024-09-25T15:11:06.489Z [WARN]: No reports found for UID: uid
+2024-09-25T15:12:47.957Z [WARN]: No reports found for UID: uid
+2024-09-25T15:12:47.961Z [WARN]: No reports found for UID: uid
+2024-09-25T15:12:58.256Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:12:58.328Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:12:58.390Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:12:58.583Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:13:07.897Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:13:07.973Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:13:08.921Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:13:08.996Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:13:18.226Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:13:18.313Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:13:22.612Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:13:22.617Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:13:26.470Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:13:26.620Z [WARN]: No reports found for UID: uid
+2024-09-25T15:13:39.100Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:13:39.171Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:13:39.742Z [WARN]: No reports found for UID: uid
+2024-09-25T15:13:39.814Z [WARN]: No reports found for UID: uid
+2024-09-25T15:15:26.205Z [WARN]: No reports found for UID: uid
+2024-09-25T15:15:26.289Z [WARN]: No reports found for UID: uid
+2024-09-25T15:15:31.205Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:15:31.210Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:15:31.537Z [WARN]: No reports found for UID: uid
+2024-09-25T15:15:31.541Z [WARN]: No reports found for UID: uid
+2024-09-25T15:16:19.971Z [WARN]: No reports found for UID: uid
+2024-09-25T15:16:20.532Z [WARN]: No reports found for UID: uid
+2024-09-25T15:16:22.643Z [WARN]: No reports found for UID: uid
+2024-09-25T15:16:22.853Z [WARN]: No reports found for UID: uid
+2024-09-25T15:16:23.578Z [WARN]: No reports found for UID: uid
+2024-09-25T15:16:23.648Z [WARN]: No reports found for UID: uid
+2024-09-25T15:16:32.372Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:16:32.561Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:16:37.668Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:16:37.748Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:16:47.368Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:16:47.375Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:16:48.569Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:16:48.663Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:16:54.666Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:16:54.910Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:16:58.320Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:16:58.394Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:16:59.390Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:16:59.473Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:16:59.517Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:16:59.899Z [WARN]: No reports found for UID: uid
+2024-09-25T15:17:04.046Z [WARN]: Report not found for deletion by UID: uid
+2024-09-25T15:17:05.196Z [WARN]: Report not found for deletion by UID: uid
+2024-09-25T15:17:11.542Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:17:11.617Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:17:12.403Z [WARN]: No reports found for UID: uid
+2024-09-25T15:17:12.532Z [WARN]: No reports found for UID: uid
+2024-09-25T15:17:16.863Z [WARN]: No reports found for UID: uid
+2024-09-25T15:17:16.867Z [WARN]: No reports found for UID: uid
+2024-09-25T15:18:00.321Z [WARN]: No reports found for UID: uid
+2024-09-25T15:18:00.527Z [WARN]: No reports found for UID: uid
+2024-09-25T15:18:08.575Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:18:08.654Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:18:12.144Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:18:12.475Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:18:12.663Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:18:12.855Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:18:14.464Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:18:14.538Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:18:31.837Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:18:32.037Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:18:36.469Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:18:36.669Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:18:37.947Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:18:37.948Z [ERROR]: Error deleting file: ENOENT: no such file or directory, unlink 'E:\Sathvik\programming\newMedico\backend\uploads\M-1.pdf'
+2024-09-25T15:18:38.133Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:18:39.130Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:18:39.160Z [ERROR]: Error deleting file: ENOENT: no such file or directory, unlink 'E:\Sathvik\programming\newMedico\backend\uploads\M-1.pdf'
+2024-09-25T15:18:39.345Z [WARN]: No reports found for UID: uid
+2024-09-25T15:18:51.320Z [WARN]: No reports found for UID: uid
+2024-09-25T15:18:53.373Z [WARN]: No reports found for UID: uid
+2024-09-25T15:19:57.422Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:19:57.434Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:19:57.912Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:19:57.933Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:06.886Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:20:07.115Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:20:07.121Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:07.309Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:09.883Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:20:10.081Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:12.156Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:20:12.160Z [ERROR]: Error deleting file: ENOENT: no such file or directory, unlink 'E:\Sathvik\programming\newMedico\backend\uploads\M-1.pdf'
+2024-09-25T15:20:12.351Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:30.952Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:20:31.180Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:42.675Z [INFO]: New report uploaded for patient UID: uid
+2024-09-25T15:20:42.910Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:45.163Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:20:45.236Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:20:46.103Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:46.158Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:46.203Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:46.512Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:20:59.792Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:20:59.899Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:21:05.697Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:21:05.771Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:21:06.682Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:21:06.760Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:21:09.525Z [INFO]: Report deleted successfully for UID: uid
+2024-09-25T15:21:09.608Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:22:16.510Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:22:16.521Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:22:17.045Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:22:17.049Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:23:40.448Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:24:19.007Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:24:21.450Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:24:23.589Z [INFO]: UID verified: uid001
+2024-09-25T15:26:22.189Z [INFO]: UID verified: uid
+2024-09-25T15:26:28.242Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:26:43.500Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:26:43.572Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:26:44.684Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:26:44.757Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:27:02.972Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:27:16.052Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:27:16.125Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:27:19.545Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:27:19.650Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:27:52.979Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:28:02.715Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:30:19.312Z [INFO]: User logged in successfully
+2024-09-25T15:30:24.284Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:30:27.083Z [INFO]: UID verified: uid001
+2024-09-25T15:30:35.783Z [INFO]: UID verified: uid
+2024-09-25T15:30:38.456Z [INFO]: User logged in successfully
+2024-09-25T15:30:40.636Z [INFO]: UID verified: uid
+2024-09-25T15:30:46.070Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:30:46.163Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:30:46.826Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:30:46.829Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:30:47.325Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:30:47.397Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:30:48.813Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:30:48.815Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:31:21.080Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:31:25.218Z [INFO]: User logged in successfully
+2024-09-25T15:31:28.593Z [INFO]: UID verified: uid
+2024-09-25T15:31:31.054Z [INFO]: User logged in successfully
+2024-09-25T15:31:35.327Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:31:35.331Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:31:36.680Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:31:36.683Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:31:39.928Z [INFO]: User logged in successfully
+2024-09-25T15:31:42.382Z [INFO]: UID verified: uid
+2024-09-25T15:31:56.551Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:31:59.292Z [INFO]: User logged in successfully
+2024-09-25T15:32:03.719Z [INFO]: UID verified: uid
+2024-09-25T15:33:45.429Z [INFO]: User logged in successfully
+2024-09-25T15:33:48.235Z [INFO]: UID verified: uid
+2024-09-25T15:33:49.869Z [INFO]: UID verified: uid
+2024-09-25T15:35:44.268Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:36:03.631Z [INFO]: UID verified: uid
+2024-09-25T15:38:59.833Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:39:39.702Z [INFO]: User logged in successfully
+2024-09-25T15:39:42.299Z [INFO]: UID verified: uid
+2024-09-25T15:40:10.576Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T15:40:13.349Z [INFO]: UID verified: uid
+2024-09-25T15:40:13.501Z [INFO]: User logged in successfully
+2024-09-25T15:40:16.780Z [INFO]: User logged in successfully
+2024-09-25T15:40:18.419Z [INFO]: UID verified: uid001
+2024-09-25T15:40:18.811Z [INFO]: UID verified: uid
+2024-09-25T15:40:23.159Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:40:23.245Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:40:24.301Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:40:24.376Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:40:27.262Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:40:27.338Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:40:27.697Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:40:27.766Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:40:28.219Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:40:28.291Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:40:42.290Z [INFO]: User logged in successfully
+2024-09-25T15:40:50.244Z [INFO]: UID verified: uid001
+2024-09-25T15:41:00.245Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:41:00.319Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:41:01.673Z [INFO]: User logged in successfully
+2024-09-25T15:41:01.973Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:41:02.052Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:41:02.978Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:41:03.060Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:41:04.100Z [INFO]: UID verified: uid
+2024-09-25T15:41:04.720Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:41:04.799Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:41:08.512Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:41:08.515Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:44:50.386Z [INFO]: User logged in successfully
+2024-09-25T15:44:53.784Z [INFO]: UID verified: uid001
+2024-09-25T15:44:58.223Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:44:58.306Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:45:00.338Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:45:00.416Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:45:21.867Z [INFO]: User logged in successfully
+2024-09-25T15:45:24.736Z [INFO]: UID verified: uid
+2024-09-25T15:46:35.765Z [INFO]: User logged in successfully
+2024-09-25T15:46:48.175Z [INFO]: UID verified: uid
+2024-09-25T15:46:54.911Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:46:59.075Z [INFO]: User logged in successfully
+2024-09-25T15:47:01.521Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:53:39.726Z [INFO]: User logged in successfully
+2024-09-25T15:53:48.564Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:53:51.112Z [INFO]: User logged in successfully
+2024-09-25T15:53:51.499Z [INFO]: UID verified: uid001
+2024-09-25T15:53:55.544Z [INFO]: UID verified: uid
+2024-09-25T15:53:57.277Z [INFO]: User logged in successfully
+2024-09-25T15:54:01.599Z [INFO]: User logged in successfully
+2024-09-25T15:54:03.468Z [INFO]: UID verified: uid
+2024-09-25T15:54:08.966Z [INFO]: UID verified: uid001
+2024-09-25T15:54:15.766Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:54:15.839Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:54:16.844Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:54:16.923Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:54:38.553Z [INFO]: User logged in successfully
+2024-09-25T15:54:40.550Z [INFO]: UID verified: uid
+2024-09-25T15:54:41.336Z [INFO]: User logged in successfully
+2024-09-25T15:54:44.827Z [INFO]: UID verified: uid001
+2024-09-25T15:54:47.773Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:54:47.850Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:54:48.986Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:54:49.060Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:54:54.583Z [INFO]: User logged in successfully
+2024-09-25T15:55:06.327Z [INFO]: User logged in successfully
+2024-09-25T15:55:08.136Z [INFO]: UID verified: uid
+2024-09-25T15:55:12.886Z [INFO]: User logged in successfully
+2024-09-25T15:55:28.328Z [INFO]: UID verified: uid001
+2024-09-25T15:55:29.801Z [INFO]: User logged in successfully
+2024-09-25T15:55:31.143Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:55:31.218Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:55:31.510Z [INFO]: UID verified: uid
+2024-09-25T15:55:32.961Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:55:33.035Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:55:38.993Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:55:42.014Z [INFO]: UID verified: uid001
+2024-09-25T15:55:45.485Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:55:45.560Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-25T15:55:46.876Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:55:46.949Z [INFO]: Fetched reports for UID: uid001
+2024-09-25T15:55:48.154Z [INFO]: User logged in successfully
+2024-09-25T15:55:50.251Z [INFO]: UID verified: uid
+2024-09-25T15:55:53.615Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:56:04.939Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:56:55.213Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:57:28.564Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T15:57:31.392Z [INFO]: User logged in successfully
+2024-09-25T15:57:33.695Z [INFO]: UID verified: uid
+2024-09-25T15:57:36.563Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:57:36.587Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T15:57:37.235Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:57:37.239Z [INFO]: Fetched reports for UID: uid
+2024-09-25T15:57:42.058Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T16:02:13.291Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-25T16:03:39.820Z [INFO]: UID verified: uid
+2024-09-25T16:03:42.334Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T16:03:42.346Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T16:03:45.811Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T16:04:56.882Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T16:04:56.885Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T16:05:37.733Z [INFO]: New patient added: uid003
+2024-09-25T16:05:47.057Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T16:05:47.060Z [WARN]: No prescriptions found for UID: uid
+2024-09-25T16:06:15.985Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-25T16:23:15.512Z [INFO]: User logged in successfully: testUser1@gmail.com
