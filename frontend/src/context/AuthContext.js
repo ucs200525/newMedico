@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 // Create the AuthContext
 export const AuthContext = createContext();
@@ -6,25 +6,27 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [uid, setUid] = useState(''); // State for UID
-  const [role, setRole] = useState(''); // State for Role from UserRoleSelection (corrected typo)
+  const [role, setRole] = useState(''); // State for Role
+  const [token, setToken] = useState(localStorage.getItem('token') || ''); // Add token state
 
   useEffect(() => {
     // Check if token exists in local storage
-    const token = localStorage.getItem('token');
-    setIsLoggedIn(!!token);
-    setUid(localStorage.getItem('uid') || ''); // Retrieve UID from local storage
-    setRole(localStorage.getItem('role') || ''); // Retrieve Role from local storage
-  }, []);
+    if (token) {
+      setIsLoggedIn(true);
+      setUid(localStorage.getItem('uid') || ''); // Retrieve UID from local storage
+      setRole(localStorage.getItem('role') || ''); // Retrieve Role from local storage
+    }
+  }, [token]);
 
-  const login = () =>{
+  const login = () => {
     setIsLoggedIn(true);
-    setRole('admin')
-    console.log("Auth admin")
-  } 
-  const userRole = ()=>{
+    setRole('admin');
+    console.log("Auth admin");
+  };
+
+  const userRole = () => {
     setIsLoggedIn(true);
-    
-  }
+  };
 
   const logout = () => {
     localStorage.removeItem('token');
@@ -33,6 +35,7 @@ export const AuthProvider = ({ children }) => {
     setIsLoggedIn(false);
     setUid(''); // Reset UID
     setRole(''); // Reset Role
+    setToken(''); // Reset token
   };
 
   const setUidContext = (newUid) => {
@@ -51,3 +54,4 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+

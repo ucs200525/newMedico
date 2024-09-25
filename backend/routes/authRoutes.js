@@ -111,6 +111,42 @@ router.post('/loginUser', async (req, res) => {
   }
 });
 
+
+
+// // Secret key for token validation (replace with your own secret key)
+// const secretKey = JWT_SECRET;
+
+// //    /api/auth/validate-token
+// // API endpoint to validate a token
+// router.post('/validate-token', (req, res) => {
+//   try {
+//     // Extract the token from the request body
+//     const { token } = req.body;
+
+//     // Check if the token is provided
+//     if (!token) {
+//       return res.status(400).json({ error: 'Token is required' });
+//     }
+
+//     // Verify the token using the secret key
+//     jwt.verify(token, secretKey, (err, decoded) => {
+//       if (err) {
+//         // Token is invalid or expired
+//         return res.status(401).json({ error: 'Invalid or expired token' });
+//       }
+
+//       // Token is valid, return the decoded payload
+//       return res.json({ isValid: true, payload: decoded });
+//     });
+//   } catch (error) {
+//     // Handle any unexpected errors
+//     console.error(error);
+//     return res.status(500).json({ error: 'Internal Server Error' });
+//   }
+// });
+
+
+
 // @route   POST /api/auth/logout
 // @desc    Logout user (client-side handling required)
 // @access  Public

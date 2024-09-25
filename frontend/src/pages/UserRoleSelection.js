@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Assuming you use react-router for navigation
 import axios from 'axios'; // Import axios
-import { AuthContext } from '../context/AuthContext'; // Ensure correct path
 
 const UserRoleSelection = () => {
   const navigate = useNavigate();

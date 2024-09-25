@@ -40,13 +40,14 @@ a {
 .navbar .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  margin-left: 20px;
+
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  margin-right: 20px;
+  margin-right: 40px;
+  margin-left: 250px;
 }
 
 .nav-links li {

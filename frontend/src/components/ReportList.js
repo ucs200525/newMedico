@@ -8,10 +8,10 @@ const ReportList = () => {
   useEffect(() => {
     const fetchReports = async () => {
       try {
-        const response = await axios.get('/api/reports');
+        const response = await axios.get('http://localhost:4000/api/reports');
         setReports(response.data);
       } catch (error) {
-        console.error('Error fetching report data:', error);
+        console.error('No reports found', error);
       }
     };
 
@@ -20,7 +20,7 @@ const ReportList = () => {
 
   const handleDelete = async (reportId) => {
     try {
-      await axios.delete(`/api/reports/${reportId}`);
+      await axios.delete(`http://localhost:4000/api/reports/${reportId}`);
       setReports(reports.filter(report => report._id !== reportId));
     } catch (error) {
       console.error('Error deleting report:', error);

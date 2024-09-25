@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Reports = ({ uid }) => {
   const [file, setFile] = useState(null);
-  const [fileType, setFileType] = useState('');
+  const [ fileType,setFileType] = useState('');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [reports, setReports] = useState([]);
@@ -23,8 +23,7 @@ const Reports = ({ uid }) => {
       const response = await axios.get(`http://localhost:4000/api/reports/by-uid/${uid}`);
       setReports(response.data);
     } catch (error) {
-      setMessage('Error fetching reports');
-      console.error('Error fetching reports:', error);
+      console.error('No reports found', error);
     }
   };
 

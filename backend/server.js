@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(morgan('dev'));  // Logging middleware
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/hospital', {
+mongoose.connect('mongodb+srv://ECSDB:ECS-Project@cluster.8szfy.mongodb.net/Project', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

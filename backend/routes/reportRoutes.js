@@ -165,11 +165,7 @@ router.get('/by-uid/:uid', async (req, res) => {
 
     const reports = await Report.find({ patientId: patient._id });
 
-    if (!reports.length) {
-      logger.warn(`No reports found for UID: ${uid}`);
-      return res.status(404).json({ message: 'No reports found' });
-    }
-
+ 
     logger.info(`Fetched reports for UID: ${uid}`);
     res.json(reports);
   } catch (error) {
