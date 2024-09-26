@@ -1,0 +1,52 @@
+/* Container to center the content */
+.dashboard-container {
+    width: 50%;
+    margin: 20px auto; /* Reduces the top margin to move the table up */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  /* Table styling */
+  .patient-table {
+    width: 100%;
+    margin: 0 auto; /* Align table to the center */
+    border-collapse: collapse;
+  }
+  
+  /* Table row and cell styling */
+  .patient-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  /* First column (field labels) styling */
+  .patient-table td:first-child {
+    font-weight: bold;
+    background-color: #f1f1f1;
+    width: 30%;
+  }
+  
+  /* Second column (field values) styling */
+  .patient-table td:last-child {
+    text-align: left;
+    width: 70%;
+  }
+  
+  /* Adding hover effect for rows */
+  .patient-table tr:hover {
+    background-color: #f0f8ff;
+  }
+  

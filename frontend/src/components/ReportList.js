@@ -38,7 +38,7 @@ const ReportList = () => {
             {report.fileType === 'pdf' && (
               <a href={`/uploads/${report.filePath}`} target="_blank" rel="noopener noreferrer">View PDF</a>
             )}
-            <button onClick={() => handleDelete(report._id)}>Delete</button>
+            <button  onClick={() => handleDelete(report._id)}>Delete</button>
           </li>
         ))}
       </ul>

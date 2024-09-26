@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   font-family: 'Arial', sans-serif; /* Simple, clean font */
 }
 
@@ -16,6 +17,39 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+=======
+  width:100%;
+  text-wrap: nowrap;
+  
+  
+}
+.moto{
+  margin-left: 0px;
+  margin-top:2px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+ 
+}
+.branding{
+  display:flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0;
+ 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin:0;
+  padding:0;
+>>>>>>> 6563bc3bc3b7f1518a408d2211b639e716788d33
 }
 
 /* Logo Styles */
@@ -27,6 +61,7 @@
   letter-spacing: 2px;
   transition: color 0.3s ease;
   cursor: pointer;
+  padding:10px;
 }
 
 /* Motto below the logo */

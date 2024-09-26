@@ -29,7 +29,9 @@ const UserPrescriptions = ({ uid }) => {
       {message && <p>{message}</p>} {/* Display any error message */}
       <PrescriptionList prescriptions={prescriptions} />
       {prescriptions.length === 0 && <p>No prescriptions found.</p>} {/* Message if no prescriptions exist */}
+      <br/>
     </div>
+    
   );
 };
 

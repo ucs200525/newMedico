@@ -2,7 +2,10 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import './Navbar.css';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6563bc3bc3b7f1518a408d2211b639e716788d33
 
 const Navbar = () => {
   const { isLoggedIn, role, uid, logout } = useContext(AuthContext);
@@ -25,9 +28,16 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="container">
+<<<<<<< HEAD
         <h1 className="logo">MEDICO</h1>
         <p className="Moto">  Your Digital Key To Health</p>
 
+=======
+        <div className="branding">
+        <h1 className="logo">MEDICO</h1>
+        <p className="moto">Your Digital Key To Health</p>
+        </div>
+>>>>>>> 6563bc3bc3b7f1518a408d2211b639e716788d33
         <ul className="nav-links">
           {isLoggedIn ? (
             <>
