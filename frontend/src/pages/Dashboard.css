@@ -1,0 +1,76 @@
+/* General container styling */
+.dashboard {
+    width: 60%;
+    margin: 0px auto; /* Centers the container horizontally */
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    margin: 0 auto; /* Align table to the center */
+    border-collapse: collapse;
+  }
+  
+  /* Table row and cell styling */
+  table tr {
+    height: 50px;
+  }
+  
+  table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Style for the first column (labels) */
+  table td:first-child {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+  }
+  
+  /* Input field styling */
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Center the whole content vertically and horizontally */
+  .dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  /* Adjust margins for the form */
+  .dashboard form {
+    margin: 0 auto;
+  }
+  
+  

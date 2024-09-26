@@ -94,14 +94,18 @@ const Prescriptions = ({ uid }) => {
   };
 
   return (
-    <div>
-      <h1>Manage Prescriptions</h1>
+    <div className='pr'>
+      <div >
+      <h1> Manage Prescriptions</h1>
       <PrescriptionList 
         onPrescriptionEdit={handleEdit} 
         onPrescriptionDelete={handleDelete} 
         prescriptions={prescriptions} 
       />
+      </div>
+      <div className="ab">
       <form onSubmit={handleSubmit}>
+        
         <h2>{editingPrescription ? 'Edit Prescription' : 'Add New Prescription'}</h2>
         <input
           type="text"
@@ -130,7 +134,10 @@ const Prescriptions = ({ uid }) => {
         <button type="submit">
           {editingPrescription ? 'Update Prescription' : 'Add Prescription'}
         </button>
+        
       </form>
+      </div>
+      
     </div>
   );
 };

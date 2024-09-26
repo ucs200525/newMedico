@@ -1,4 +1,3 @@
-/* Global styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -18,7 +17,7 @@ a {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -107,25 +106,17 @@ form button:hover {
   background-color: #2980b9;
 }
 
-/* Dashboard styles */
-.dashboard-container {
-  background-color: #e67e22;
-  color: white;
-  padding: 40px;
-  border-radius: 8px;
-  margin: 20px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 /* Patients, Prescriptions, Reports page styles */
 .data-list-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  
+
 }
 
 .data-item {
-  background-color: #f39c12;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 6px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
@@ -153,6 +144,13 @@ form button:hover {
   border-radius: 8px;
   margin: 20px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.pr{
+  display:flex;
+  flex-direction: row;
+}
+.ab{
+  margin-left: 350px;
 }
 
 .reports-container {

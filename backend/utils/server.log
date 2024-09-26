@@ -2350,3 +2350,265 @@
 2024-09-25T16:05:47.060Z [WARN]: No prescriptions found for UID: uid
 2024-09-25T16:06:15.985Z [INFO]: User logged in successfully: testUser@gmail.com
 2024-09-25T16:23:15.512Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-26T08:22:28.821Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T08:22:33.416Z [INFO]: UID verified: uid001
+2024-09-26T08:22:37.534Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:22:37.816Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:22:42.789Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T08:22:43.160Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T08:23:58.042Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T08:24:05.986Z [INFO]: UID verified: uid001
+2024-09-26T08:24:10.031Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:24:10.289Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:25:40.641Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T08:25:52.820Z [INFO]: UID verified: uid
+2024-09-26T08:25:57.101Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:25:57.190Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:25:57.870Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:25:57.959Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:26:00.338Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:26:00.408Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:26:00.939Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:26:01.065Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:26:01.501Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:26:01.568Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:02.988Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:04.044Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:06.529Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:07.541Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:13.260Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:27:13.494Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:27:14.248Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:14.623Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:15.851Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:16.241Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:16.650Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:27:17.021Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:27:17.963Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:18.151Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:30.621Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:30.947Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:32.963Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:27:33.315Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:27:33.682Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:34.100Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:27:34.835Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:27:35.198Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:29:31.679Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:29:31.756Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:29:34.119Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:29:34.183Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:29:37.221Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:29:37.286Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T08:30:06.433Z [INFO]: New prescription added for patient UID: uid
+2024-09-26T08:31:25.530Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:31:30.524Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:31:37.520Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:31:40.543Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:31:42.564Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:32:54.455Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:32:55.171Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:32:55.242Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:32:59.580Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:33:00.546Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:34:09.692Z [ERROR]: Error fetching prescriptions: read ECONNRESET
+2024-09-26T08:34:11.628Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:35:03.259Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:35:04.173Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:36:20.310Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:36:20.370Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:36:33.352Z [INFO]: New prescription added for patient UID: uid
+2024-09-26T08:36:37.738Z [INFO]: New prescription added for patient UID: uid
+2024-09-26T08:36:45.913Z [INFO]: Prescription deleted successfully for UID: uid
+2024-09-26T08:36:47.695Z [INFO]: Prescription deleted successfully for UID: uid
+2024-09-26T08:36:58.089Z [INFO]: New prescription added for patient UID: uid
+2024-09-26T08:38:03.094Z [ERROR]: Error fetching prescriptions: read ECONNRESET
+2024-09-26T08:38:27.022Z [ERROR]: Error fetching prescriptions: read ECONNRESET
+2024-09-26T08:39:25.558Z [ERROR]: Error fetching prescriptions: read ECONNRESET
+2024-09-26T08:39:25.561Z [ERROR]: Error fetching prescriptions: read ECONNRESET
+2024-09-26T08:39:33.537Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:40:01.658Z [INFO]: New prescription added for patient UID: uid
+2024-09-26T08:40:01.676Z [INFO]: New prescription added for patient UID: uid
+2024-09-26T08:40:01.700Z [INFO]: New prescription added for patient UID: uid
+2024-09-26T08:40:01.727Z [INFO]: New prescription added for patient UID: uid
+2024-09-26T08:40:01.912Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:40:01.979Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:40:03.595Z [INFO]: New prescription added for patient UID: uid
+2024-09-26T08:40:12.668Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T08:40:17.964Z [INFO]: UID verified: uid001
+2024-09-26T08:40:20.738Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:40:21.028Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:40:27.109Z [INFO]: New prescription added for patient UID: uid001
+2024-09-26T08:40:46.565Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:40:50.525Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:41:09.305Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:41:09.402Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T08:42:50.064Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T08:42:50.962Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T08:42:55.468Z [ERROR]: Error fetching patient by UID: read ECONNRESET
+2024-09-26T08:43:01.093Z [INFO]: UID verified: uid001
+2024-09-26T08:43:01.892Z [INFO]: UID verified: uid001
+2024-09-26T08:43:33.667Z [ERROR]: Error fetching patient by UID: getaddrinfo ENOTFOUND cluster-shard-00-00.8szfy.mongodb.net
+2024-09-26T08:43:40.823Z [ERROR]: JWT_SECRET:
+2024-09-26T08:43:42.394Z [ERROR]: JWT_SECRET:
+2024-09-26T08:43:51.137Z [ERROR]: Error fetching patient by UID: getaddrinfo ENOTFOUND cluster-shard-00-00.8szfy.mongodb.net
+2024-09-26T08:44:01.636Z [ERROR]: JWT_SECRET:
+2024-09-26T08:44:04.667Z [ERROR]: JWT_SECRET:
+2024-09-26T08:45:45.215Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T08:45:47.853Z [INFO]: UID verified: uid
+2024-09-26T08:45:54.875Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:45:55.083Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:49:44.450Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:49:44.540Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:49:45.088Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:49:45.211Z [INFO]: Fetched reports for UID: uid
+2024-09-26T08:56:44.070Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T08:56:44.144Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:03:43.683Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:03:44.027Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:03:44.933Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:03:45.452Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:03:53.314Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:03:53.480Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:04:06.995Z [INFO]: User logged in successfully
+2024-09-26T09:04:11.855Z [INFO]: UID verified: uid001
+2024-09-26T09:04:14.253Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:04:14.694Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:04:17.787Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:04:17.864Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:13:08.937Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:13:09.040Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:13:09.669Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:13:09.756Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:13:13.968Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:13:15.919Z [INFO]: UID verified: uid
+2024-09-26T09:13:24.028Z [INFO]: User logged in successfully
+2024-09-26T09:13:26.940Z [INFO]: UID verified: uid
+2024-09-26T09:14:06.472Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:14:09.219Z [INFO]: UID verified: uid
+2024-09-26T09:14:14.692Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:14.769Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:15.842Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:15.905Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:16.568Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:14:16.632Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:14:18.720Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:18.897Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:19.683Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:14:19.797Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:14:40.643Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:14:40.711Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:14:41.266Z [INFO]: User logged in successfully
+2024-09-26T09:14:41.457Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:41.544Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:44.478Z [INFO]: UID verified: uid
+2024-09-26T09:14:47.618Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:48.069Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:14:48.366Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:14:48.574Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:15:09.284Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:15:12.867Z [INFO]: UID verified: uid
+2024-09-26T09:15:16.173Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:15:16.239Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:15:17.961Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:15:18.212Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:15:18.721Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:15:18.796Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:15:49.136Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:15:49.207Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:18:09.230Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:18:09.299Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:18:28.124Z [INFO]: User logged in successfully
+2024-09-26T09:18:32.168Z [INFO]: UID verified: uid
+2024-09-26T09:18:36.526Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:18:36.691Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:19:18.568Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:19:46.449Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:19:48.808Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:20:02.848Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:20:07.090Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:20:17.230Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:20:17.383Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:20:27.839Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:20:31.525Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:21:02.846Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:21:03.015Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:21:07.007Z [INFO]: UID verified: uid001
+2024-09-26T09:21:11.373Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:21:11.438Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:21:13.249Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:21:13.338Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:21:17.706Z [INFO]: User logged in successfully
+2024-09-26T09:21:22.942Z [INFO]: UID verified: uid001
+2024-09-26T09:21:26.552Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:21:26.823Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:21:42.937Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:21:44.455Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:21:54.356Z [INFO]: UID verified: uid
+2024-09-26T09:21:57.465Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:21:57.575Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:22:02.296Z [INFO]: UID verified: uid
+2024-09-26T09:22:07.965Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:22:08.055Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:22:12.194Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:22:12.265Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:22:14.663Z [INFO]: Prescription deleted successfully for UID: uid
+2024-09-26T09:22:17.264Z [INFO]: Prescription deleted successfully for UID: uid
+2024-09-26T09:22:20.848Z [INFO]: Prescription deleted successfully for UID: uid
+2024-09-26T09:22:22.836Z [INFO]: Prescription deleted successfully for UID: uid
+2024-09-26T09:22:25.275Z [INFO]: Prescription deleted successfully for UID: uid
+2024-09-26T09:22:27.751Z [INFO]: Prescription deleted successfully for UID: uid
+2024-09-26T09:22:36.997Z [INFO]: User logged in successfully
+2024-09-26T09:22:41.345Z [INFO]: UID verified: uid
+2024-09-26T09:22:44.295Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:22:44.377Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:22:44.485Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:22:44.543Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:22:46.139Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:22:46.236Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:23:26.938Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:23:58.214Z [INFO]: UID verified: uid001
+2024-09-26T09:24:07.515Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:24:07.742Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:24:12.541Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:24:13.271Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:25:00.745Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:25:00.950Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:25:31.429Z [INFO]: User logged in successfully
+2024-09-26T09:25:40.501Z [INFO]: UID verified: uid001
+2024-09-26T09:25:47.467Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:25:47.657Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:25:50.216Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:25:50.420Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:28:09.886Z [INFO]: User registered successfully: kinshuk@gmail.com
+2024-09-26T09:28:58.134Z [WARN]: Login attempt failed: Invalid credentials for email kinshuk@gmail.com
+2024-09-26T09:29:11.448Z [WARN]: Login attempt failed: Invalid credentials for email kinshuk@gmail.com
+2024-09-26T09:29:22.615Z [INFO]: User logged in successfully: kinshuk@gmail.com
+2024-09-26T09:30:16.666Z [INFO]: UID verified: uid001
+2024-09-26T09:30:16.866Z [INFO]: UID verified: uid001
+2024-09-26T09:30:28.225Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:30:28.432Z [INFO]: Fetched prescriptions for UID: uid001
+2024-09-26T09:30:36.929Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:30:37.031Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:31:08.883Z [INFO]: New report uploaded for patient UID: uid001
+2024-09-26T09:31:09.186Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:33:10.867Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:33:11.043Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:36:30.935Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:36:31.136Z [INFO]: Fetched reports for UID: uid001
+2024-09-26T09:38:08.135Z [INFO]: User logged in successfully
+2024-09-26T09:38:30.843Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:39:43.883Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:39:59.737Z [INFO]: UID verified: uid
+2024-09-26T09:43:17.986Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-09-26T09:43:27.191Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:43:27.324Z [INFO]: Fetched prescriptions for UID: uid
+2024-09-26T09:43:44.618Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:43:45.011Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:44:13.375Z [INFO]: New report uploaded for patient UID: uid
+2024-09-26T09:44:13.579Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:44:46.867Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:44:47.398Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:44:55.871Z [INFO]: New report uploaded for patient UID: uid
+2024-09-26T09:44:56.005Z [INFO]: Fetched reports for UID: uid
+2024-09-26T09:52:35.371Z [INFO]: User logged in successfully: testUser@gmail.com

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Dashboard.css';
+import './DashboardUser.css';
 
 const DashboardUser = ({ uid }) => {
   const [patient, setPatient] = useState(null);
@@ -8,13 +8,12 @@ const DashboardUser = ({ uid }) => {
 
   useEffect(() => {
     const fetchPatientData = async () => {
-        try {
-          const response = await axios.get(`http://localhost:4000/api/patients/${uid}`);
-          setPatient(response.data);
-        } catch (error) {
-          setError('Error fetching patient data: ' + error.message);
-        }
-  
+      try {
+        const response = await axios.get(`http://localhost:4000/api/patients/${uid}`);
+        setPatient(response.data);
+      } catch (error) {
+        setError('Error fetching patient data: ' + error.message);
+      }
     };
 
     fetchPatientData();
@@ -29,26 +28,36 @@ const DashboardUser = ({ uid }) => {
   }
 
   return (
-    <div>
+    <div className="dashboard-container">
       <h2>Patient Dashboard</h2>
-      <div>
-        <strong>Name:</strong> {patient.name}
-      </div>
-      <div>
-        <strong>Age:</strong> {patient.age}
-      </div>
-      <div>
-        <strong>Gender:</strong> {patient.gender}
-      </div>
-      <div>
-        <strong>Address:</strong> {patient.otherFields?.address || 'N/A'}
-      </div>
-      <div>
-        <strong>Email:</strong> {patient.otherFields?.email || 'N/A'}
-      </div>
-      <div>
-        <strong>Phone:</strong> {patient.otherFields?.phone || 'N/A'}
-      </div>
+      <table className="patient-table">
+        <tbody>
+          <tr>
+            <td><strong>Name:</strong></td>
+            <td>{patient.name}</td>
+          </tr>
+          <tr>
+            <td><strong>Age:</strong></td>
+            <td>{patient.age}</td>
+          </tr>
+          <tr>
+            <td><strong>Gender:</strong></td>
+            <td>{patient.gender}</td>
+          </tr>
+          <tr>
+            <td><strong>Address:</strong></td>
+            <td>{patient.otherFields?.address || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>Email:</strong></td>
+            <td>{patient.otherFields?.email || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>Phone:</strong></td>
+            <td>{patient.otherFields?.phone || 'N/A'}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };

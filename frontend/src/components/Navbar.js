@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import './Navbar.css';
-import image from "../context/logo.jpg";
 
 const Navbar = () => {
   const { isLoggedIn, role, uid, logout } = useContext(AuthContext);
@@ -25,8 +24,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-      <img src={image} alt="logo" width="75" height="60"/>
+        <div className="branding">
         <h1 className="logo">MEDICO</h1>
+        <p className="moto">Your Digital Key To Health</p>
+        </div>
         <ul className="nav-links">
           {isLoggedIn ? (
             <>

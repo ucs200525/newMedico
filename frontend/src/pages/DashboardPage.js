@@ -74,64 +74,80 @@ const Dashboard = ({ uid }) => {
   };
 
   return (
-    <div>
-      <h2>Patient Dashboard</h2>
-
-      {patient && (
-        <div>
-          <div>
-            <span>NAME: </span>
-            <input type="text" name="name" value={updatedData.name || ''} onChange={handleUpdateChange} />
-            <button onClick={() => handleUpdateSubmit('name')}>UPDATE</button>
-          </div>
-          <div>
-            <span>AGE: </span>
-            <input type="number" name="age" value={updatedData.age || ''} onChange={handleUpdateChange} />
-            <button onClick={() => handleUpdateSubmit('age')}>UPDATE</button>
-          </div>
-          <div>
-            <span>GENDER: </span>
-            <select name="gender" value={updatedData.gender || ''} onChange={handleUpdateChange}>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
-            <button onClick={() => handleUpdateSubmit('gender')}>UPDATE</button>
-          </div>
-          <div>
-            <span>ADDRESS: </span>
-            <input
-              type="text"
-              name="otherFields[address]"
-              value={updatedData.otherFields?.address || ''}
-              onChange={handleUpdateChange}
-            />
-            <button onClick={() => handleUpdateSubmit('otherFields.address')}>UPDATE</button>
-          </div>
-          <div>
-            <span>EMAIL: </span>
-            <input
-              type="text"
-              name="otherFields[email]"
-              value={updatedData.otherFields?.email || ''}
-              onChange={handleUpdateChange}
-            />
-            <button onClick={() => handleUpdateSubmit('otherFields.email')}>UPDATE</button>
-          </div>
-          <div>
-            <span>PHONE: </span>
-            <input
-              type="text"
-              name="otherFields[phone]"
-              value={updatedData.otherFields?.phone || ''}
-              onChange={handleUpdateChange}
-            />
-            <button onClick={() => handleUpdateSubmit('otherFields.phone')}>UPDATE</button>
-          </div>
-        </div>
-      )}
+    <div className='dashboard-container'>
+      <div className='dashboard'>
+        <h2>Patient Dashboard</h2>
+        {patient && (
+          <table>
+            <tbody>
+              <tr>
+                <td>NAME:</td>
+                <td>
+                  <input type="text" name="name" value={updatedData.name || ''} onChange={handleUpdateChange} />
+                </td>
+                <td><button onClick={() => handleUpdateSubmit('name')}>UPDATE</button></td>
+              </tr>
+              <tr>
+                <td>AGE:</td>
+                <td>
+                  <input type="number" name="age" value={updatedData.age || ''} onChange={handleUpdateChange} />
+                </td>
+                <td><button onClick={() => handleUpdateSubmit('age')}>UPDATE</button></td>
+              </tr>
+              <tr>
+                <td>GENDER:</td>
+                <td>
+                  <select name="gender" value={updatedData.gender || ''} onChange={handleUpdateChange}>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </td>
+                <td><button onClick={() => handleUpdateSubmit('gender')}>UPDATE</button></td>
+              </tr>
+              <tr>
+                <td>ADDRESS:</td>
+                <td>
+                  <input
+                    type="text"
+                    name="otherFields[address]"
+                    value={updatedData.otherFields?.address || ''}
+                    onChange={handleUpdateChange}
+                  />
+                </td>
+                <td><button onClick={() => handleUpdateSubmit('otherFields.address')}>UPDATE</button></td>
+              </tr>
+              <tr>
+                <td>EMAIL:</td>
+                <td>
+                  <input
+                    type="text"
+                    name="otherFields[email]"
+                    value={updatedData.otherFields?.email || ''}
+                    onChange={handleUpdateChange}
+                  />
+                </td>
+                <td><button onClick={() => handleUpdateSubmit('otherFields.email')}>UPDATE</button></td>
+              </tr>
+              <tr>
+                <td>PHONE:</td>
+                <td>
+                  <input
+                    type="text"
+                    name="otherFields[phone]"
+                    value={updatedData.otherFields?.phone || ''}
+                    onChange={handleUpdateChange}
+                  />
+                </td>
+                <td><button onClick={() => handleUpdateSubmit('otherFields.phone')}>UPDATE</button></td>
+              </tr>
+            </tbody>
+          </table>
+        )}
+      </div>
     </div>
   );
+  
 };
 
 export default Dashboard;
