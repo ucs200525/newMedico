@@ -2470,3 +2470,20 @@
 2024-09-25T16:06:15.985Z [INFO]: User logged in successfully: testUser@gmail.com
 2024-09-25T16:23:15.512Z [INFO]: User logged in successfully: testUser1@gmail.com
 >>>>>>> 54fd39ab916c4b64dabd62f7935b53aca6f6b8e3
+2024-09-26T06:40:01.871Z [ERROR]: JWT_SECRET:
+2024-09-26T06:40:03.885Z [ERROR]: JWT_SECRET:
+2024-09-26T06:40:03.965Z [ERROR]: JWT_SECRET:
+2024-09-26T06:40:04.221Z [ERROR]: JWT_SECRET:
+2024-09-26T06:44:44.846Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-26T06:45:03.069Z [INFO]: User logged in successfully
+2024-09-26T06:45:06.117Z [WARN]: UID verification failed: UID uidi not found
+2024-09-26T06:45:06.908Z [INFO]: UID verified: uid
+2024-09-26T06:45:09.529Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T06:45:09.535Z [WARN]: No prescriptions found for UID: uid
+2024-09-26T06:45:10.321Z [INFO]: Fetched reports for UID: uid
+2024-09-26T06:45:10.332Z [INFO]: Fetched reports for UID: uid
+2024-09-26T06:49:22.032Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-26T06:49:38.577Z [INFO]: UID verified: uid
+2024-09-26T08:13:55.161Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-26T08:23:10.786Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-09-26T08:23:32.963Z [INFO]: User logged in successfully: testUser@gmail.com
