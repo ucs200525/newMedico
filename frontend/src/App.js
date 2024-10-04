@@ -11,13 +11,17 @@ import Prescriptions from './pages/PrescriptionsPage';
 import Reports from './pages/ReportsPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import UserDataPage from './pages/UserDataPage';
+
 import { AuthProvider } from './context/AuthContext';
 
 import DashboardUser from './pages/DashboardUser';
+import PrescriptionsUser from './pages/PrescriptionsUser';
+import ReportsUser from './pages/ReportsUser';
+
 import ValidateLogin from './components/ValidateLogin';
 import UserRoleSelection from './pages/UserRoleSelection';
-import ReportsUser from './pages/ReportsUser';
-import PrescriptionsUser from './pages/PrescriptionsUser';
+
+
 const App = () => {
   return (
     <AuthProvider>
@@ -34,13 +38,13 @@ const App = () => {
           <Route path="/reports" element={<ProtectedRoute element={<Reports />} />} />
 
 
-          <Route path="/" element={<UserRoleSelection />} />
+          <Route path="/main-page" element={<UserRoleSelection />} />
 
-          <Route path="/dashboardUser" element={<ValidateLogin element={<DashboardUser />} />} />
-          <Route path="/ReportsUser" element={<ValidateLogin element={<ReportsUser />} />} />
-          <Route path="/PrescriptionsUser" element={<ValidateLogin element={<PrescriptionsUser />} />} />
 
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/dashboardUser" element={<ProtectedRoute element={<DashboardUser />} />} />
+          <Route path="/ReportsUser" element={<ProtectedRoute element={<ReportsUser />} />} />
+          <Route path="/PrescriptionsUser" element={<ProtectedRoute element={<PrescriptionsUser />} />} />
+          <Route path="*" element={<Navigate to="/main-page" />} />
         </Routes>
       </Router>
     </AuthProvider>

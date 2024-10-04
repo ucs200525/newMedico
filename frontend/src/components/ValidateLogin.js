@@ -4,10 +4,10 @@ import { Navigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
 const ValidateLogin = ({ element }) => {
-  const {uid ,role} = useContext(AuthContext);
+  const {isLoggedin,uid ,role} = useContext(AuthContext);
 
   // Check if user is logged in and uid is verified
-  if (!uid) {
+  if (!isLoggedin) {
     return <Navigate to="/verify-uid" />;
   }
  

@@ -7,7 +7,7 @@ const logger = require('../utils/logger.js');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const JWT_SECRET=process.env.JWT_SECRET||"e24a7e342be9ef60b84f73f4698f4227d5ae4dfc5e452d7f012bf5fe02f58e4c8f73a2c5baf980927f1e9e2e645d8473f1df9ad7f4c53ae7c5ef4fdc7f1c2e0b";
+const JWT_SECRET=process.env.JWT_SECRET|| "e24a7e342be9ef60b84f73f4698f4227d5ae4dfc5e452d7f012bf5fe02f58e4c8f73a2c5baf980927f1e9e2e645d8473f1df9ad7f4c53ae7c5ef4fdc7f1c2e0b";
 
 // @route   POST /api/auth/register
 // @desc    Register a new admin
@@ -52,7 +52,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 // @route   POST /api/auth/login
-// @desc    Login user and return token
+// @desc    Login user and return token and username
 // @access  Public
 router.post('/login', validateLogin, async (req, res) => {
   const { email, password } = req.body;
@@ -65,30 +65,35 @@ router.post('/login', validateLogin, async (req, res) => {
       logger.warn(`Login attempt failed: User not found for email ${email}`);
       return res.status(400).json({ message: 'Invalid credentials' });
     }
+
     // Direct comparison for plain text password
     if (password !== admin.password) {
       logger.warn(`Login attempt failed: Invalid credentials for email ${email}`);
-      console.log(`Entered password: ${password}`);
-      console.log(` password: ${admin.password}`);
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
     // Generate JWT token
-    const token = jwt.sign({ id: admin._id }, JWT_SECRET, {
-      expiresIn: '1h' //1m,1s,1h
+    const token = jwt.sign({ id: admin._id, name: admin.name }, JWT_SECRET, {
+      expiresIn: '1h' // Token expiration time
     });
 
     logger.info(`User logged in successfully: ${email}`);
-    res.json({ token });
+    
+    // Respond with token, uid, role, and username
+    res.json({
+      token,
+      role: 'admin', // Assuming admin role here
+      name: admin.name // Include the username
+    });
   } catch (error) {
     logger.error('JWT_SECRET:', JWT_SECRET);
-    const admin = await Admin.findOne({ email });
     logger.error(`Error during login: ${error.message}`);
     logger.warn(`Entered password: ${password}`);
-    logger.warn(` password: ${admin.password}`);
+    logger.warn(`Stored password: ${admin ? admin.password : 'N/A'}`); // Ensure admin exists
     res.status(500).json({ message: 'Server error', error });
   }
 });
+
 
 
 // @route   POST /api/auth/loginUser
@@ -104,7 +109,7 @@ router.post('/loginUser', async (req, res) => {
     // Here you can add logic to handle user data, e.g., saving user info in a database if needed
 
     logger.info(`User logged in successfully`);
-    res.json({ token });
+    res.json({ token,role: 'user' });
   } catch (error) {
     logger.error('JWT_SECRET:', JWT_SECRET);
     res.status(500).json({ message: 'Server error', error });

@@ -5,6 +5,7 @@ const validateRegister = (req, res, next) => {
     // Basic validation checks
     if (!name || !email || !password ) {
         return res.status(400).json({ message: 'All fields are required for registration' });
+        
     }
     // Check if password is strong enough
     if (password.length < 1) {
@@ -27,3 +28,10 @@ const validateLogin = (req, res, next) => {
 };
 
 module.exports = { validateRegister, validateLogin };
+
+
+/* Length more than 8 char
+    should contain at least one upper and lower case
+    
+
+*/

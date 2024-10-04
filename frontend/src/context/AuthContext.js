@@ -5,36 +5,47 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [uid, setUid] = useState(''); // State for UID
-  const [role, setRole] = useState(''); // State for Role
+  const [uid, setUid] = useState(localStorage.getItem('uid') || ''); // Retrieve UID from local storage
+  const [role, setRole] = useState(localStorage.getItem('role') || ''); // Retrieve Role from local storage
+  const [username, setUsername] = useState(localStorage.getItem('username') || ''); // Retrieve Username from local storage
   const [token, setToken] = useState(localStorage.getItem('token') || ''); // Add token state
 
   useEffect(() => {
     // Check if token exists in local storage
     if (token) {
       setIsLoggedIn(true);
-      setUid(localStorage.getItem('uid') || ''); // Retrieve UID from local storage
-      setRole(localStorage.getItem('role') || ''); // Retrieve Role from local storage
     }
   }, [token]);
 
-  const login = () => {
+  const login = (newToken, newRole, newUsername) => {
     setIsLoggedIn(true);
-    setRole('admin');
-    console.log("Auth admin");
+    setToken(newToken); // Set token
+    setRole(newRole); // Set Role
+    setUsername(newUsername); // Set Username
+    localStorage.setItem('token', newToken); // Store token in local storage
+    localStorage.setItem('role', newRole); // Store Role in local storage
+    localStorage.setItem('username', newUsername); // Store Username in local storage
   };
 
-  const userRole = () => {
+  const loginUser = (newToken,newRole) =>{
     setIsLoggedIn(true);
+    setToken(newToken); // Set token
+    setRole(newRole); // Set Role
+    localStorage.setItem('token', newToken); // Store token in local storage
+    localStorage.setItem('role', newRole); // Store Role in local storage
   };
+  
+
 
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('uid'); // Remove UID from local storage
     localStorage.removeItem('role'); // Remove Role from local storage
+    localStorage.removeItem('username'); // Remove Username from local storage
     setIsLoggedIn(false);
     setUid(''); // Reset UID
     setRole(''); // Reset Role
+    setUsername(''); // Reset Username
     setToken(''); // Reset token
   };
 
@@ -49,9 +60,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, userRole, login, logout, uid, setUidContext, role, setRoleContext }}>
+    <AuthContext.Provider value={{ isLoggedIn, login,loginUser, username, logout, uid, setUidContext, role, setRoleContext,setIsLoggedIn }}>
       {children}
     </AuthContext.Provider>
   );
 };
-

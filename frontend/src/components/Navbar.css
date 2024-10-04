@@ -1,27 +1,26 @@
-/* Navbar Container */
+/* src/components/Navbar.css */
 .navbar {
-  background-color: #2C3E50; /* Deep blue-gray background */
-  padding: 1.5rem 3rem;
-  color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-<<<<<<< HEAD
-  font-family: 'Arial', sans-serif; /* Simple, clean font */
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
 }
 
-/* Flexbox container */
 .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
-=======
+  align-items: center;
   width:100%;
   text-wrap: nowrap;
   
-  
+}
+
+.border{
+  border: 2px solid transparent;
+}
+
+.border:hover{
+  /*border: 2px solid white; */
+  cursor: pointer;
 }
 .moto{
   margin-left: 0px;
@@ -49,126 +48,26 @@
   gap: 20px;
   margin:0;
   padding:0;
->>>>>>> 6563bc3bc3b7f1518a408d2211b639e716788d33
 }
 
-/* Logo Styles */
-.logo {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #f1c40f; /* Bright gold for standout logo */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: color 0.3s ease;
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a, .nav-links button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  background: none;
+  border: none;
   cursor: pointer;
   padding:10px;
 }
 
-/* Motto below the logo */
-.Moto {
-  font-size: 1.2rem;
-  color: #ecf0f1; /* Soft white for the motto */
-  margin-top: 0.3rem;
-  font-style: italic;
-  text-transform: none;
-  transition: color 0.3s ease;
+.nav-links a:hover, .nav-links button:hover {
+  text-decoration: underline;
 }
 
-/* Logo Hover Effect */
-.logo:hover {
-  color: #e67e22; /* Orange hover effect on logo */
-}
-
-.Moto:hover {
-  color: #f39c12; /* Light gold hover effect on motto */
-}
-
-/* Navigation Links */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem; /* Space between nav items */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  display: inline-block;
-}
-
-.nav-links a,
 .nav-links button {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #bdc3c7; /* Light gray for nav items */
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Hover state for navigation links */
-.nav-links a:hover,
-.nav-links button:hover {
-  background-color: #34495e; /* Darker blue-gray on hover */
-  color: #ffffff; /* Brighten text on hover */
-}
-
-/* Logout Button Style */
-.nav-links button:last-child {
-  background-color: #e74c3c; /* Bold red for Logout */
-  color: #ffffff;
-  padding: 0.7rem 1.5rem;
-  border-radius: 5px;
-}
-
-.nav-links button:last-child:hover {
-  background-color: #c0392b; /* Darker red on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-  }
-
-  .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links a,
-  .nav-links button {
-    width: 100%;
-    text-align: left;
-    padding-left: 0;
-  }
-}
-
-/* Active Navigation Link */
-.nav-links .active {
-  background-color: #34495e; /* Darker background for active link */
-  color: #ffffff;
-}
-
-/* Additional Effects */
-.nav-links a,
-.nav-links button {
-  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links button:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+  background: #333;
 }

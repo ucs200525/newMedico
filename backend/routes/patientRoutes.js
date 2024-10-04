@@ -146,7 +146,45 @@ router.post('/verify-uid', async (req, res) => {
   }
 });
 
+///new routes check uid url input///////////////////////////////////////////////////////////////////////
 
 
+
+
+// Variable to store the latest UID from Arduino
+let latestUID = ''; 
+// @route   POST /api/patients/arduino/uid
+// @desc    Receive UID from Arduino
+// @access  Private (for Arduino to send UID)
+router.post('/arduino/:uid', async (req, res) => {
+  const { uid } = req.params;
+  
+  // if (!uid) {
+  //   logger.warn('UID missing in Arduino request');
+  //   return res.status(400).json({ message: 'UID is required' });
+  // }
+
+  latestUID = uid; // Store UID in the server variable
+  logger.info(`Received UID from Arduino: ${uid}`); // Log the UID received
+
+  // Sending the latest UID back to the frontend
+  logger.info(`Sending latest UID to frontend: ${latestUID}`);
+  return res.status(200).json({ uid: uid });
+});
+// @route   GET /api/patients/latest-uid
+// @desc    Return the latest UID (polled by frontend)
+// @access  Public
+router.get('/latest-uid', (req, res) => {
+  // if (!latestUID) {
+  //   logger.warn('No UID received from Arduino yet');
+  //   return res.status(404).json({ message: 'No UID available' });
+  // }
+
+  logger.info(`Sending latest UID to frontend: ${latestUID}`);
+  return res.status(200).json({ uid: latestUID });
+});
+
+
+///new routes end/////////////////////////////////////////////////////////////////////////////////////
 
 module.exports = router;

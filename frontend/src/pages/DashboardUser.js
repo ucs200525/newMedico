@@ -1,23 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './DashboardUser.css';
+import LoadingSpinner from '../components/LoadingSpinner'; // Import the spinner component
 
 const DashboardUser = ({ uid }) => {
   const [patient, setPatient] = useState(null);
+  const [loading, setLoading] = useState(true); // Add loading state
   const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchPatientData = async () => {
       try {
+        //await new Promise((resolve) => setTimeout(resolve, 20));
         const response = await axios.get(`http://localhost:4000/api/patients/${uid}`);
         setPatient(response.data);
       } catch (error) {
         setError('Error fetching patient data: ' + error.message);
+      } finally {
+        setLoading(false); // Set loading to false after the API call
       }
     };
 
     fetchPatientData();
   }, [uid]);
+
+  if (loading) {
+    return <LoadingSpinner />; // Show spinner when loading
+  }
 
   if (error) {
     return <p>{error}</p>;
@@ -63,3 +72,4 @@ const DashboardUser = ({ uid }) => {
 };
 
 export default DashboardUser;
+//with loading

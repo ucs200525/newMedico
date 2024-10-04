@@ -9,7 +9,7 @@ const { authenticateToken } = require('../middleware/authMiddleware');
 // @desc    Add health record by patient UID (Admin only)
 // @access  Private (Admin)
 router.post('/health/by-uid', authenticateToken, async (req, res) => {
-  const { uid, bloodGroup, sugar, bp, infections, diseases } = req.body;
+  const { uid, bloodGroup, sugar, bp, infections, diseases, eyeSite, height, weight, BMI } = req.body;
 
   try {
     // Find the patient by UID
@@ -18,15 +18,8 @@ router.post('/health/by-uid', authenticateToken, async (req, res) => {
       logger.warn(`Patient not found for UID: ${uid}`);
       return res.status(404).json({ message: 'Patient not found' });
     }
+    const healthRecord = new Health({ patientId: patient._id, eyeSite, height, weight, BMI, bloodGroup, sugar, bp, infections, diseases });
 
-    const healthRecord = new Health({
-      patientId: patient._id,
-      bloodGroup,
-      sugar,
-      bp,
-      infections,
-      diseases
-    });
     await healthRecord.save();
     logger.info(`New health record added for patient UID: ${uid}`);
     res.status(201).json(healthRecord);
