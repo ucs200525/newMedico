@@ -8,17 +8,14 @@ const { authenticateToken } = require('../middleware/authMiddleware');
 // @route   POST /api/health/by-uid
 // @desc    Add health record by patient UID (Admin only)
 // @access  Private (Admin)
-router.post('/health/by-uid', authenticateToken, async (req, res) => {
+router.post('/by-uid', async (req, res) => {
   const { uid, bloodGroup, sugar, bp, infections, diseases, eyeSite, height, weight, BMI } = req.body;
 
   try {
     // Find the patient by UID
     const patient = await Patients.findOne({ uid });
-    if (!patient) {
-      logger.warn(`Patient not found for UID: ${uid}`);
-      return res.status(404).json({ message: 'Patient not found' });
-    }
-    const healthRecord = new Health({ patientId: patient._id, eyeSite, height, weight, BMI, bloodGroup, sugar, bp, infections, diseases });
+
+    const healthRecord = new Health({ uid, bloodGroup, sugar, bp, infections, diseases, eyeSite, height, weight, BMI });
 
     await healthRecord.save();
     logger.info(`New health record added for patient UID: ${uid}`);
@@ -32,22 +29,17 @@ router.post('/health/by-uid', authenticateToken, async (req, res) => {
 // @route   PUT /api/health/by-uid/:uid/:id
 // @desc    Update health record by patient UID (Admin only)
 // @access  Private (Admin)
-router.put('/health/by-uid/:uid/:id', authenticateToken, async (req, res) => {
-  const { uid, id } = req.params;
-  const updates = req.body;
-
+router.put('/by-uid/:uid', async (req, res) => {
+  const { uid } = req.params;
+  const update = req.body;
   try {
     // Find the patient by UID
     const patient = await Patients.findOne({ uid });
-    if (!patient) {
-      logger.warn(`Patient not found for UID: ${uid}`);
-      return res.status(404).json({ message: 'Patient not found' });
-    }
 
     const healthRecord = await Health.findOneAndUpdate(
-      { _id: id, patientId: patient._id },
-      updates,
-      { new: true }
+      { uid },
+      { $set: update }, // Use $set to update only the provided fields
+      { new: true, runValidators: true }
     );
 
     if (!healthRecord) {
@@ -66,7 +58,7 @@ router.put('/health/by-uid/:uid/:id', authenticateToken, async (req, res) => {
 // @route   DELETE /api/health/by-uid/:uid/:id
 // @desc    Delete health record by patient UID (Admin only)
 // @access  Private (Admin)
-router.delete('/health/by-uid/:uid/:id', authenticateToken, async (req, res) => {
+router.delete('/by-uid/:uid/', async (req, res) => {
   const { uid, id } = req.params;
 
   try {
@@ -92,33 +84,53 @@ router.delete('/health/by-uid/:uid/:id', authenticateToken, async (req, res) => 
   }
 });
 
+// // @route   GET /api/health/by-uid/:uid
+// // @desc    Get all health records by patient UID (Admin only)
+// // @access  Private (Admin)
+// router.get('/by-uid/:uid', async (req, res) => {
+
+//   try {
+//     // Find the patient by UID
+//     const patient = await Patients.findOne({ uid: req.params.uid  });
+//     if (!patient) {
+//       logger.warn(`Patient not found for UID: ${uid}`);
+//       return res.status(404).json({ message: 'Patient not found' });
+//     }
+
+//     const healthRecords = await Health.find({ patientId: patient._id });
+
+//     if (!healthRecords.length) {
+//       logger.warn(`No health records found for UID: ${uid}`);
+//       return res.status(404).json({ message: 'No health records found' });
+//     }
+
+//     logger.info(`Fetched health records for UID: ${uid}`);
+//     res.json(healthRecords);
+//   } catch (error) {
+//     logger.error(`Error fetching health records: ${error.message}`);
+//     res.status(500).json({ message: 'Server error', error });
+//   }
+// });
+
+
+
 // @route   GET /api/health/by-uid/:uid
 // @desc    Get all health records by patient UID (Admin only)
 // @access  Private (Admin)
-router.get('/health/by-uid/:uid', authenticateToken, async (req, res) => {
+router.get('/by-uid/:uid', async (req, res) => {
   const { uid } = req.params;
 
   try {
-    // Find the patient by UID
-    const patient = await Patients.findOne({ uid });
-    if (!patient) {
-      logger.warn(`Patient not found for UID: ${uid}`);
-      return res.status(404).json({ message: 'Patient not found' });
-    }
-
-    const healthRecords = await Health.find({ patientId: patient._id });
-
-    if (!healthRecords.length) {
-      logger.warn(`No health records found for UID: ${uid}`);
-      return res.status(404).json({ message: 'No health records found' });
-    }
+    // Find all health records associated with the patient
+    const healthRecords = await Health.findOne({ uid: req.params.uid });
 
     logger.info(`Fetched health records for UID: ${uid}`);
-    res.json(healthRecords);
+    res.json(healthRecords);  // Return the health records
   } catch (error) {
     logger.error(`Error fetching health records: ${error.message}`);
     res.status(500).json({ message: 'Server error', error });
   }
 });
+
 
 module.exports = router;

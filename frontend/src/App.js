@@ -11,6 +11,7 @@ import Prescriptions from './pages/PrescriptionsPage';
 import Reports from './pages/ReportsPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import UserDataPage from './pages/UserDataPage';
+import Health from "./pages/HealthPage";
 
 import { AuthProvider } from './context/AuthContext';
 
@@ -36,6 +37,8 @@ const App = () => {
           <Route path="/patients" element={<Patients />} />
           <Route path="/prescriptions" element={<ProtectedRoute element={<Prescriptions />} />} />
           <Route path="/reports" element={<ProtectedRoute element={<Reports />} />} />
+          <Route path="/HealthPage" element={<Health/>} />
+          
 
 
           <Route path="/main-page" element={<UserRoleSelection />} />

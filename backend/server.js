@@ -16,7 +16,7 @@ const app = express();
 
 // Enable CORS for all routes
 app.use(cors({
-   origin: 'http://localhost:3000', //  Frontend domain
+   origin: "*", //  Frontend domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
   credentials: true, // Enable sending cookies with cross-origin requests
 }));
