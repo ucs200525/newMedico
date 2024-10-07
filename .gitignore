@@ -6,6 +6,8 @@
 /task.txt
 /frontend/node_modules
 /backend/node_modules
+/frontend/.env
+/backend/.env
 /.pnp
 .pnp.js
 
