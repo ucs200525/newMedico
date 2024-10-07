@@ -21,7 +21,7 @@ const UserRoleSelection = () => {
       try {
         // Make sure to await the axios call
         //await new Promise((resolve) => setTimeout(resolve, 2000));
-        const response = await axios.post('http://localhost:4000/api/auth/loginUser');
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/loginUser`);
         loginUser(response.data.token,response.data.role)
         // Stop loading when the API call is successful
         setLoading(false);

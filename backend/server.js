@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+const dotenv = require('dotenv').config();
 const morgan = require('morgan');
 const cors = require('cors'); // Import cors
 const authRoute = require('./routes/authRoutes');
@@ -9,11 +9,11 @@ const prescriptionRoutes = require('./routes/prescriptionRoutes');
 const reportRoutes = require('./routes/reportRoutes');
 const healthRoutes = require('./routes/healthRoutes');
 const { errorHandler } = require('./middleware/errorMiddleware');
-dotenv.config();
+const dbUrl = process.env.MONGO_URL;
+const port = process.env.PORT;
 
 
 const app = express();
-
 // Enable CORS for all routes
 app.use(cors({
    origin: "*", //  Frontend domain
@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(morgan('dev'));  // Logging middleware
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://ECSDB:ECS-Project@cluster.8szfy.mongodb.net/Project', {
+mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -44,8 +44,7 @@ app.use('/api/health', healthRoutes);          // Health routes
 app.use(errorHandler);
 
 // Server listening
-const PORT = process.env.PORT || 4000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });

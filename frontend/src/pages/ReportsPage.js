@@ -20,7 +20,7 @@
 //   // Fetch all reports by UID
 //   const fetchReports = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4000/api/reports/by-uid/${uid}`);
+//       const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}`);
 //       setReports(response.data);
 //     } catch (error) {
 //       console.error('No reports found', error);
@@ -41,7 +41,7 @@
 //     formData.append('OrginalFileName',file.name);
 
 //     try {
-//       await axios.post(`http://localhost:4000/api/reports/by-uid/${uid}`, formData, {
+//       await axios.post(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}`, formData, {
 //         headers: {
 //           'Content-Type': 'multipart/form-data',
 //         },
@@ -68,7 +68,7 @@
 //     formData.append('file', file);
 
 //     try {
-//       await axios.put(`http://localhost:4000/api/reports/by-uid/${uid}/${editingReportId}`, formData, {
+//       await axios.put(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}/${editingReportId}`, formData, {
 //         headers: {
 //           'Content-Type': 'multipart/form-data',
 //         },
@@ -93,7 +93,7 @@
 //   // Handle report delete
 //   const handleDelete = async (id) => {
 //     try {
-//       await axios.delete(`http://localhost:4000/api/reports/by-uid/${uid}/${id}`);
+//       await axios.delete(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}/${id}`);
 //       setMessage('Report deleted successfully');
 //       fetchReports(); // Refetch reports after deletion
 //     } catch (error) {
@@ -123,7 +123,7 @@
 //             <span>{report.fileName}</span>
 //             <button onClick={() => handleEdit(report)}>Edit</button>
 //             <button onClick={() => handleDelete(report._id)}>Delete</button>
-//             <a href={`http://localhost:4000/api/reports/${encodeURIComponent(report.fileName)}`} target="_blank" rel="noopener noreferrer">
+//             <a href={`${process.env.REACT_APP_API_URL}/api/reports/${encodeURIComponent(report.fileName)}`} target="_blank" rel="noopener noreferrer">
 //   <button>Open</button>
 // </a>
 
@@ -165,7 +165,7 @@ const Reports = ({ uid }) => {
   const fetchReports = async () => {
     setLoading(true); // Start loading
     try {
-      const response = await axios.get(`http://localhost:4000/api/reports/by-uid/${uid}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}`);
       setReports(response.data);
     } catch (error) {
       console.error('No reports found', error);
@@ -189,7 +189,7 @@ const Reports = ({ uid }) => {
 
     setLoading(true); // Start loading for the submission
     try {
-      await axios.post(`http://localhost:4000/api/reports/by-uid/${uid}`, formData, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -219,7 +219,7 @@ const Reports = ({ uid }) => {
 
     setLoading(true); // Start loading for the update
     try {
-      await axios.put(`http://localhost:4000/api/reports/by-uid/${uid}/${editingReportId}`, formData, {
+      await axios.put(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}/${editingReportId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -247,7 +247,7 @@ const Reports = ({ uid }) => {
   const handleDelete = async (id) => {
     setLoading(true); // Start loading for deletion
     try {
-      await axios.delete(`http://localhost:4000/api/reports/by-uid/${uid}/${id}`);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}/${id}`);
       setMessage('Report deleted successfully');
       fetchReports(); // Refetch reports after deletion
     } catch (error) {
@@ -283,7 +283,7 @@ const Reports = ({ uid }) => {
             <span>{report.fileName}</span>
             <button onClick={() => handleEdit(report)}>Edit</button>
             <button onClick={() => handleDelete(report._id)}>Delete</button>
-            <a href={`http://localhost:4000/api/reports/${encodeURIComponent(report.fileName)}`} target="_blank" rel="noopener noreferrer">
+            <a href={`${process.env.REACT_APP_API_URL}/api/reports/${encodeURIComponent(report.fileName)}`} target="_blank" rel="noopener noreferrer">
               <button>Open</button>
             </a>
           </li>

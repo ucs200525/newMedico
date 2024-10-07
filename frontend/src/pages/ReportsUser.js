@@ -8,7 +8,7 @@
 //   // Fetch all reports by UID
 //   const fetchReports = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4000/api/reports/by-uid/${uid}`);
+//       const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}`);
 //       setReports(response.data);
 //     } catch (error) {
 //       setMessage('Error fetching reports');
@@ -33,7 +33,7 @@
 //           reports.map((report) => (
 //             <li key={report._id}>
 //               <span>{report.fileName}</span>
-//               <a href={`http://localhost:4000/api/reports/${encodeURIComponent(report.fileName)}`} target="_blank" rel="noopener noreferrer">
+//               <a href={`${process.env.REACT_APP_API_URL}/api/reports/${encodeURIComponent(report.fileName)}`} target="_blank" rel="noopener noreferrer">
 //                 <button>Open</button>
 //               </a>
 //             </li>
@@ -59,7 +59,7 @@ const UserReports = ({ uid }) => {
   // Fetch all reports by UID
   const fetchReports = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/reports/by-uid/${uid}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/reports/by-uid/${uid}`);
       setReports(response.data);
     } catch (error) {
       setMessage('Error fetching reports');
@@ -90,7 +90,7 @@ const UserReports = ({ uid }) => {
           reports.map((report) => (
             <li key={report._id}>
               <span>{report.fileName}</span>
-              <a href={`http://localhost:4000/api/reports/${encodeURIComponent(report.fileName)}`} target="_blank" rel="noopener noreferrer">
+              <a href={`${process.env.REACT_APP_API_URL}/api/reports/${encodeURIComponent(report.fileName)}`} target="_blank" rel="noopener noreferrer">
                 <button>Open</button>
               </a>
             </li>

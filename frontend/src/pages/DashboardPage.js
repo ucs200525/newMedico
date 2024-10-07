@@ -12,10 +12,10 @@ const Dashboard = ({ uid }) => {
     const fetchPatientData = async () => {
       if (uid) {
         try {
-          const response = await axios.get(`http://localhost:4000/api/patients/${uid}`);
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/patients/${uid}`);
           setPatient(response.data);
           
-          const health_response = await axios.get(`http://localhost:4000/api/health/by-uid/${uid}`);
+          const health_response = await axios.get(`${process.env.REACT_APP_API_URL}/api/health/by-uid/${uid}`);
           setHealth(health_response.data);
           
           setUpdatedData({
@@ -72,7 +72,7 @@ const Dashboard = ({ uid }) => {
         dataToSend = { [field]: updatedData[field] };
       }
 
-      const response = await axios.put(`http://localhost:4000/api/patients/${uid}`, dataToSend);
+      const response = await axios.put(`${process.env.REACT_APP_API_URL}/api/patients/${uid}`, dataToSend);
       if (response.status === 200) {
         alert("Patient Updated Successfully");
       } else {
@@ -86,7 +86,7 @@ const Dashboard = ({ uid }) => {
 
   const handleHealthUpdateSubmit = async () => {
     try {
-      const response = await axios.put(`http://localhost:4000/api/health/by-uid/${uid}`, updatedHealthData);
+      const response = await axios.put(`${process.env.REACT_APP_API_URL}/api/health/by-uid/${uid}`, updatedHealthData);
       if (response.status === 200) {
         alert("Health Record Updated Successfully");
         setHealth(updatedHealthData); // Update local state

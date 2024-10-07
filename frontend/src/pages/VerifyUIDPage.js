@@ -14,7 +14,7 @@
 //     event.preventDefault();
 
 //     try {
-//       const response = await axios.post('http://localhost:4000/api/patients/verify-uid', { uid: uidInput });
+//       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/patients/verify-uid`, { uid: uidInput });
 //       console.log('UID verification successful', response);
 
 //       if (response.status === 200) {
@@ -71,7 +71,7 @@ const VerifyUIDPage = () => {
 
   useEffect(() => {
     const connectWebSocket = () => {
-      const ws = new WebSocket('ws://localhost:8080'); // Assuming WebSocket server is on port 8080
+      const ws = new WebSocket(`${process.env.REACT_APP_wsPORT}`); // Assuming WebSocket server is on port 8080
 
       ws.onopen = () => {
         console.log('Connected to WebSocket');
@@ -105,7 +105,7 @@ const VerifyUIDPage = () => {
     setError(''); // Reset error state before verification
 
     try {
-      const response = await axios.post('http://localhost:4000/api/patients/verify-uid', { uid: uidInput });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/patients/verify-uid`, { uid: uidInput });
       console.log('UID verification successful', response);
 
       if (response.status === 200) {

@@ -23,7 +23,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await axios.post('http://localhost:4000/api/health/{by-uid}', healthData);
+//       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/health/{by-uid}`, healthData);
 //       console.log('Health record added successfully:', response.data);
 //       alert("Health Record Added Successfully");
 //       resetForm(); // Reset form after submission
@@ -99,7 +99,7 @@ const Health = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/api/health/by-uid', healthData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/health/by-uid`, healthData);
       console.log('Health record added successfully:', response.data);
       alert("Health Record Added Successfully");
       resetForm();

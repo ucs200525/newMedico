@@ -13,9 +13,9 @@ const DashboardUser = ({ uid }) => {
     const fetchPatientData = async () => {
       try {
         //await new Promise((resolve) => setTimeout(resolve, 20));
-        const response = await axios.get(`http://localhost:4000/api/patients/${uid}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/patients/${uid}`);
         setPatient(response.data);
-        const health_response = await axios.get(`http://localhost:4000/api/health/by-uid/${uid}`);
+        const health_response = await axios.get(`${process.env.REACT_APP_API_URL}/api/health/by-uid/${uid}`);
         setHealth(health_response.data);
       } catch (error) {
         setError('Error fetching patient data: ' + error.message);

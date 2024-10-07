@@ -12,7 +12,7 @@ const RegisterPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-    const response = await axios.post('http://localhost:4000/api/auth/register', { name, email, password });
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, { name, email, password });
     console.log('Registration successful', response.data);
       if (response.status === 201) {
         alert("Successfully Registered");

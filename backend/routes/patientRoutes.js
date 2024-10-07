@@ -7,7 +7,7 @@ const { authenticateToken, authorizeAdmin } = require('../middleware/authMiddlew
 
 
 
-const JWT_SECRET=process.env.JWT_SECRET||"e24a7e342be9ef60b84f73f4698f4227d5ae4dfc5e452d7f012bf5fe02f58e4c8f73a2c5baf980927f1e9e2e645d8473f1df9ad7f4c53ae7c5ef4fdc7f1c2e0b";
+const JWT_SECRET=process.env.JWT_SECRET;
 
 
 // @route   GET /api/patients/:uid

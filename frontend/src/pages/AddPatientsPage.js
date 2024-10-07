@@ -35,7 +35,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await axios.post('http://localhost:4000/api/patients', patientData);
+//       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/patients`, patientData);
 //       console.log('Patient added successfully:', response.data);
 //       // Clear form or show success message
 //       resetForm(); // Optional: Reset form after submission
@@ -131,7 +131,7 @@
 //     setErrorMessage(''); // Reset any previous error messages
 //     Navigate("/HealthPage");
 //     try {
-//       const response = await axios.post('http://localhost:4000/api/patients', patientData);
+//       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/patients`, patientData);
 //       console.log('Patient added successfully:', response.data);
 //       alert("Patient Added Successfully");
 //       resetForm(); // Reset form after successful submission
@@ -230,7 +230,7 @@ const Patients = () => {
     setErrorMessage('');
     
     try {
-      const response = await axios.post('http://localhost:4000/api/patients', patientData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/patients`, patientData);
       console.log('Patient added successfully:', response.data);
       alert("Patient Added Successfully");
 

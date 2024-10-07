@@ -16,7 +16,7 @@
 //   useEffect(() => {
 //     const fetchPrescriptions = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:4000/api/prescriptions/by-uid/${uid}`);
+//         const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`);
 //         setPrescriptions(response.data);
 //       } catch (error) {
 //         console.error('Error fetching prescription data:', error);
@@ -50,7 +50,7 @@
 //     if (editingPrescription) {
 //       // Update prescription
 //       try {
-//         await axios.put(`http://localhost:4000/api/prescriptions/by-uid/${uid}`, formData);
+//         await axios.put(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`, formData);
 //         setPrescriptions(prescriptions.map(prescription =>
 //           prescription._id === editingPrescription._id ? { ...prescription, ...formData } : prescription
 //         ));
@@ -62,7 +62,7 @@
 //     } else {
 //       // Add new prescription
 //       try {
-//         const response = await axios.post(`http://localhost:4000/api/prescriptions/by-uid/${uid}`, formData);
+//         const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`, formData);
 //         setPrescriptions([...prescriptions, response.data]);  // Use the response data that contains the new prescription
 //         resetForm();
 //       } catch (error) {
@@ -86,7 +86,7 @@
 
 //   const handleDelete = async (id) => {
 //     try {
-//       await axios.delete(`http://localhost:4000/api/prescriptions/by-uid/${uid}`);
+//       await axios.delete(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`);
 //       setPrescriptions(prescriptions.filter(prescription => prescription._id !== id));
 //     } catch (error) {
 //       console.error('Error deleting prescription:', error);
@@ -167,7 +167,7 @@ const Prescriptions = ({ uid }) => {
     const fetchPrescriptions = async () => {
       setLoading(true); // Start loading
       try {
-        const response = await axios.get(`http://localhost:4000/api/prescriptions/by-uid/${uid}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`);
         setPrescriptions(response.data);
       } catch (error) {
         console.error('Error fetching prescription data:', error);
@@ -204,7 +204,7 @@ const Prescriptions = ({ uid }) => {
       // Update prescription
       setLoading(true); // Start loading for the update
       try {
-        await axios.put(`http://localhost:4000/api/prescriptions/by-uid/${uid}`, formData);
+        await axios.put(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`, formData);
         setPrescriptions(prescriptions.map(prescription =>
           prescription._id === editingPrescription._id ? { ...prescription, ...formData } : prescription
         ));
@@ -219,7 +219,7 @@ const Prescriptions = ({ uid }) => {
       // Add new prescription
       setLoading(true); // Start loading for the submission
       try {
-        const response = await axios.post(`http://localhost:4000/api/prescriptions/by-uid/${uid}`, formData);
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`, formData);
         setPrescriptions([...prescriptions, response.data]);  // Use the response data that contains the new prescription
         resetForm();
       } catch (error) {
@@ -246,7 +246,7 @@ const Prescriptions = ({ uid }) => {
   const handleDelete = async (id) => {
     setLoading(true); // Start loading for deletion
     try {
-      await axios.delete(`http://localhost:4000/api/prescriptions/by-uid/${uid}/${id}`); // Ensure the correct endpoint is used
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}/${id}`); // Ensure the correct endpoint is used
       setPrescriptions(prescriptions.filter(prescription => prescription._id !== id));
     } catch (error) {
       console.error('Error deleting prescription:', error);

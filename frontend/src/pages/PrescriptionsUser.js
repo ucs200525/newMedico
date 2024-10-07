@@ -10,7 +10,7 @@
 //   useEffect(() => {
 //     const fetchPrescriptions = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:4000/api/prescriptions/by-uid/${uid}`);
+//         const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`);
 //         setPrescriptions(response.data);
 //       } catch (error) {
 //         console.error('Error fetching prescription data:', error);
@@ -52,7 +52,7 @@ const UserPrescriptions = ({ uid }) => {
   useEffect(() => {
     const fetchPrescriptions = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/prescriptions/by-uid/${uid}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`);
         setPrescriptions(response.data);
       } catch (error) {
         console.error('Error fetching prescription data:', error);
