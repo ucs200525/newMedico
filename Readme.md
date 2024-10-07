@@ -1,6 +1,4 @@
-Here's a template for your `README.md` based on the context of your project:
 
----
 
 # NewMedico - Hospital Management System
 
