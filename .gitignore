@@ -6,11 +6,11 @@
 /task.txt
 # Ignore frontend node_modules and .env
 /frontend/node_modules/
-/frontend/.env
+/frontend/.env/
 
 # Ignore backend node_modules and .env
 /backend/node_modules/
-/backend/.env
+/backend/.env/
 /.pnp
 .pnp.js
 
