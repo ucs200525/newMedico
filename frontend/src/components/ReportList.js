@@ -8,7 +8,7 @@ const ReportList = () => {
   useEffect(() => {
     const fetchReports = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/reports');
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/reports`);
         setReports(response.data);
       } catch (error) {
         console.error('No reports found', error);
@@ -20,7 +20,7 @@ const ReportList = () => {
 
   const handleDelete = async (reportId) => {
     try {
-      await axios.delete(`http://localhost:4000/api/reports/${reportId}`);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/reports/${reportId}`);
       setReports(reports.filter(report => report._id !== reportId));
     } catch (error) {
       console.error('Error deleting report:', error);
