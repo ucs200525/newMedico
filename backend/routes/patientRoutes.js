@@ -68,7 +68,7 @@ router.put('/:uid', async (req, res) => {
 
     res.json(updatedPatient);
   } catch (err) {
-    console.error('Error updating patient:', err);
+    logger.error('Error updating patient:', err);
     res.status(500).json({ message: 'Server error' });
   }
 });
@@ -171,6 +171,7 @@ router.post('/arduino/:uid', async (req, res) => {
   logger.info(`Sending latest UID to frontend: ${latestUID}`);
   return res.status(200).json({ uid: uid });
 });
+
 // @route   GET /api/patients/latest-uid
 // @desc    Return the latest UID (polled by frontend)
 // @access  Public

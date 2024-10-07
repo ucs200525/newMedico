@@ -1,7 +1,7 @@
 const mongoose = require('mongoose'); 
 
 const healthSchema = new mongoose.Schema({
-  patientId: { type: mongoose.Schema.Types.ObjectId, ref: 'Patients', required: true },  // Added required for patientId
+  patientId: { type: mongoose.Schema.Types.ObjectId, ref: 'Patients' }, 
   uid: { type: String, required: true, unique: true },
   eyeSight: { type: String },  // Fixed typo from eyeSite to eyeSight
   height: { type: Number },

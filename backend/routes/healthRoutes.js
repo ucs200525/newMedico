@@ -14,7 +14,10 @@ router.post('/by-uid', async (req, res) => {
   try {
     // Find the patient by UID
     const patient = await Patients.findOne({ uid });
-
+    if(!patient){
+      logger.warn(`patient record not found for UID: ${uid}`);
+      return res.status(404).json({ message: 'patient record not found for UID' });
+    }
     const healthRecord = new Health({ uid, bloodGroup, sugar, bp, infections, diseases, eyeSite, height, weight, BMI });
 
     await healthRecord.save();
@@ -58,7 +61,7 @@ router.put('/by-uid/:uid', async (req, res) => {
 // @route   DELETE /api/health/by-uid/:uid/:id
 // @desc    Delete health record by patient UID (Admin only)
 // @access  Private (Admin)
-router.delete('/by-uid/:uid/', async (req, res) => {
+router.delete('/by-uid/:uid', async (req, res) => {
   const { uid, id } = req.params;
 
   try {

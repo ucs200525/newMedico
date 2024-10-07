@@ -4956,3 +4956,260 @@
 2024-10-06T18:42:06.921Z [WARN]: No prescriptions found for UID: uid0000
 2024-10-06T18:42:06.943Z [WARN]: No prescriptions found for UID: uid0000
 >>>>>>> d72d38a0cf39e24c2a01e93b3bc5b078ed4e0f5c
+2024-10-07T04:08:27.565Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T04:09:02.227Z [INFO]: New patient added: uid
+2024-10-07T04:09:20.663Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T04:09:23.430Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T04:09:32.653Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T04:09:48.608Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T04:11:00.145Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T04:12:30.052Z [INFO]: UID verified: uid111
+2024-10-07T04:12:30.215Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:12:30.236Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:12:56.309Z [INFO]: Health record updated successfully for UID: uid111
+2024-10-07T04:12:59.864Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:12:59.873Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:13:03.431Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:13:03.453Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:13:05.730Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:13:05.745Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:13:15.274Z [INFO]: User logged in successfully
+2024-10-07T04:13:19.108Z [INFO]: UID verified: uid111
+2024-10-07T04:13:19.262Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:13:19.267Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:13:41.865Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T04:14:13.195Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T04:14:32.318Z [INFO]: UID verified: uid111
+2024-10-07T04:14:32.441Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:14:32.456Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:14:39.266Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T04:14:41.852Z [INFO]: UID verified: uid111
+2024-10-07T04:14:41.993Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:14:42.008Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:14:45.948Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:14:45.962Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:14:51.041Z [INFO]: User logged in successfully
+2024-10-07T04:14:59.976Z [INFO]: UID verified: uid111
+2024-10-07T04:15:00.104Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:15:00.111Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:15:01.823Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:15:01.827Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:15:02.652Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:15:02.657Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:15:03.649Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:15:03.665Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:15:04.192Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:15:04.207Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:15:11.588Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:15:11.594Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:15:12.612Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:15:12.622Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:15:20.820Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T04:15:26.533Z [INFO]: UID verified: uid111
+2024-10-07T04:15:26.661Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:15:26.675Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:15:29.180Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:15:29.187Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:15:44.228Z [INFO]: New report uploaded for patient UID: uid111
+2024-10-07T04:15:44.348Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:16:04.107Z [INFO]: User logged in successfully
+2024-10-07T04:16:08.464Z [INFO]: UID verified: uid111
+2024-10-07T04:16:08.586Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:16:08.594Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:16:10.436Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:16:10.450Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:16:35.368Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:16:35.374Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T04:16:36.286Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:16:36.290Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:16:40.187Z [INFO]: User logged in successfully
+2024-10-07T04:16:43.198Z [INFO]: UID verified: uid111
+2024-10-07T04:16:43.315Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:16:43.318Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:16:46.550Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:16:46.556Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:16:56.165Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T04:16:59.238Z [INFO]: UID verified: uid111
+2024-10-07T04:16:59.354Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:16:59.377Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T04:17:01.367Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:17:01.371Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T04:17:05.697Z [INFO]: Report deleted successfully for UID: uid111
+2024-10-07T04:17:05.775Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:20:06.089Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:20:08.092Z [INFO]: UID verified: uid
+2024-10-07T06:20:08.219Z [INFO]: Fetched health records for UID: uid
+2024-10-07T06:20:08.266Z [INFO]: Fetched health records for UID: uid
+2024-10-07T06:20:12.217Z [INFO]: Fetched health records for UID: uid
+2024-10-07T06:20:12.223Z [INFO]: Fetched health records for UID: uid
+2024-10-07T06:20:22.752Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:20:27.254Z [INFO]: UID verified: uid111
+2024-10-07T06:20:27.399Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:20:27.432Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:20:31.668Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:20:31.695Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:20:33.077Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:20:33.082Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:20:34.667Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:20:34.703Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:22:00.963Z [INFO]: User logged in successfully
+2024-10-07T06:22:42.574Z [INFO]: User registered successfully: newUser@gmail.com
+2024-10-07T06:23:12.688Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:23:18.322Z [INFO]: UID verified: uid111
+2024-10-07T06:23:18.431Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:23:18.452Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:25:09.795Z [INFO]: User logged in successfully
+2024-10-07T06:25:14.452Z [INFO]: UID verified: uid111
+2024-10-07T06:25:14.590Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:25:14.595Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:25:18.239Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:25:18.244Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:25:19.067Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:25:19.074Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:25:20.793Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:25:20.803Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:25:26.013Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:25:29.197Z [INFO]: UID verified: uid111
+2024-10-07T06:25:29.304Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:25:29.327Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:25:31.643Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:25:31.647Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:25:32.594Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:25:32.598Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:25:35.495Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:25:35.514Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:34:37.733Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:34:45.639Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-10-07T06:37:31.185Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:37:46.102Z [WARN]: Login attempt failed: User not found for email wci@gmail.com
+2024-10-07T06:40:16.615Z [WARN]: Login attempt failed: User not found for email wci@gmail.com
+2024-10-07T06:40:20.213Z [WARN]: Login attempt failed: User not found for email wci@gmail.com
+2024-10-07T06:40:20.866Z [WARN]: Login attempt failed: User not found for email wci@gmail.com
+2024-10-07T06:40:21.480Z [WARN]: Login attempt failed: User not found for email wci@gmail.com
+2024-10-07T06:40:22.722Z [WARN]: Login attempt failed: User not found for email wci@gmail.com
+2024-10-07T06:43:56.190Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:44:02.101Z [WARN]: UID verification failed: UID uid not found
+2024-10-07T06:49:52.438Z [INFO]: UID verified: uid111
+2024-10-07T06:49:52.558Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:49:52.577Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:49:57.954Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:49:59.913Z [WARN]: UID verification failed: UID uid not found
+2024-10-07T06:50:31.000Z [WARN]: UID verification failed: UID uid not found
+2024-10-07T06:51:17.895Z [WARN]: UID verification failed: UID uid not found
+2024-10-07T06:51:22.920Z [INFO]: UID verified: uid111
+2024-10-07T06:51:23.037Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:51:23.054Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:51:25.331Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:51:25.338Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:51:26.149Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:51:26.165Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:51:26.823Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:51:26.827Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:51:27.505Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:51:27.510Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:51:29.082Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:51:29.088Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:51:29.647Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:51:29.650Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:51:30.826Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:51:30.846Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:51:48.558Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:51:48.562Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:52:05.653Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:52:05.658Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:52:07.319Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:52:07.323Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:52:11.209Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:52:11.229Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:52:12.395Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:52:12.402Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:52:13.800Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:52:13.806Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:52:16.226Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:52:16.244Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:52:33.384Z [INFO]: User logged in successfully
+2024-10-07T06:52:39.599Z [WARN]: UID verification failed: UID uid001 not found
+2024-10-07T06:52:44.575Z [INFO]: UID verified: uid111
+2024-10-07T06:52:44.682Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:52:44.706Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:52:47.160Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:52:47.166Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T06:52:47.741Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:52:47.750Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T06:52:48.373Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:52:48.377Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:53:41.870Z [WARN]: Login attempt failed: User not found for email jknef@wfji
+2024-10-07T06:54:08.100Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:54:10.062Z [WARN]: UID verification failed: UID uid not found
+2024-10-07T06:54:14.831Z [INFO]: UID verified: uid111
+2024-10-07T06:54:14.952Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:54:14.958Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T06:56:56.568Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T06:57:13.392Z [INFO]: New patient added: 22
+2024-10-07T06:57:25.268Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T06:57:25.889Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T06:57:31.033Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:00:11.429Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:00:12.039Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:00:12.634Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:00:12.938Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:00:13.456Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:00:17.466Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:00:17.806Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:01:53.793Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-10-07T07:02:13.397Z [INFO]: New patient added: 51
+2024-10-07T07:02:23.449Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:04:52.799Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:04:59.555Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:06:24.963Z [ERROR]: Error adding health record: Health validation failed: patientId: Path `patientId` is required.
+2024-10-07T07:10:03.674Z [INFO]: New health record added for patient UID: 51
+2024-10-07T07:10:20.190Z [ERROR]: Error adding health record: E11000 duplicate key error collection: Project.health index: uid_1 dup key: { uid: "51" }
+2024-10-07T07:10:22.328Z [ERROR]: Error adding health record: E11000 duplicate key error collection: Project.health index: uid_1 dup key: { uid: "51" }
+2024-10-07T07:11:22.462Z [INFO]: New health record added for patient UID: 588888888
+2024-10-07T07:12:43.545Z [WARN]: patient record not found for UID: 51gtfrdes
+2024-10-07T07:14:35.440Z [ERROR]: Error adding health record: Health validation failed: bloodGroup: Path `bloodGroup` is required., sugar: Path `sugar` is required., bp: Path `bp` is required.
+2024-10-07T07:15:01.176Z [ERROR]: Error adding health record: Health validation failed: bloodGroup: Path `bloodGroup` is required., sugar: Path `sugar` is required., bp: Path `bp` is required.
+2024-10-07T07:15:40.523Z [ERROR]: Error adding health record: Health validation failed: bloodGroup: Path `bloodGroup` is required., sugar: Path `sugar` is required., bp: Path `bp` is required.
+2024-10-07T07:16:19.228Z [ERROR]: Error adding health record: Health validation failed: bloodGroup: Path `bloodGroup` is required., sugar: Path `sugar` is required., bp: Path `bp` is required.
+2024-10-07T07:24:07.789Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-10-07T07:24:29.567Z [INFO]: New patient added: uif
+2024-10-07T07:25:19.588Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T07:25:51.950Z [INFO]: New patient added: uid
+2024-10-07T07:25:52.045Z [INFO]: New health record added for patient UID: uid
+2024-10-07T07:31:05.010Z [INFO]: New patient added: uidnew
+2024-10-07T07:31:43.940Z [INFO]: New patient added: 0
+2024-10-07T07:31:51.871Z [INFO]: New health record added for patient UID: 0
+2024-10-07T07:32:52.170Z [INFO]: New patient added: uid000000000
+2024-10-07T07:41:38.725Z [WARN]: patient record not found for UID: uid578
+2024-10-07T07:43:54.506Z [INFO]: New patient added: uid578
+2024-10-07T07:43:54.632Z [INFO]: New health record added for patient UID: uid578
+2024-10-07T07:45:22.353Z [INFO]: New patient added: uid111122222
+2024-10-07T07:46:18.941Z [ERROR]: Error adding patient: E11000 duplicate key error collection: Project.patients index: uid_1 dup key: { uid: "uid111122222" }
+2024-10-07T07:46:21.857Z [ERROR]: Error adding patient: E11000 duplicate key error collection: Project.patients index: uid_1 dup key: { uid: "uid111122222" }
+2024-10-07T07:46:22.336Z [ERROR]: Error adding patient: E11000 duplicate key error collection: Project.patients index: uid_1 dup key: { uid: "uid111122222" }
+2024-10-07T07:46:22.454Z [ERROR]: Error adding patient: E11000 duplicate key error collection: Project.patients index: uid_1 dup key: { uid: "uid111122222" }
+2024-10-07T07:46:22.619Z [ERROR]: Error adding patient: E11000 duplicate key error collection: Project.patients index: uid_1 dup key: { uid: "uid111122222" }
+2024-10-07T07:46:22.896Z [ERROR]: Error adding patient: E11000 duplicate key error collection: Project.patients index: uid_1 dup key: { uid: "uid111122222" }
+2024-10-07T07:48:42.831Z [INFO]: User registered successfully: email@gmail.com
+2024-10-07T07:49:02.947Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T07:49:05.680Z [WARN]: UID verification failed: UID uid not found
+2024-10-07T07:49:09.943Z [WARN]: UID verification failed: UID uid000 not found
+2024-10-07T07:49:14.808Z [INFO]: UID verified: uid111
+2024-10-07T07:49:14.941Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T07:49:14.957Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T07:49:17.896Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T07:49:17.903Z [INFO]: Fetched prescriptions for UID: uid111
+2024-10-07T07:49:19.153Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T07:49:19.156Z [INFO]: Fetched reports for UID: uid111
+2024-10-07T07:49:28.897Z [INFO]: New patient added: newn
+2024-10-07T07:49:37.367Z [INFO]: New health record added for patient UID: newn
+2024-10-07T07:51:12.999Z [ERROR]: Error adding health record: E11000 duplicate key error collection: Project.health index: uid_1 dup key: { uid: "newn" }
+2024-10-07T07:51:18.878Z [WARN]: patient record not found for UID: newn1
+2024-10-07T07:51:19.730Z [WARN]: patient record not found for UID: newn1
+2024-10-07T07:51:34.898Z [INFO]: New patient added: uid11111111
+2024-10-07T07:51:43.674Z [INFO]: New health record added for patient UID: uid11111111
+2024-10-07T07:51:45.196Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T07:51:45.217Z [INFO]: Fetched health records for UID: uid111
+2024-10-07T07:51:57.307Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-07T07:52:11.445Z [INFO]: New patient added: uid000
+2024-10-07T07:52:19.225Z [INFO]: New health record added for patient UID: uid000

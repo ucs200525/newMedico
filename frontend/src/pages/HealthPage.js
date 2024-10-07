@@ -69,12 +69,14 @@
 
 // export default Health;
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; // Import useLocation to receive passed props
+import { useLocation,useNavigate  } from 'react-router-dom'; // Import useLocation to receive passed props
 import axios from 'axios';
 
 const Health = () => {
   const location = useLocation(); // To access the passed props
+  const navigate = useNavigate();
   const { uid } = location.state || {}; // Extract the UID from the state
+  const [error, setError] = useState('');
 
   const [healthData, setHealthData] = useState({
     uid: uid || '',  // Pre-fill UID if available
@@ -101,8 +103,10 @@ const Health = () => {
       console.log('Health record added successfully:', response.data);
       alert("Health Record Added Successfully");
       resetForm();
+      navigate("/Dashboard");
     } catch (error) {
       console.error('Error adding health record:', error.response ? error.response.data : error.message);
+      setError('Error adding health record.');
     }
   };
 
@@ -142,6 +146,7 @@ const Health = () => {
         <input type="text" name="infections" placeholder="Infections" onChange={handleChange} />
         <input type="text" name="diseases" placeholder="Diseases" onChange={handleChange} />
         <button type="submit">Add Health Record</button>
+        {error && <p id='registerError' style={{ color: 'red' }}>{error}</p>}
       </form>
     </div>
   );

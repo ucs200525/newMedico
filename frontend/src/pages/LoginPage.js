@@ -80,7 +80,7 @@ const LoginPage = () => {
       login(response.data.token, response.data.role, response.data.name); // Pass the username
       navigate('/verify-uid');
     } catch (err) {
-      setError('Login failed. Please check your credentials.');
+      setError('Invalid LoginId/Password.');
       console.error('Login error:', err);
     } finally {
       setLoading(false); // Set loading to false after the API call completes
@@ -90,33 +90,18 @@ const LoginPage = () => {
   if (loading) {
     return <LoadingSpinner />; // Show spinner when loading
   }
-
   return (
     <div>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <label>Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <label>Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
+        <label>Email: <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} required /></label>
+        <label>Password: <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} required /></label>
         <button type="submit">Login</button>
+        {error && <p id='loginError' style={{ color: 'red' }}>{error}</p>}
       </form>
-      {error && <p>{error}</p>}
     </div>
   );
-};
-
+  };
+  
 export default LoginPage;
 //with loading 

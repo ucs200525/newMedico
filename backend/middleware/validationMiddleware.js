@@ -3,13 +3,14 @@ const validateRegister = (req, res, next) => {
     const { name, email, password } = req.body;
 
     // Basic validation checks
-    if (!name || !email || !password ) {
+    if (!name || !email || !password) {
         return res.status(400).json({ message: 'All fields are required for registration' });
-        
     }
-    // Check if password is strong enough
-    if (password.length < 1) {
-        return res.status(400).json({ message: 'Password must be at least 1 characters long' });
+
+    // Check if password is strong enough: at least 8 characters, one uppercase, and one lowercase letter
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    if (!passwordRegex.test(password)) {
+        return res.status(400).json({ message: '1.Password must be at least 8 characters long \n2.Contain atleast one uppercase and one lowercase letters' });
     }
 
     next(); // Proceed to the next middleware or controller
@@ -28,10 +29,3 @@ const validateLogin = (req, res, next) => {
 };
 
 module.exports = { validateRegister, validateLogin };
-
-
-/* Length more than 8 char
-    should contain at least one upper and lower case
-    
-
-*/
