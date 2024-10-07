@@ -5,6 +5,7 @@ import LoadingSpinner from '../components/LoadingSpinner'; // Import the spinner
 
 const DashboardUser = ({ uid }) => {
   const [patient, setPatient] = useState(null);
+  const [health, setHealth] = useState(null);
   const [loading, setLoading] = useState(true); // Add loading state
   const [error, setError] = useState('');
 
@@ -14,6 +15,8 @@ const DashboardUser = ({ uid }) => {
         //await new Promise((resolve) => setTimeout(resolve, 20));
         const response = await axios.get(`http://localhost:4000/api/patients/${uid}`);
         setPatient(response.data);
+        const health_response = await axios.get(`http://localhost:4000/api/health/by-uid/${uid}`);
+        setHealth(health_response.data);
       } catch (error) {
         setError('Error fetching patient data: ' + error.message);
       } finally {
@@ -65,6 +68,43 @@ const DashboardUser = ({ uid }) => {
             <td><strong>Phone:</strong></td>
             <td>{patient.otherFields?.phone || 'N/A'}</td>
           </tr>
+          <tr>
+            <td><strong>Blood Pressure:</strong></td>
+            <td>{health.bp || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>Sugar:</strong></td>
+            <td>{health.sugar || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>BloodGroup:</strong></td>
+            <td>{health.bloodGroup || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>Height:</strong></td>
+            <td>{health.height || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>Weight:</strong></td>
+            <td>{health.weight || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>BMI:</strong></td>
+            <td>{health.BMI || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>EyeSight:</strong></td>
+            <td>{health.eyeSight || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>Infections:</strong></td>
+            <td>{health.infections || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td><strong>Chronic Diseases:</strong></td>
+            <td>{health.diseases || 'N/A'}</td>
+          </tr>
+          
         </tbody>
       </table>
     </div>

@@ -1,19 +1,20 @@
 const mongoose = require('mongoose'); 
 
-const userSchema = new mongoose.Schema({
-  patientId: { type: mongoose.Schema.Types.ObjectId, ref: 'Patients' }, 
-  eyeSite: { type: String }, // Specify type for eyeSite
-  height: { type: Number }, // Specify type for height
-  weight: { type: Number }, // Corrected typo from 'wiehht' to 'weight'
-  BMI: { type: Number }, // Specify type for BMI
+const healthSchema = new mongoose.Schema({
+  patientId: { type: mongoose.Schema.Types.ObjectId, ref: 'Patients', required: true },  // Added required for patientId
+  uid: { type: String, required: true, unique: true },
+  eyeSight: { type: String },  // Fixed typo from eyeSite to eyeSight
+  height: { type: Number },
+  weight: { type: Number },
+  BMI: { type: Number },
   bloodGroup: { type: String, required: true }, 
   sugar: { type: Number, required: true }, 
   bp: { type: String, required: true }, 
-  infections: { type: String }, 
+  infections: { type: String },
   diseases: { type: String }
 });
 
 // Create the Health model
-const Health = mongoose.model('Health', userSchema);
+const Health = mongoose.model('Health', healthSchema);
 
 module.exports = Health;

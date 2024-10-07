@@ -1,31 +1,36 @@
-const { SerialPort } = require('serialport');
-const { ReadlineParser } = require('@serialport/parser-readline');  // Correct import for the parser
-
-// Set up WebSocket server
 const WebSocket = require('ws');
-const wss = new WebSocket.Server({ port: 8080 });
+const http = require('http');
 
-// Set up serial port communication (adjust COM port and baud rate as per your Arduino configuration)
-const port = new SerialPort({ path: 'COM3', baudRate: 9600 }); 
-const parser = port.pipe(new ReadlineParser({ delimiter: '\r\n' })); // Correctly instantiate the ReadlineParser
+// HTTP server setup
+const server = http.createServer((req, res) => {
+  res.end('WebSocket server running...\n');
+});
 
-// On connection to WebSocket
+// WebSocket server setup
+const wss = new WebSocket.Server({ server });
+
 wss.on('connection', (ws) => {
-  console.log('Client connected to WebSocket');
-  
-  // Listen for data from Arduino
-  parser.on('data', (uid) => {
-    console.log('UID from Arduino:', uid);
-    
-    // Send UID to the frontend
-    ws.send(uid);
+  console.log('Client connected');
+
+  ws.on('message', (message) => {
+    console.log(`Received message: ${message}`);
+    console.log(`Received from Arduino: ${message}`);
+    wss.clients.forEach((client) => {
+    console.log(`Client readyState: ${client.readyState}`); // Check the client's state
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(message);
+      console.log('Message sent to client');
+    }
+  });
+
   });
 
   ws.on('close', () => {
-    console.log('Client disconnected from WebSocket');
+    console.log('Client disconnected');
   });
 });
 
-port.on('error', (err) => {
-  console.error('Serial port error:', err.message);
+// Start server
+server.listen(8080, () => {
+  console.log('Server listening on port 8080');
 });

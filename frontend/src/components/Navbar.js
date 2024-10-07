@@ -38,7 +38,7 @@ const Navbar = () => {
                     <li><button onClick={() => handleNavigation('/reports')}>Reports</button></li>
                     <li><button onClick={() => navigate('/patients')}>Add Patients</button></li>
                     <li><button onClick={handleLogout}>Logout</button></li>
-                    <li><button>{username}</button></li>
+                    
                   </>
                 ) : role === 'user' ? (
                   <>
