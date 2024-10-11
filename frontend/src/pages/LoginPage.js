@@ -74,7 +74,7 @@ const LoginPage = () => {
     event.preventDefault();
     setLoading(true); // Set loading to true when the request starts
     try {
-      const response = await axios.post(`https://newmedico-1.onrender.com/api/auth/login`, { email, password });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, { email, password });
       console.log('Login successful', response.data);
       localStorage.setItem('token', response.data.token);
       login(response.data.token, response.data.role, response.data.name); // Pass the username
