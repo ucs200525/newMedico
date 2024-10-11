@@ -21,9 +21,10 @@ app.use(cors({
   credentials: true, // Enable sending cookies with cross-origin requests
 }));
 
-app.use("/" , async (req, res) => {
-  res.json("Deployment Succesfull");
-})
+app.get("/", (req, res) => {
+  res.json("Deployment Successful");
+});
+
 
 // Middleware to parse JSON bodies
 app.use(express.json());
