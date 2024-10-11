@@ -1,0 +1,50 @@
+[
+    {
+        "uid": 10001,
+        "medication": "Salbutamol Inhaler",
+        "dosage": "1 puff as needed for wheezing",
+        "duration": "Until symptoms resolve"
+    },
+    {
+        "uid": 10002,
+        "medication": "Cetirizine",
+        "dosage": "10 mg once daily",
+        "duration": "As needed for allergies"
+    },
+    {
+        "uid": 10003,
+        "medication": "Amlodipine",
+        "dosage": "5 mg once daily",
+        "duration": "Indefinitely for hypertension"
+    },
+    {
+        "uid": 10004,
+        "medication": "Oseltamivir",
+        "dosage": "75 mg twice daily",
+        "duration": "5 days for flu"
+    },
+    {
+        "uid": 10005,
+        "medication": "Atorvastatin",
+        "dosage": "10 mg once daily",
+        "duration": "As prescribed for cholesterol"
+    },
+    {
+        "uid": 10006,
+        "medication": "Iron supplements",
+        "dosage": "Iron 65 mg once daily",
+        "duration": "Until blood levels are normal"
+    },
+    {
+        "uid": 10007,
+        "medication": "Ibuprofen",
+        "dosage": "400 mg as needed for pain",
+        "duration": "As needed"
+    },
+    {
+        "uid": 10008,
+        "medication": "Eye drops",
+        "dosage": "1 drop in each eye twice daily",
+        "duration": "Until symptoms improve"
+    }
+]
