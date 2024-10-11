@@ -71,7 +71,7 @@ const VerifyUIDPage = () => {
 
   useEffect(() => {
     const connectWebSocket = () => {
-      const ws = new WebSocket(`${process.env.REACT_APP_wsPORT}`); // Assuming WebSocket server is on port 8080
+      const ws = new WebSocket(`${process.env.REACT_APP_API_URL}`); // Assuming WebSocket server is on port 8080
 
       ws.onopen = () => {
         console.log('Connected to WebSocket');
