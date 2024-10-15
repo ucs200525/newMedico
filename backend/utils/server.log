@@ -5506,3 +5506,19 @@
 2024-10-15T10:25:08.219Z [INFO]: Fetched health records for UID: 93a9501c
 2024-10-15T10:25:32.011Z [INFO]: User logged in successfully: testUser1@gmail.com
 2024-10-15T10:36:18.903Z [INFO]: User logged in successfully
+2024-10-15T18:07:31.661Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-15T18:11:42.400Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-15T18:11:50.036Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-15T18:11:52.688Z [INFO]: User logged in successfully
+2024-10-15T18:12:31.562Z [INFO]: User logged in successfully: testUser@gmail.com
+2024-10-15T18:12:37.265Z [INFO]: User logged in successfully
+2024-10-15T18:13:17.015Z [INFO]: User logged in successfully
+2024-10-15T18:13:28.844Z [INFO]: User logged in successfully
+2024-10-15T18:14:30.467Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-15T18:14:43.186Z [WARN]: UID verification failed: UID uid111 not found
+2024-10-15T18:14:45.259Z [WARN]: UID verification failed: UID uid111 not found
+2024-10-15T18:15:02.998Z [INFO]: User logged in successfully
+2024-10-15T18:15:05.898Z [INFO]: User logged in successfully
+2024-10-15T18:15:11.207Z [INFO]: User logged in successfully
+2024-10-15T18:17:40.410Z [INFO]: User logged in successfully
+2024-10-15T18:19:00.453Z [INFO]: User logged in successfully
