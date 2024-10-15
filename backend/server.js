@@ -20,7 +20,7 @@ const app = express();
 // Enable CORS for all routes
 const front = "https://new-medico.vercel.app" || "http://localhost:3000";
 app.use(cors({
-  origin: 'front', // Frontend domain
+  origin: front, // Frontend domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
   credentials: true, // Enable sending cookies with cross-origin requests
 }));
