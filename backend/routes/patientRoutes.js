@@ -138,7 +138,8 @@ router.post('/verify-uid', async (req, res) => {
     
     return res.status(200).json({
       token,
-      uid: patient.uid // or however you store the UID
+      uid: patient.uid ,// or however you store the UID
+      name:patient.name
     });
   } catch (error) {
     logger.error(`Error during UID verification: ${error.message}`);

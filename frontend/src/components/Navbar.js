@@ -38,6 +38,7 @@ const Navbar = () => {
                     <li><button onClick={() => handleNavigation('/reports')}>Reports</button></li>
                     <li><button onClick={() => navigate('/patients')}>Add Patients</button></li>
                     <li><button onClick={handleLogout}>Logout</button></li>
+                    {/* <li>{username}</li> */}
                     
                   </>
                 ) : role === 'user' ? (
@@ -46,6 +47,7 @@ const Navbar = () => {
                     <li><button onClick={() => handleNavigation('/PrescriptionsUser')}>Prescriptions User</button></li>
                     <li><button onClick={() => handleNavigation('/ReportsUser')}>Reports User</button></li>
                     <li><button onClick={handleLogout}>Logout</button></li>
+                    {/* <li>{username}</li> */}
                   </>
                 ) : null}
               </>

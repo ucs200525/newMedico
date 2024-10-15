@@ -63,7 +63,7 @@ import LoadingSpinner from '../components/LoadingSpinner'; // Import the spinner
 
 const VerifyUIDPage = () => {
   const [uidInput, setUidInput] = useState(''); // State to store UID from WebSocket
-  const { setUidContext, setRoleContext, role } = useContext(AuthContext);
+  const { setUidContext, role,LoginUserName } = useContext(AuthContext);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false); // Add loading state
   const navigate = useNavigate();
@@ -103,10 +103,12 @@ const VerifyUIDPage = () => {
     event.preventDefault();
     setLoading(true); // Set loading to true when the request starts
     setError(''); // Reset error state before verification
+    
 
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/patients/verify-uid`, { uid: uidInput });
       console.log('UID verification successful', response);
+      LoginUserName(response.data.name)
 
       if (response.status === 200) {
         setUidContext(uidInput); // Set UID in AuthContext

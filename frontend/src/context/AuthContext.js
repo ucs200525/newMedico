@@ -27,6 +27,9 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('username', newUsername); // Store Username in local storage
   };
 
+  const LoginUserName = (name) =>{
+    setUsername(name);
+  };
   const loginUser = (newToken,newRole) =>{
     setIsLoggedIn(true);
     setToken(newToken); // Set token
@@ -34,6 +37,8 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('token', newToken); // Store token in local storage
     localStorage.setItem('role', newRole); // Store Role in local storage
   };
+
+
   
 
 
@@ -60,7 +65,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, login,loginUser, username, logout, uid, setUidContext, role, setRoleContext,setIsLoggedIn }}>
+    <AuthContext.Provider value={{ isLoggedIn, login,loginUser,LoginUserName, username, logout, uid, setUidContext, role, setRoleContext,setIsLoggedIn }}>
       {children}
     </AuthContext.Provider>
   );
