@@ -5496,3 +5496,12 @@
 2024-10-14T18:08:34.635Z [INFO]: User logged in successfully: testUser@gmail.com
 2024-10-14T18:09:29.499Z [INFO]: User logged in successfully: testUser@gmail.com
 2024-10-14T18:09:41.272Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-15T10:24:29.071Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-15T10:24:42.017Z [INFO]: UID verified: 93a9501c
+2024-10-15T10:24:42.355Z [INFO]: Fetched health records for UID: 93a9501c
+2024-10-15T10:24:42.363Z [INFO]: Fetched health records for UID: 93a9501c
+2024-10-15T10:24:57.114Z [INFO]: User logged in successfully
+2024-10-15T10:25:08.136Z [INFO]: UID verified: 93a9501c
+2024-10-15T10:25:08.214Z [INFO]: Fetched health records for UID: 93a9501c
+2024-10-15T10:25:08.219Z [INFO]: Fetched health records for UID: 93a9501c
+2024-10-15T10:25:32.011Z [INFO]: User logged in successfully: testUser1@gmail.com
