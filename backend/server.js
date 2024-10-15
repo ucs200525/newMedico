@@ -20,7 +20,7 @@ const app = express();
 // Enable CORS for all routes
 const front = "https://new-medico.vercel.app" || "http://localhost:3000";
 app.use(cors({
-  origin: front, // Frontend domain
+  origin: '*', // Frontend domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
   credentials: true, // Enable sending cookies with cross-origin requests
 }));
@@ -50,6 +50,11 @@ app.use('/api/health', healthRoutes);          // Health routes
 
 // Error handling middleware
 app.use(errorHandler);
+
+// app.use((req, res, next) => {
+//   res.setHeader('Content-Security-Policy', "connect-src 'self' ws://localhost:4000");
+//   next();
+// });
 
 // Create HTTP server using the Express app
 const server = http.createServer(app);

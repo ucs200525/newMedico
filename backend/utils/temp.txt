@@ -1,0 +1,1 @@
+mango:- mongodb+srv://ECSDB:ECS-Project@cluster.8szfy.mongodb.net/Project

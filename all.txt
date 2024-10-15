@@ -1,0 +1,10 @@
+MONGO_URL=mongodb+srv://ECSDB:ECS-Project@cluster.8szfy.mongodb.net/Project
+JWT_SECRET=e24a7e342be9ef60b84f73f4698f4227d5ae4dfc5e452d7f012bf5fe02f58e4c8f73a2c5baf980927f1e9e2e645d8473f1df9ad7f4c53ae7c5ef4fdc7f1c2e0b
+
+
+REACT_APP_API_URL=https://newmedico-1.onrender.com/
+
+
+https://newmedico-1.onrender.com
+
+https://new-medico.vercel.app
