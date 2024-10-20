@@ -57,39 +57,8 @@ app.use(errorHandler);
 //   next();
 // });
 
-// Create HTTP server using the Express app
-const server = http.createServer(app);
-
-// WebSocket server setup
-const wss = new WebSocket.Server({ server });
-
-wss.on('connection', (ws) => {
-  console.log('Client connected');
-
-  ws.on('message', (message) => {
-    console.log(`Received message: ${message}`);
-    console.log(`Received from Arduino: ${message}`);
-
-    // Broadcast the message to all connected clients
-    wss.clients.forEach((client) => {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(message);
-        console.log('Message sent to client');
-      }
-    });
-  });
-
-  ws.on('close', () => {
-    console.log('Client disconnected');
-  });
-});
-
-// Log a message when WebSocket server is ready
-wss.on('listening', () => {
-  console.log('WebSocket server running');
-});
 
 // Server listening
-server.listen(port, () => {
+app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
