@@ -5646,3 +5646,7 @@
 2024-10-15T19:27:11.298Z [INFO]: User logged in successfully
 2024-10-15T19:27:18.132Z [INFO]: User logged in successfully: testUser1@gmail.com
 2024-10-20T07:15:22.522Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-10-20T07:21:48.537Z [INFO]: UID verified: uid111
+2024-10-20T07:21:48.625Z [INFO]: Fetched health records for UID: uid111
+2024-10-20T07:21:48.664Z [INFO]: Fetched health records for UID: uid111
+2024-10-20T07:21:54.526Z [INFO]: User logged in successfully: testUser1@gmail.com
