@@ -6164,3 +6164,10 @@
 2024-11-04T18:48:20.345Z [INFO]: Fetched health records for UID: 93a9501c
 2024-11-04T18:48:20.357Z [INFO]: Fetched health records for UID: 93a9501c
 2024-11-05T16:02:48.855Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-11-05T16:11:20.957Z [INFO]: User logged in successfully
+2024-11-05T16:11:25.282Z [INFO]: User logged in successfully
+2024-11-05T16:12:24.591Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-11-05T16:22:09.390Z [INFO]: User logged in successfully
+2024-11-05T16:22:15.191Z [WARN]: Login attempt failed: User not found for email medwebt@gmail.com
+2024-11-05T16:23:13.117Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-11-05T16:23:16.317Z [INFO]: User logged in successfully
