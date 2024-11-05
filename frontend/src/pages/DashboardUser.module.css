@@ -1,7 +1,7 @@
-/* Container to center the content */
+/* 
 .dashboardContainer {
   width: 50%;
-  margin: 20px auto; /* Reduces the top margin to move the table up */
+  margin: 20px auto; 
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -10,21 +10,81 @@
   text-align: center;
 }
 
-/* Title styling */
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.patientTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patientTable td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  min-width: 180px; 
+}
+
+.tooltip {
+  cursor: pointer;
+}
+
+
+.patientTable td:first-child {
+  font-weight: bold;
+  background-color: #f1f1f1;
+  width: 30%;
+}
+
+
+.patientTable td:last-child {
+  text-align: left;
+  width: 70%;
+}
+
+
+.patientTable tr:hover {
+  background-color: #f0f8ff;
+}
+
+///////////////////////////for admin only not users///////////////////
+ */
+
+
+
+
+/*
+
+/////////////////////////////////////////for users only////////////////////////////
+.dashboardContainer {
+  width: 50%;
+  margin: 20px auto; 
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+
 h2 {
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: bold;
 }
 
-/* Table styling */
+
 .patientTable {
   width: 100%;
-  margin: 0 auto; /* Align table to the center */
+  margin: 0 auto; 
   border-collapse: collapse;
 }
 
-/* Table row and cell styling */
+
 .patientTable td {
   padding: 10px;
   border: 1px solid #ccc;
@@ -32,25 +92,22 @@ h2 {
   font-size: 16px;
 }
 
-/* First column (field labels) styling */
+
 .patientTable td:first-child {
   font-weight: bold;
   background-color: #f1f1f1;
   width: 30%;
 }
 
-/* Second column (field values) styling */
 .patientTable td:last-child {
   text-align: left;
   width: 70%;
 }
 
-/* Adding hover effect for rows */
 .patientTable tr:hover {
   background-color: #f0f8ff;
 }
 
-/* Modal styles */
 .modal {
   position: fixed;
   top: 0;
@@ -68,12 +125,12 @@ h2 {
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
-  width: 90%; /* Adjusted to allow responsiveness */
-  max-width: 800px; /* Increased max-width for the popup */
+  width: 90%; 
+  max-width: 800px; 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   position: relative;
-  max-height: 80vh; /* Set a max height for the modal */
-  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 80vh;
+  overflow-y: auto; 
 }
 
 .modalContent h2 {
@@ -84,7 +141,6 @@ h2 {
   line-height: 1.6;
 }
 
-/* Close button in the modal */
 .close {
   position: absolute;
   top: 10px;
@@ -101,7 +157,7 @@ h2 {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 200px; /* Set the width of the tooltip */
+  width: 200px; 
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
   text-align: center;
@@ -109,9 +165,9 @@ h2 {
   padding: 5px;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Position above the element */
+  bottom: 125%; 
   left: 50%;
-  margin-left: -100px; /* Center the tooltip */
+  margin-left: -100px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -129,13 +185,12 @@ h2 {
 
 .patientTable td {
   padding: 10px;
-  border: 1px solid #ccc; /* Optional: adds border to cells */
-  text-align: left; /* Align text to the left */
-  min-width: 180px; /* Set a minimum width for the cells */
-
+  border: 1px solid #ccc;
+  text-align: left; 
+  min-width: 180px; 
 }
 
 .tooltip {
   cursor: pointer;
 }
-
+ */

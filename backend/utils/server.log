@@ -6171,3 +6171,15 @@
 2024-11-05T16:22:15.191Z [WARN]: Login attempt failed: User not found for email medwebt@gmail.com
 2024-11-05T16:23:13.117Z [INFO]: User logged in successfully: testUser1@gmail.com
 2024-11-05T16:23:16.317Z [INFO]: User logged in successfully
+2024-11-05T16:46:45.025Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-11-05T16:46:47.585Z [INFO]: User logged in successfully
+2024-11-05T16:46:57.034Z [INFO]: UID verified: 93a9501c
+2024-11-05T16:46:57.511Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-05T16:46:57.522Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-05T16:49:44.883Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-05T16:49:53.958Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-05T16:50:09.118Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-05T16:50:20.240Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-05T16:51:15.501Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-05T16:52:16.554Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-05T16:52:16.559Z [INFO]: Fetched health records for UID: 93a9501c
