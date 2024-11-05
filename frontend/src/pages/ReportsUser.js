@@ -80,9 +80,9 @@ const UserReports = ({ uid }) => {
 
   return (
     <div>
-      <h1>Your Reports for UID: {uid}</h1>
+      <h1>Your Reports</h1>
       {message && <p>{message}</p>}
-      <h2>Existing Reports</h2>
+      
       <ul>
         {reports.length === 0 ? (
           <p>No reports available.</p>

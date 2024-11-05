@@ -269,7 +269,7 @@ const Reports = ({ uid }) => {
 
   return (
     <div>
-      <h1>Patient Reports for UID: {uid}</h1>
+      <h1>Patient Reports</h1>
       {message && <p>{message}</p>}
       <form onSubmit={editingReportId ? handleUpdate : handleSubmit}>
         <input type="file" accept=".pdf, .png, .jpg, .jpeg" onChange={handleFileChange} required />

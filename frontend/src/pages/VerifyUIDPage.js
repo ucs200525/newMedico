@@ -95,7 +95,9 @@ const VerifyUIDPage = () => {
 
     // Cleanup WebSocket connection when component is unmounted
     return () => {
-      if (socket) socket.close();
+      if (socket) {
+        socket.close();
+      }
     };
   }, []);
 
@@ -129,6 +131,9 @@ const VerifyUIDPage = () => {
     }
   };
 
+  const handleAddPatient = () => {
+    navigate('/patients'); // Replace with the correct route for adding a patient
+  };
   if (loading) {
     return <LoadingSpinner />; // Show spinner when loading
   }
@@ -150,6 +155,12 @@ const VerifyUIDPage = () => {
         <button type="submit">Verify</button>
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </form>
+      {role === 'admin' ? (
+        <>
+          <p>Want to add patient? <button onClick={handleAddPatient}>Add Patient</button></p>
+          
+        </>
+      ) : null}
     </div>
   );
 };

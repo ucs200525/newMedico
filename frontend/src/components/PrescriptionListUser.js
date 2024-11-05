@@ -3,7 +3,7 @@ import React from 'react';
 const PrescriptionList = ({ prescriptions }) => {
   return (
     <div>
-      <h2>Prescription List</h2>
+      
       {prescriptions.length === 0 ? (
         <p>No prescriptions available.</p>
       ) : (

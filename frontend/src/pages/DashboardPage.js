@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Dashboard.css';
+import styles from  './Dashboard.module.css'; // Import the CSS module
 
 const Dashboard = ({ uid }) => {
   const [patient, setPatient] = useState(null);
@@ -97,13 +97,13 @@ const Dashboard = ({ uid }) => {
   };
 
   return (
-    <div className='dashboard-container'>
-      <div className='dashboard'>
-        <h2>Patient Dashboard</h2>
+    <div className={styles.dashboardContainer}>
+      <div className={styles.dashboard}>
+        <h2>Patient Dashboard ( UID: {uid} )</h2>
         {patient && (
-          <table>
+          <table className={styles.patientTable}>
             <tbody>
-            <tr>
+              <tr>
                 <td>NAME:</td>
                 <td>
                   <input type="text" name="name" value={updatedData.name || ''} onChange={handleUpdateChange} />
@@ -255,18 +255,6 @@ const Dashboard = ({ uid }) => {
                     type="text"
                     name="infections"
                     value={updatedHealthData.infections || ''}
-                    onChange={handleHealthChange}
-                  />
-                </td>
-                <td><button onClick={handleHealthUpdateSubmit}>UPDATE</button></td>
-              </tr>
-              <tr>
-                <td><strong>Chronic Diseases:</strong></td>
-                <td>
-                  <input
-                    type="text"
-                    name="diseases"
-                    value={updatedHealthData.diseases || ''}
                     onChange={handleHealthChange}
                   />
                 </td>

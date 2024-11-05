@@ -1,0 +1,38 @@
+.dashboardContainer {
+  padding: 20px;
+}
+
+.dashboard {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.patientTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patientTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.patientTable input, .patientTable select {
+  width: 100%;
+  padding: 5px;
+}
+
+.patientTable button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.patientTable button:hover {
+  background-color: #45a049;
+}

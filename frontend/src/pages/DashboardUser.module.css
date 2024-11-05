@@ -1,0 +1,53 @@
+/* Container to center the content */
+.dashboardContainer {
+  width: 50%;
+  margin: 20px auto; /* Reduces the top margin to move the table up */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Title styling */
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.patientTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patientTable td {
+  padding: 10px;
+  border: 1px solid #ccc; /* Optional: adds border to cells */
+  text-align: left; /* Align text to the left */
+  min-width: 180px; /* Set a minimum width for the cells */
+}
+
+.tooltip {
+  cursor: pointer;
+}
+
+
+
+/* First column (field labels) styling */
+.patientTable td:first-child {
+  font-weight: bold;
+  background-color: #f1f1f1;
+  width: 30%;
+}
+
+/* Second column (field values) styling */
+.patientTable td:last-child {
+  text-align: left;
+  width: 70%;
+}
+
+/* Adding hover effect for rows */
+.patientTable tr:hover {
+  background-color: #f0f8ff;
+}
