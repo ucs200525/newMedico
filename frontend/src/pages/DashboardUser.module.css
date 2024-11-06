@@ -48,17 +48,19 @@ h2 {
 
 .patientTable tr:hover {
   background-color: #f0f8ff;
-}
+} */
 
+/* 
 ///////////////////////////for admin only not users///////////////////
  */
 
 
 
 
-/*
 
-/////////////////////////////////////////for users only////////////////////////////
+
+/* /////////////////////////////////////////for users only//////////////////////////// */
+
 .dashboardContainer {
   width: 50%;
   margin: 20px auto; 
@@ -193,4 +195,4 @@ h2 {
 .tooltip {
   cursor: pointer;
 }
- */
+ 
