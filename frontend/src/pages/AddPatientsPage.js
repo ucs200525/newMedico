@@ -275,7 +275,7 @@ const Patients = () => {
           <option value="Other">Other</option>
         </select>
         <input type="text" name="otherFields[address]" placeholder="Address" onChange={handleChange} />
-        <input type="text" name="otherFields[email]" placeholder="Email" onChange={handleChange} />
+        <input type="text" name="otherFields[email]" placeholder="Email " onChange={handleChange} />
         <input type="text" name="otherFields[phone]" placeholder="Phone" onChange={handleChange} />
         <button type="submit" disabled={loading}>
           {loading ? 'Adding...' : 'Add Patient'}
