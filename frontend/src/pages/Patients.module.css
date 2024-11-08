@@ -1,0 +1,80 @@
+/* Patients.module.css */
+
+/* General styling for the form container */
+.patient-form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Ensure the content starts from top */
+  height: 100vh; /* Ensure the container is vertically centered */
+  box-sizing: border-box;
+  padding-top: 70px;  /* Adjust for navbar */
+}
+
+/* General input styles for all input fields */
+.input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus effect for all inputs */
+.input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Style the submit button */
+.button {
+  width: 100%;
+  padding: 14px;
+  background-color: #e74c3c; /* Reddish color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Form Heading */
+.heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Styling for form and input sections */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

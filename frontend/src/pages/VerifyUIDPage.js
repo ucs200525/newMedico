@@ -131,8 +131,9 @@ const VerifyUIDPage = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>Verify UID</h2>
+      
       <form onSubmit={handleSubmit} className={styles.form}>
+      <h2 className={styles.heading}>Verify UID</h2>
         <label className={styles.label}>
           UID received from Arduino:
           <input

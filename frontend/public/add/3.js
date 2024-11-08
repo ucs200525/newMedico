@@ -12,44 +12,68 @@ const addPrescription = async (prescriptionData) => {
 // Example prescription data for each patient without uid
 const prescriptions = [
     {
-        medication: 'Salbutamol Inhaler',
-        dosage: '1 puff as needed for wheezing',
-        duration: 'Until symptoms resolve'
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
+        "medication": "Salbutamol Inhaler",
+        "dosage": "1 puff as needed for wheezing",
+        "instructions": "Use as needed for wheezing relief",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        medication: 'Cetirizine',
-        dosage: '10 mg once daily',
-        duration: 'As needed for allergies'
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
+        "medication": "Cetirizine",
+        "dosage": "10 mg once daily",
+        "instructions": "As needed for allergies",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        medication: 'Amlodipine',
-        dosage: '5 mg once daily',
-        duration: 'Indefinitely for hypertension'
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
+        "medication": "Amlodipine",
+        "dosage": "5 mg once daily",
+        "instructions": "Indefinitely for hypertension",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        medication: 'Oseltamivir',
-        dosage: '75 mg twice daily',
-        duration: '5 days for flu'
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
+        "medication": "Oseltamivir",
+        "dosage": "75 mg twice daily",
+        "instructions": "5 days for flu",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        medication: 'Atorvastatin',
-        dosage: '10 mg once daily',
-        duration: 'As prescribed for cholesterol'
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
+        "medication": "Atorvastatin",
+        "dosage": "10 mg once daily",
+        "instructions": "As prescribed for cholesterol",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        medication: 'Iron supplements',
-        dosage: 'Iron 65 mg once daily',
-        duration: 'Until blood levels are normal'
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
+        "medication": "Iron supplements",
+        "dosage": "Iron 65 mg once daily",
+        "instructions": "Until blood levels are normal",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        medication: 'Ibuprofen',
-        dosage: '400 mg as needed for pain',
-        duration: 'As needed'
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
+        "medication": "Ibuprofen",
+        "dosage": "400 mg as needed for pain",
+        "instructions": "As needed",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        medication: 'Eye drops',
-        dosage: '1 drop in each eye twice daily',
-        duration: 'Until symptoms improve'
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
+        "medication": "Eye drops",
+        "dosage": "1 drop in each eye twice daily",
+        "instructions": "Until symptoms improve",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     }
 ];
 

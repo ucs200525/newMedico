@@ -245,7 +245,7 @@ const Prescriptions = ({ uid }) => {
   const handleDelete = async (id) => {
     setLoading(true); // Start loading for deletion
     try {
-      await axios.delete(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}/${id}`); // Ensure the correct endpoint is used
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/prescriptions/by-uid/${uid}`); // Ensure the correct endpoint is used
       setPrescriptions(prescriptions.filter(prescription => prescription._id !== id));
     } catch (error) {
       console.error('Error deleting prescription:', error);
@@ -269,13 +269,6 @@ const Prescriptions = ({ uid }) => {
 
   return (
     <div className={styles.pr}>
-      <h1 className={styles.h1}> Manage Prescriptions</h1>
-      <PrescriptionList 
-        onPrescriptionEdit={handleEdit} 
-        onPrescriptionDelete={handleDelete} 
-        prescriptions={prescriptions} 
-        onToggleDetails={togglePrescriptionDetails}
-      />
       <div className={styles.ab}>
         <form onSubmit={handleSubmit}>
           <h2>{editingPrescription ? 'Edit Prescription' : 'Add New Prescription'}</h2>
@@ -308,6 +301,13 @@ const Prescriptions = ({ uid }) => {
           </button>
         </form>
       </div>
+      <h1 className={styles.h1}> Manage Prescriptions</h1>
+      <PrescriptionList 
+        onPrescriptionEdit={handleEdit} 
+        onPrescriptionDelete={handleDelete} 
+        prescriptions={prescriptions} 
+        onToggleDetails={togglePrescriptionDetails}
+      />
     </div>
   );
 };

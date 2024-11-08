@@ -45,15 +45,14 @@
 // };
 
 // export default UserReports;
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import LoadingSpinner from '../components/LoadingSpinner'; // Import the spinner component
+import styles from './UserReports.module.css'; // Import the CSS module
 
 const UserReports = ({ uid }) => {
   const [reports, setReports] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState('');
 
   // Fetch all reports by UID
@@ -65,7 +64,7 @@ const UserReports = ({ uid }) => {
       setMessage('Error fetching reports');
       console.error('Error fetching reports:', error);
     } finally {
-      setLoading(false); // Set loading to false after the API call
+      setLoading(false);
     }
   };
 
@@ -79,19 +78,19 @@ const UserReports = ({ uid }) => {
   }
 
   return (
-    <div>
-      <h1>Your Reports</h1>
-      {message && <p>{message}</p>}
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Your Reports</h1>
+      {message && <p className={styles.message}>{message}</p>}
       
-      <ul>
+      <ul className={styles.reportList}>
         {reports.length === 0 ? (
-          <p>No reports available.</p>
+          <p className={styles.noReports}>No reports available.</p>
         ) : (
           reports.map((report) => (
-            <li key={report._id}>
-              <span>{report.fileName}</span>
+            <li key={report._id} className={styles.reportItem}>
+              <span className={styles.reportName}>{report.fileName}</span>
               <a href={`${process.env.REACT_APP_API_URL}/api/reports/${encodeURIComponent(report.fileName)}`} target="_blank" rel="noopener noreferrer">
-                <button>Open</button>
+                <button className={styles.button}>Open</button>
               </a>
             </li>
           ))
@@ -102,4 +101,5 @@ const UserReports = ({ uid }) => {
 };
 
 export default UserReports;
+
 //with loaing

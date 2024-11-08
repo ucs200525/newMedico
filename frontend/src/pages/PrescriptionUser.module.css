@@ -1,0 +1,51 @@
+.container {
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .prescriptionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .prescriptionDescription {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .detailsButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .detailsButton:hover {
+    background-color: #45a049;
+  }
+  
+  .noPrescriptions {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  

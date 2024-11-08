@@ -8,56 +8,8 @@
     background-color: #f3f4f6;
   }
   
-  .ab {
-    width: 100%;
-    max-width: 600px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Adds spacing below the form */
-  }
   
-  .ab h2 {
-    text-align: center;
-    font-size: 1.6rem;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .ab form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .ab input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-    width: 100%;
-  }
-  
-  .ab button {
-    padding: 10px;
-    background-color: #fff; /* White background */
-    color: #d9534f; /* Red color */
-    border: 1px solid #d9534f; /* Red border */
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    min-width: 160px; /* Ensure minimum width */
-    text-align: center;
-    margin-top: 15px; /* Adds space between inputs and button */
-  }
-  
-  .ab button:hover {
-    background-color: #d9534f; /* Red background on hover */
-    color: #fff; /* White text on hover */
-  }
-  
+ 
   .h1 {
     font-size: 2rem;
     color: #333;
