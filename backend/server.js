@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const morgan = require('morgan');
-const cors = require('cors'); // Import cors
+
 const WebSocket = require('ws'); // Import WebSocket
 const http = require('http'); // Import http
 
@@ -16,14 +16,15 @@ const dbUrl = process.env.MONGO_URL;
 const port = process.env.PORT;
 
 const app = express();
+const cors = require('cors');
 
 const corsOptions = {
-  origin: '*', // Allow all origins
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
-  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  origin:'*', // allowed origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // allowed methods
+  credentials: true, // allow credentials (cookies, authorization headers, etc.)
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); // apply CORS middleware
 
 app.get("/", (req, res) => {
   res.json("Server Running Successful");
