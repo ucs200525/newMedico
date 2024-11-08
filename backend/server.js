@@ -19,7 +19,14 @@ const app = express();
 
 // Enable CORS for all routes
 const front = ['https://new-medico-cukslsvdh-ucs-projects-765a2e85.vercel.app', 'http://localhost:3000'];
-app.use(cors());
+const corsOptions = {
+  origin: 'https://new-medico-mvh4msv8w-ucs-projects-765a2e85.vercel.app', // Allow this domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+};
+
+app.use(cors(corsOptions));
+
 
 app.get("/", (req, res) => {
   res.json("Server Running Successful");
