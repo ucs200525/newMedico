@@ -18,7 +18,7 @@ const port = process.env.PORT;
 const app = express();
 
 // Enable CORS for all routes
-const front = ['https://new-medico.vercel.app', 'http://localhost:3000'];
+const front = ['https://new-medico-cukslsvdh-ucs-projects-765a2e85.vercel.app', 'http://localhost:3000'];
 app.use(cors({
   origin:  front, // Frontend domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
