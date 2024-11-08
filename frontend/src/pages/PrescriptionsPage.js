@@ -144,12 +144,11 @@
 
 // export default Prescriptions;
 
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PrescriptionList from '../components/PrescriptionList';
 import LoadingSpinner from '../components/LoadingSpinner'; // Import the loading spinner component
+import styles from './Prescriptions.module.css'; // Import the CSS Module
 
 const Prescriptions = ({ uid }) => {
   const [prescriptions, setPrescriptions] = useState([]);
@@ -255,19 +254,29 @@ const Prescriptions = ({ uid }) => {
     }
   };
 
+  const togglePrescriptionDetails = (id) => {
+    setPrescriptions(prescriptions.map(prescription => {
+      if (prescription._id === id) {
+        return { ...prescription, showDetails: !prescription.showDetails };
+      }
+      return prescription;
+    }));
+  };
+
   if (loading) {
     return <LoadingSpinner />; // Show loading spinner
   }
 
   return (
-    <div className='pr'>
-      <h1> Manage Prescriptions</h1>
+    <div className={styles.pr}>
+      <h1 className={styles.h1}> Manage Prescriptions</h1>
       <PrescriptionList 
         onPrescriptionEdit={handleEdit} 
         onPrescriptionDelete={handleDelete} 
         prescriptions={prescriptions} 
+        onToggleDetails={togglePrescriptionDetails}
       />
-      <div className="ab">
+      <div className={styles.ab}>
         <form onSubmit={handleSubmit}>
           <h2>{editingPrescription ? 'Edit Prescription' : 'Add New Prescription'}</h2>
           <input
@@ -304,6 +313,5 @@ const Prescriptions = ({ uid }) => {
 };
 
 export default Prescriptions;
-
 
 //with loading

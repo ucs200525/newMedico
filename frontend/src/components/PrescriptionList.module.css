@@ -1,0 +1,73 @@
+/* PrescriptionList.module.css */
+
+.prescriptionItem {
+    margin-bottom: 15px; /* Reduced space between prescriptions */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px; /* Smaller font size for compact view */
+  }
+  
+  .date {
+    font-weight: bold;
+    margin-bottom: 5px; /* Reduced space below the date */
+  }
+  
+  .toggleButton {
+    padding: 6px 12px; /* Smaller padding */
+    background-color: #fff;
+    color: #d9534f; /* Red text */
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Reduced space below the toggle button */
+    font-size: 12px; /* Smaller text size for the button */
+  }
+  
+  .toggleButton:hover {
+    background-color: #d9534f;
+    color: #fff;
+  }
+  
+  .details {
+    margin-top: 10px;
+    font-size: 13px; /* Smaller font size for details */
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-between; /* Distribute space between buttons */
+    gap: 8px; /* Reduced gap */
+    margin-top: 10px;
+  }
+  
+  .editButton, .deleteButton {
+    padding: 6px 12px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%; /* Buttons will take up 48% of the width each */
+  }
+  
+  .editButton {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+  }
+  
+  .editButton:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .deleteButton {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: 1px solid #f44336;
+  }
+  
+  .deleteButton:hover {
+    background-color: #e53935;
+  }
+  

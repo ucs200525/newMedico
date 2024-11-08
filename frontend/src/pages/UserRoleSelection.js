@@ -1,92 +1,68 @@
-import React, { useState,useContext } from 'react';
-import { useNavigate } from 'react-router-dom'; // Assuming you use react-router for navigation
-import axios from 'axios'; // Import axios
-import LoadingSpinner from '../components/LoadingSpinner'; // Import your LoadingSpinner component
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import LoadingSpinner from '../components/LoadingSpinner';
 import { AuthContext } from '../context/AuthContext';
+import styles from './UserRoleSelection.module.css';
 
 const UserRoleSelection = () => {
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false); // State to handle loading
-  const { loginUser } = useContext(AuthContext); // Access loginUser function from context
+  const [loading, setLoading] = useState(false);
+  const { loginUser } = useContext(AuthContext);
 
-  // Handle selection
   const handleRoleSelection = async (role) => {
-    // Start loading
     setLoading(true);
 
     if (role === 'admin') {
-      setLoading(false); // Stop loading for admin role
-      navigate('/login'); // Redirect to the admin login page
+      setLoading(false);
+      navigate('/login');
     } else {
       try {
-        // Make sure to await the axios call
-        //await new Promise((resolve) => setTimeout(resolve, 2000));
         const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/loginUser`);
-        loginUser(response.data.token,response.data.role)
-        // Stop loading when the API call is successful
+        loginUser(response.data.token, response.data.role);
         setLoading(false);
-        navigate('/dashboardUser'); // Redirect to the user dashboard
+        navigate('/dashboardUser');
       } catch (error) {
-        setLoading(false); // Stop loading if there's an error
+        setLoading(false);
         console.error('Error logging in user:', error);
-        // Optionally, display an error message to the user
       }
     }
   };
 
   return (
-    <div style={styles.container}>
-      {loading ? (
-        <LoadingSpinner /> // Show spinner when loading
-      ) : (
-        <>
-          <h1>Select Your Role</h1>
-          <div style={styles.buttonContainer}>
-            <button 
-              style={styles.button} 
-              onClick={() => handleRoleSelection('admin')}
-            >
-              Admin
-            </button>
-            <button 
-              style={styles.button} 
-              onClick={() => handleRoleSelection('user')}
-            >
-              User
-            </button>
-          </div>
-        </>
-      )}
+    <div className={styles.outerContainer}>
+      <nav className={styles.navbar}>
+        <h1 className={styles.navTitle}>MedWeb</h1>
+      </nav>
+      <div className={styles.container}>
+        {loading ? (
+          <LoadingSpinner />
+        ) : (
+          <>
+            <h1 className={styles.header}>Welcome to MedWeb Portal</h1>
+            <p className={styles.description}>
+              Please select your role to access the MedWeb portal. <br />
+              <strong>Admin</strong> users can manage patients, prescriptions, and reports, while <strong>Users</strong> can view their medical information and reports.
+            </p>
+            <div className={styles.buttonContainer}>
+              <button
+                className={`${styles.button} ${styles.adminButton}`}
+                onClick={() => handleRoleSelection('admin')}
+              >
+                Admin Access
+              </button>
+              <button
+                className={`${styles.button} ${styles.userButton}`}
+                onClick={() => handleRoleSelection('user')}
+              >
+                User Access
+              </button>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };
 
-// Basic inline styles for the page
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    backgroundColor: '#f8f9fa'
-  },
-  buttonContainer: {
-    display: 'flex',
-    gap: '20px',
-    marginTop: '20px'
-  },
-  button: {
-    padding: '15px 30px',
-    fontSize: '18px',
-    cursor: 'pointer',
-    backgroundColor: '#007bff',
-    color: 'black',
-    border: 'none',
-    borderRadius: '5px',
-    transition: 'background-color 0.3s ease'
-  }
-};
-
 export default UserRoleSelection;
-//with loading 

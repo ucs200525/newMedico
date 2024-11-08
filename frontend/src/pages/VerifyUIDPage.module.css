@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff5f5; /* Light whitish-red background */
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    color: #b30000; /* Dark red color for the heading */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* Increase form box width */
+    background: #ffffff;
+    padding: 30px; /* Increase padding for larger look */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .label {
+    font-size: 0.95rem; /* Slightly smaller label */
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 8px; /* Smaller input padding */
+    margin-bottom: 15px;
+    border: 1px solid #ffd6d6; /* Light red border */
+    border-radius: 5px;
+    font-size: 0.95rem; /* Smaller font size for input */
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .input:focus {
+    border-color: #ff4d4f; /* Bright red for focused input */
+  }
+  
+  .button {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #ff4d4f; /* Whitish-red button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #e63946; /* Darker red on hover */
+  }
+  
+  .errorMessage {
+    color: #e63946; /* Error message in a strong red */
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .addPatientContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Space above add patient link */
+  }
+  
+  .addPatientButton {
+    font-size: 1rem;
+    background-color: #ffeded;
+    color: #b30000;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #ff4d4f;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .addPatientButton:hover {
+    background-color: #ff4d4f; /* Darker red on hover */
+    color: white;
+  }
+  

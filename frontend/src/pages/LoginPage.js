@@ -56,11 +56,13 @@
 
 
 // src/pages/LoginPage.js
+// src/pages/LoginPage.js
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import LoadingSpinner from '../components/LoadingSpinner'; // Import the spinner component
+import styles from './LoginPage.module.css'; // Import CSS module
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -88,20 +90,46 @@ const LoginPage = () => {
   };
 
   if (loading) {
-    return <LoadingSpinner />; // Show spinner when loading
+    return (
+      <div className={styles.spinnerContainer}>
+        <LoadingSpinner />
+      </div>
+    ); // Show spinner when loading
   }
+  
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Email: <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} required /></label>
-        <label>Password: <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} required /></label>
-        <button type="submit">Login</button>
-        {error && <p id='loginError' style={{ color: 'red' }}>{error}</p>}
+    <div className={styles.container}>
+      
+      <form onSubmit={handleSubmit} className={styles.form}>
+      <h2 className={styles.heading}>Login</h2>
+        <label className={styles.label}>
+          Email:
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className={styles.input}
+          />
+        </label>
+        <label className={styles.label}>
+          Password:
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            className={styles.input}
+          />
+        </label>
+        <div className={styles.buttonContainer}>
+          <button type="submit" className={styles.button}>Login</button>
+        </div>
+        {error && <p id="loginError" className={styles.error}>{error}</p>}
       </form>
     </div>
   );
-  };
-  
+};
+
 export default LoginPage;
 //with loading 

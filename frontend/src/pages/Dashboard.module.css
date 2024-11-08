@@ -1,38 +1,72 @@
 .dashboardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7; /* Light grey background */
   padding: 20px;
 }
 
 .dashboard {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .patientTable {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .patientTable td {
   padding: 10px;
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.patientTable input, .patientTable select {
+.patientTable td:first-child {
+  font-weight: bold;
+  color: #666;
+  width: 30%;
+}
+
+.patientTable td input,
+.patientTable td select {
   width: 100%;
-  padding: 5px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-.patientTable button {
-  padding: 5px 10px;
-  background-color: #4CAF50;
+/* Button styling: soft red color with closer positioning to input fields */
+.patientTable td button {
+  margin-top: 5px; /* Reduce margin to bring closer to input */
+  padding: 8px 16px;
+  background-color: #ff4d4f; /* Soft red color */
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.patientTable button:hover {
-  background-color: #45a049;
+.patientTable td button:hover {
+  background-color: #e63946; /* Darker red on hover */
+}
+
+.patientTable td button:disabled {
+  background-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
 }
