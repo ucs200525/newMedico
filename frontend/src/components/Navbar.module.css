@@ -1,100 +1,166 @@
-/* Navbar.module.css */
-
+/* Basic styles */
 .navbar {
   background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 10px;
   position: relative;
 }
 
 .container {
   display: flex;
-  align-items: center;
-  width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .branding {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 .logo {
   font-size: 24px;
-  font-weight: bold;
+  margin: 0;
 }
 
 .moto {
-  font-size: 14px;
-  color: #ccc;
-  margin-top: 5px;
+  font-size: 12px;
+  color: #bbb;
 }
 
+/* The hamburger icon and cross */
 .menuIcon {
-  display: none;
-  font-size: 1.5em;
+  font-size: 30px; /* Larger icon size */
   cursor: pointer;
+  display: none; /* Hidden for larger screens */
 }
 
 .sidebar {
-  position: fixed;
+  position: absolute;
+  left: -250px;
   top: 0;
-  left: 0;
+  background-color: #333;
   width: 250px;
-  height: 100%;
-  background-color: #222;
-  color: #fff;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: 100;
+  height: 100vh;
+  transition: left 0.3s ease;
+  padding-top: 60px; /* To avoid menu content being behind branding */
 }
 
 .sidebar.open {
-  transform: translateX(0);
+  left: 0;
 }
 
 .navLinks {
   list-style: none;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 0;
+  margin: 0;
+  color: white;
 }
 
 .navLinks li {
-  margin: 20px 0;
+  padding: 10px;
+  border-bottom: 1px solid #555;
 }
 
-.navLinks button,
-.navLinks a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px 0;
+/* For larger screens */
+.navbarLinks {
   display: block;
-  transition: color 0.3s;
 }
 
-.navLinks button:hover,
-.navLinks a:hover {
-  color: #4CAF50;
+.navbarLinks ul {
+  list-style: none;
+  display: flex;
 }
 
-/* Mobile-specific styles */
+.navbarLinks ul li {
+  margin-left: 20px;
+}
+
+/* Style buttons for larger devices to be reddish */
+.navbarLinks ul li button {
+  background: none;
+  color: #d9534f; /* Reddish color */
+  border: 1px solid #d9534f; /* Reddish border */
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.navbarLinks ul li button:hover {
+  background-color: #d9534f;
+  color: white; /* Text turns white when hovered */
+}
+
+/* Login and Register Button Styles for Both Smaller and Larger Devices */
+.loginRegisterButton {
+  background-color: #dd1811; /* Green background for login/register */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for login/register buttons */
+.loginRegisterButton:hover {
+  background-color: #d9534f; /* Darker green for hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Smaller Devices: */
 @media (max-width: 768px) {
   .menuIcon {
+    display: block; /* Show hamburger icon for smaller devices */
+  }
+
+  .navbarLinks {
+    display: none; /* Hide nav links in the top navbar */
+  }
+
+  .sidebar.open {
+    left: 0; /* Show sidebar when open */
+  }
+
+  .navbarLinks ul {
     display: block;
-    color: #fff;
+    margin: 0;
+  }
+
+  /* Style Login and Register buttons differently on smaller devices */
+  .loginRegisterButton {
+    background-color: #007bff; /* Blue background for smaller devices */
+    width: 100%; /* Make the buttons fill the width of the screen */
+    margin: 10px 0;
+  }
+}
+
+/* For Larger Devices: */
+@media (min-width: 769px) {
+  .navbarLinks {
+    display: block; /* Show menu links directly on larger screens */
+  }
+
+  .sidebar {
+    display: none; /* Hide the sidebar on larger screens */
+  }
+
+  .menuIcon {
+    display: none; /* Hide the hamburger icon on larger screens */
   }
 
   .container {
-    justify-content: space-between;
+    max-width: 1200px; /* Define max width of the navbar */
+    margin: 0 auto; /* Center the navbar */
+  }
+
+  /* Style Login and Register buttons for larger devices */
+  .loginRegisterButton {
+    background-color: #d86662; /* Green background for larger devices */
+    width: auto; /* Default width */
+    margin: 0 10px; /* Add some margin */
   }
 }

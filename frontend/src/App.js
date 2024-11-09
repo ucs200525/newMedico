@@ -12,6 +12,7 @@ import Reports from './pages/ReportsPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import UserDataPage from './pages/UserDataPage';
 import Health from "./pages/HealthPage";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { AuthProvider } from './context/AuthContext';
 
