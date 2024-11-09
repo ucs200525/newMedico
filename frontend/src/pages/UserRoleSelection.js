@@ -42,7 +42,8 @@ const UserRoleSelection = () => {
             <h1 className={styles.header}>Welcome to MediCo Portal</h1>
             <p className={styles.description}>
               Please select your role to access the MediCo portal. <br />
-              <strong>Admin</strong> users can manage patients, prescriptions, and reports, while <strong>Users</strong> can view their medical information and reports.
+              <strong>Admin</strong> can manage patients, prescriptions, and reports. <br />
+               <strong>Users</strong> can view their medical information and reports.
             </p>
             <div className={styles.buttonContainer}>
               <button
