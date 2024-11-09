@@ -1,87 +1,100 @@
-/* src/components/Navbar.module.css */
+/* Navbar.module.css */
 
 .navbar {
-    background-color: #333;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.moto {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.menuIcon {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #222;
+  color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.navLinks {
+  list-style: none;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.navLinks li {
+  margin: 20px 0;
+}
+
+.navLinks button,
+.navLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0;
+  display: block;
+  transition: color 0.3s;
+}
+
+.navLinks button:hover,
+.navLinks a:hover {
+  color: #4CAF50;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
     color: #fff;
-    padding: 10px 20px;
   }
-  
+
   .container {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
   }
-  
-  .moto {
-    margin-left: 0;
-    margin-top: 2px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    color: #ccc;
-    text-align: center;
-    margin-top: 5px;
-  }
-  
-  .branding {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    display: inline;
-  }
-  
-  .navButton, .navLink {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    transition: all 0.3s ease;
-  }
-  
-  .navButton:hover, .navLink:hover {
-    color: #4CAF50;
-    text-decoration: none;
-    transform: scale(1.1);
-    border: 2px solid #4CAF50;
-    border-radius: 5px;
-  }
-  
-  .navButton {
-    background-color: #007bff;
-    border: 2px solid #007bff;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  
-  .navButton:hover {
-    background-color: #0056b3;
-    border: 2px solid #0056b3;
-    transform: translateY(-3px);
-  }
-  
-  .navButton:focus, .navLink:focus {
-    outline: none;
-  }
-  
+}

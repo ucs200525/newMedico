@@ -1,4 +1,4 @@
-/* 
+/* General styling remains the same */
 .dashboardContainer {
   width: 50%;
   margin: 20px auto; 
@@ -10,90 +10,25 @@
   text-align: center;
 }
 
-
-h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-  font-weight: bold;
-}
-.patientTable {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.patientTable td {
-  padding: 10px;
-  border: 1px solid #ccc;
-  text-align: left;
-  min-width: 180px; 
-}
-
-.tooltip {
-  cursor: pointer;
-}
-
-
-.patientTable td:first-child {
-  font-weight: bold;
-  background-color: #f1f1f1;
-  width: 30%;
-}
-
-
-.patientTable td:last-child {
-  text-align: left;
-  width: 70%;
-}
-
-
-.patientTable tr:hover {
-  background-color: #f0f8ff;
-} */
-
-/* 
-///////////////////////////for admin only not users///////////////////
- */
-
-
-
-
-
-
-/* /////////////////////////////////////////for users only//////////////////////////// */
-
-.dashboardContainer {
-  width: 50%;
-  margin: 20px auto; 
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-
 h2 {
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: bold;
 }
 
-
 .patientTable {
   width: 100%;
-  margin: 0 auto; 
+  margin: 0 auto;
   border-collapse: collapse;
 }
-
 
 .patientTable td {
   padding: 10px;
   border: 1px solid #ccc;
   text-align: left;
   font-size: 16px;
+  min-width: 180px; 
 }
-
 
 .patientTable td:first-child {
   font-weight: bold;
@@ -110,6 +45,7 @@ h2 {
   background-color: #f0f8ff;
 }
 
+/* Modal styling */
 .modal {
   position: fixed;
   top: 0;
@@ -151,6 +87,7 @@ h2 {
   cursor: pointer;
 }
 
+/* Tooltip styling */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -179,20 +116,76 @@ h2 {
   opacity: 1;
 }
 
+/* Responsive styling for smaller devices */
+@media (max-width: 768px) {
+  .dashboardContainer {
+    width: 90%; /* Increase width on smaller screens */
+    padding: 15px;
+    margin: 10px auto;
+  }
 
-.patientTable {
-  width: 100%;
-  border-collapse: collapse;
+  h2 {
+    font-size: 24px; /* Reduce font size for headers */
+  }
+
+  .patientTable td {
+    padding: 8px;
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .patientTable td:first-child {
+    width: 35%; /* Adjust width for smaller screens */
+  }
+
+  .patientTable td:last-child {
+    width: 65%; /* Adjust width for smaller screens */
+  }
+
+  .modalContent {
+    width: 95%; /* Make modal more responsive */
+    padding: 10px;
+  }
+
+  .close {
+    font-size: 18px; /* Reduce close button size */
+  }
+
+  .tooltip .tooltiptext {
+    width: 150px; /* Reduce tooltip width */
+    font-size: 0.85em; /* Smaller text in tooltips */
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 10px;
+    width: 100%; /* Full width on smaller screens */
+  }
 }
 
-.patientTable td {
-  padding: 10px;
-  border: 1px solid #ccc;
-  text-align: left; 
-  min-width: 180px; 
-}
+@media (max-width: 480px) {
+  .dashboardContainer {
+    width: 95%;
+    padding: 10px;
+  }
 
-.tooltip {
-  cursor: pointer;
+  h2 {
+    font-size: 20px;
+  }
+
+  .patientTable td {
+    padding: 6px;
+    font-size: 12px; /* Smaller font for extra-small screens */
+  }
+
+  .modalContent {
+    padding: 8px;
+  }
+
+  .close {
+    font-size: 16px;
+  }
+
+  .tooltip .tooltiptext {
+    width: 120px; /* Further reduce tooltip width for extra-small screens */
+  }
 }
- 

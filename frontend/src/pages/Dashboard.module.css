@@ -1,3 +1,4 @@
+/* Base styles remain the same */
 .dashboardContainer {
   width: 50%;
   margin: 20px auto;
@@ -16,8 +17,8 @@ h2 {
 }
 
 .patientTable {
-  width: 50%; /* Set to 100% to take full width of the container */
-  margin: 0 auto; /* Centers the table horizontally */
+  width: 50%; /* Full width on smaller screens */
+  margin: 0 auto;
   border-collapse: collapse;
 }
 
@@ -47,42 +48,42 @@ h2 {
   background-color: #f0f8ff;
 }
 
-/* Styling the buttons */
+/* Button styling */
 .button {
-  background-color:#d9534f; /* Whitish red background */
-  color: white; /* Dark red text */
-  border: none; /* Remove border */
-  padding: 10px 20px; /* Add padding */
-  font-size: 14px; /* Set font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-  margin: 5px; /* Add margin between buttons */
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 5px;
   max-width: 160px;
-  display: block; /* Ensures the button takes up full width inside the cell */
-  margin-left: auto; /* Centers the button horizontally */
-  margin-right: auto; /* Centers the button horizontally */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button:hover {
-  background-color: #e6b3b3; /* Lighter red on hover */
+  background-color: #e6b3b3;
 }
 
 .button:focus {
-  outline: none; /* Remove focus outline */
+  outline: none;
 }
 
 .button:active {
-  background-color: #d58f8f; /* Darker red when clicked */
+  background-color: #d58f8f;
 }
 
 .inputField {
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  width: 90%; /* Full width for input fields */
+  width: 90%;
   font-size: 14px;
-  margin-bottom: 10px; /* Space between input and button */
+  margin-bottom: 10px;
 }
 
 .selectField {
@@ -96,4 +97,51 @@ h2 {
 
 .selectField option {
   padding: 5px;
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 1000px) {
+  .dashboardContainer {
+    width: 90%; /* Increased width to make it more usable on smaller screens */
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .patientTable {
+    width: 100%; /* Full width on smaller screens */
+    margin: 0;
+  }
+
+  .patientTable td {
+    padding: 8px;
+    min-width: auto; /* Allow cells to shrink as needed */
+    font-size: 0.9rem; /* Smaller font size for better readability */
+  }
+
+  h2 {
+    font-size: 22px; /* Reduce font size for headers */
+  }
+
+  .button {
+    font-size: 12px; /* Decrease button font size */
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+    max-width: 100%; /* Allow button to be responsive */
+    width: 100%; /* Button spans full width on smaller screens */
+  }
+
+  .inputField, .selectField {
+    width: 90%; /* Full width for form fields */
+    font-size: 12px; /* Reduce font size */
+    padding: 6px; /* Adjust padding for smaller screens */
+  }
+
+  /* Adjust last column width on smaller screens */
+  .patientTable td:first-child {
+    width: 30%; /* Increase the width of the first column */
+  }
+
+  .patientTable td:last-child {
+    width: 10%; /* Reduce the width of the last column for smaller screens */
+    font-size: 0.9rem; /* Slightly smaller text for the last column */
+  }
 }

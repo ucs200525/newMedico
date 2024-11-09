@@ -1,87 +1,160 @@
 /* Outer container styling */
 .outerContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background-color: #f7eaea;
-  }
-  
-  /* Navbar styling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7eaea;
+  padding: 20px; /* Add some padding for small screens */
+}
+
+/* Navbar styling */
+.navbar {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #ffcccc;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navTitle {
+  color: #b30000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Inner box styling */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Header styling */
+.header {
+  color: #b30000;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Description styling */
+.description {
+  color: #333333;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Button container styling */
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Button styling */
+.button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.adminButton {
+  background-color: #b30000;
+}
+
+.userButton {
+  background-color: #ff6666;
+}
+
+.button:hover {
+  background-color: #cc3333;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design for smaller devices */
+@media (max-width: 768px) {
   .navbar {
-    width: 100%;
-    padding: 15px 0;
-    background-color: #ffcccc;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0; /* Reduce padding */
   }
-  
+
   .navTitle {
-    color: #b30000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
+    font-size: 1.2rem; /* Decrease font size */
   }
-  
-  /* Inner box styling */
+
   .container {
-    width: 100%;
-    max-width: 500px;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  /* Header styling */
-  .header {
-    color: #b30000;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  /* Description styling */
-  .description {
-    color: #333333;
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Button container styling */
-  .buttonContainer {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+    padding: 20px;
+    max-width: 90%; /* Make container width smaller on smaller devices */
     margin-top: 20px;
   }
-  
-  /* Button styling */
+
+  .header {
+    font-size: 1.5rem; /* Adjust header size for smaller screens */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Adjust description font size */
+  }
+
+  .buttonContainer {
+    gap: 15px; /* Adjust gap for buttons */
+  }
+
   .button {
-    padding: 12px 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.9rem; /* Reduce button font size */
+    padding: 10px 20px; /* Adjust padding */
   }
-  
+
   .adminButton {
-    background-color: #b30000;
+    background-color: #990000; /* Slightly darker for mobile */
   }
-  
+
   .userButton {
-    background-color: #ff6666;
+    background-color: #ff4d4d; /* Slightly lighter for mobile */
   }
-  
-  .button:hover {
-    background-color: #cc3333;
+}
+
+/* Extra Small Devices (Mobile) */
+@media (max-width: 480px) {
+  .navTitle {
+    font-size: 1rem; /* Further reduce font size */
   }
-  
-  .button:active {
-    transform: translateY(1px);
+
+  .container {
+    max-width: 100%;
+    padding: 15px;
+    margin-top: 15px;
   }
-  
+
+  .header {
+    font-size: 1.3rem; /* Adjust header size for very small screens */
+  }
+
+  .description {
+    font-size: 0.85rem; /* Adjust description font size */
+  }
+
+  .button {
+    font-size: 0.8rem; /* Further reduce button font size */
+    padding: 8px 15px; /* Adjust padding for smaller buttons */
+  }
+
+  .buttonContainer {
+    flex-direction: column; /* Stack buttons vertically on very small screens */
+    gap: 10px;
+  }
+}
