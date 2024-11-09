@@ -129,6 +129,7 @@
     display: block;
     margin: 0;
   }
+  
 
   /* Style Login and Register buttons differently on smaller devices */
   .loginRegisterButton {

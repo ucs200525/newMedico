@@ -27,13 +27,13 @@ const CustomNavbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <Link to="/" className={styles.branding}>
+        <Link to="/" className={styles.branding} onClick={handleLogout} >
           <h1 className={styles.logo}>MEDICO</h1>
           <p className={styles.moto}>Your Digital Key To Health</p>
         </Link>
 
         {/* Hamburger / Cross Button for Smaller Devices */}
-        <div className={styles.menuIcon} onClick={toggleMenu}>
+        <div className={styles.menuIcon} onClick={toggleMenu}  style={{ color: 'white' }}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
 
