@@ -90,8 +90,8 @@ const CustomNavbar = () => {
               </>
             ) : (
               <>
-                <li><Link to="/login" className={styles.loginRegisterButton}>Login</Link></li>
-                <li><Link to="/register" className={styles.loginRegisterButton}>Register</Link></li>
+                <li><Link to="/login"><button className={styles.loginRegisterButton}>Login</button></Link></li>
+                <li><Link to="/register"><button className={styles.loginRegisterButton}>Register</button></Link></li>
               </>
             )}
           </ul>
