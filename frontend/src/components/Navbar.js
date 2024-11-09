@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <header>
         <div className={styles.container}>
-          <Link to="/" className={`${styles.branding} ${styles.border}`}>
+          <Link to="/" className={`${styles.branding} ${styles.border}`} onClick={handleLogout}>
             <h1 className={styles.logo}>MEDICO</h1>
             <p className={styles.moto}>Your Digital Key To Health</p>
           </Link>
