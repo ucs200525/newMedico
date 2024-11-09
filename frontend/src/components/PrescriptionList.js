@@ -26,9 +26,10 @@ const PrescriptionList = ({ prescriptions, onPrescriptionEdit, onPrescriptionDel
 
             {expandedPrescriptionId === prescription._id && (
               <div className={styles.details}>
-                <h3>Medication: {prescription.medication}</h3>
-                <h3>Dosage: {prescription.dosage}</h3>
-                <h3>Instructions: {prescription.instructions}</h3>
+                <h3 className={styles.medication}>Medication: {prescription.medication}</h3>
+                <h3 className={styles.dosage}>Dosage: {prescription.dosage}</h3>
+                <h3 className={styles.instructions}>Instructions: {prescription.instructions}</h3>
+
               </div>
             )}
 

@@ -13,6 +13,32 @@
     font-weight: bold;
     margin-bottom: 5px; /* Reduced space below the date */
   }
+  .medication {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* Removes default margin */
+  }
+
+  .dosage {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .instructions {
+    font-size: 16px;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
   
   .toggleButton {
     padding: 6px 12px; /* Smaller padding */

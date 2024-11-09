@@ -70,7 +70,7 @@ const UserPrescriptions = ({ uid }) => {
 
   return (
     <div className="user-prescriptions">
-      <h1>Your Prescriptions</h1>
+      
       {message && <p>{message}</p>}
       <PrescriptionList prescriptions={prescriptions} />
       {prescriptions.length === 0 && <p>No prescriptions found.</p>}

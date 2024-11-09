@@ -79,7 +79,7 @@ const UserReports = ({ uid }) => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Your Reports</h1>
+      <h2 className={styles.heading}>Your Reports</h2>
       {message && <p className={styles.message}>{message}</p>}
       
       <ul className={styles.reportList}>

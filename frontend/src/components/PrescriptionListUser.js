@@ -15,6 +15,7 @@ const PrescriptionList = ({ prescriptions }) => {
         <p className={styles.noPrescriptions}>No prescriptions available.</p>
       ) : (
         <ul>
+          <h2  className={styles.title}>Your Prescriptions</h2>
           {prescriptions.map((prescription) => (
             <li key={prescription._id} className={styles.prescriptionItem}>
               <h3>Medication: {prescription.medication}</h3>
