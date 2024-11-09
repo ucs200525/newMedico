@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import styles from './RegisterPage.module.css'; // Import the CSS module
 
 const RegisterPage = () => {
   const [name, setName] = useState('');
@@ -12,8 +13,8 @@ const RegisterPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, { name, email, password });
-    console.log('Registration successful', response.data);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, { name, email, password });
+      console.log('Registration successful', response.data);
       if (response.status === 201) {
         alert("Successfully Registered");
         navigate('/Login');
@@ -29,13 +30,36 @@ const RegisterPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter Your Name" required />
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" required />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" required />
-      <button type="submit">Register</button>
-      {error && <p id='registerError' style={{ color: 'red' }}>{error}</p>}
-    </form>
+    <div className={styles.formContainer}>
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          value={name} 
+          onChange={(e) => setName(e.target.value)} 
+          placeholder="Enter Your Name" 
+          required 
+          className={styles.inputField} 
+        />
+        <input 
+          type="email" 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+          placeholder="Enter Email" 
+          required 
+          className={styles.inputField} 
+        />
+        <input 
+          type="password" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+          placeholder="Enter Password" 
+          required 
+          className={styles.inputField} 
+        />
+        <button type="submit" className={styles.button}>Register</button>
+        {error && <p className={styles.errorMessage}>{error}</p>}
+      </form>
+    </div>
   );
 };
 

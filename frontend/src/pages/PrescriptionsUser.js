@@ -36,19 +36,16 @@
 // };
 
 // export default UserPrescriptions;
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PrescriptionList from '../components/PrescriptionListUser';
-import LoadingSpinner from '../components/LoadingSpinner'; // Import the spinner component
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const UserPrescriptions = ({ uid }) => {
   const [prescriptions, setPrescriptions] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
-  const [message, setMessage] = useState(''); // For displaying messages
+  const [loading, setLoading] = useState(true);
+  const [message, setMessage] = useState('');
 
-  // Fetch prescriptions
   useEffect(() => {
     const fetchPrescriptions = async () => {
       try {
@@ -58,29 +55,30 @@ const UserPrescriptions = ({ uid }) => {
         console.error('Error fetching prescription data:', error);
         setMessage('Error fetching prescriptions. Please try again later.');
       } finally {
-        setLoading(false); // Set loading to false after the API call
+        setLoading(false);
       }
     };
 
     if (uid) {
       fetchPrescriptions();
     }
-  }, [uid]); // Add uid as dependency
+  }, [uid]);
 
   if (loading) {
-    return <LoadingSpinner />; // Show spinner when loading
+    return <LoadingSpinner />;
   }
 
   return (
-    <div>
+    <div className="user-prescriptions">
       <h1>Your Prescriptions</h1>
-      {message && <p>{message}</p>} {/* Display any error message */}
+      {message && <p>{message}</p>}
       <PrescriptionList prescriptions={prescriptions} />
-      {prescriptions.length === 0 && <p>No prescriptions found.</p>} {/* Message if no prescriptions exist */}
-      <br/>
+      {prescriptions.length === 0 && <p>No prescriptions found.</p>}
+      <br />
     </div>
   );
 };
 
 export default UserPrescriptions;
+
 //with loading

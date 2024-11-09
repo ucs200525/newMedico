@@ -68,9 +68,11 @@
 // };
 
 // export default Health;
+
 import React, { useState, useEffect } from 'react';
-import { useLocation,useNavigate  } from 'react-router-dom'; // Import useLocation to receive passed props
+import { useLocation, useNavigate } from 'react-router-dom'; // Import useLocation to receive passed props
 import axios from 'axios';
+import styles from './Health.module.css';  // Import the CSS module
 
 const Health = () => {
   const location = useLocation(); // To access the passed props
@@ -88,7 +90,8 @@ const Health = () => {
     sugar: '',
     bp: '',
     infections: '',
-    diseases: ''
+    diseases: '',
+    gender: ''  // Add gender field
   });
 
   const handleChange = (e) => {
@@ -121,7 +124,8 @@ const Health = () => {
       sugar: '',
       bp: '',
       infections: '',
-      diseases: ''
+      diseases: '',
+      gender: ''  // Reset gender field as well
     });
   };
 
@@ -132,21 +136,98 @@ const Health = () => {
   }, [uid]);
 
   return (
-    <div>
-      <h2>Add Health Record</h2>
+    <div className={styles['health-form-container']}>
+      <h2 className={styles.heading}>Add Health Record</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="uid" placeholder="UID" value={healthData.uid} onChange={handleChange} required />
-        <input type="text" name="eyeSight" placeholder="Eye Sight" onChange={handleChange} required />
-        <input type="number" name="height" placeholder="Height (cm)" onChange={handleChange} required />
-        <input type="number" name="weight" placeholder="Weight (kg)" onChange={handleChange} required />
-        <input type="number" name="BMI" placeholder="BMI" onChange={handleChange} required />
-        <input type="text" name="bloodGroup" placeholder="Blood Group" onChange={handleChange} required />
-        <input type="number" name="sugar" placeholder="Sugar Level" onChange={handleChange} required />
-        <input type="text" name="bp" placeholder="Blood Pressure" onChange={handleChange} required />
-        <input type="text" name="infections" placeholder="Infections" onChange={handleChange} />
-        <input type="text" name="diseases" placeholder="Diseases" onChange={handleChange} />
-        <button type="submit">Add Health Record</button>
-        {error && <p id='registerError' style={{ color: 'red' }}>{error}</p>}
+        <input
+          type="text"
+          name="uid"
+          placeholder="UID"
+          value={healthData.uid}
+          onChange={handleChange}
+          className={styles.input}
+          required
+        />
+        <input
+          type="text"
+          name="eyeSight"
+          placeholder="Eye Sight"
+          onChange={handleChange}
+          className={styles.input}
+          required
+        />
+        <input
+          type="number"
+          name="height"
+          placeholder="Height (cm)"
+          onChange={handleChange}
+          className={styles.input}
+          required
+        />
+        <input
+          type="number"
+          name="weight"
+          placeholder="Weight (kg)"
+          onChange={handleChange}
+          className={styles.input}
+          required
+        />
+        <input
+          type="number"
+          name="BMI"
+          placeholder="BMI"
+          onChange={handleChange}
+          className={styles.input}
+          required
+        />
+        <input
+          type="text"
+          name="bloodGroup"
+          placeholder="Blood Group"
+          onChange={handleChange}
+          className={styles.input}
+          required
+        />
+        <input
+          type="number"
+          name="sugar"
+          placeholder="Sugar Level"
+          onChange={handleChange}
+          className={styles.input}
+          required
+        />
+        <input
+          type="text"
+          name="bp"
+          placeholder="Blood Pressure"
+          onChange={handleChange}
+          className={styles.input}
+          required
+        />
+        <input
+          type="text"
+          name="infections"
+          placeholder="Infections"
+          onChange={handleChange}
+          className={styles.input}
+        />
+        <input
+          type="text"
+          name="diseases"
+          placeholder="Diseases"
+          onChange={handleChange}
+          className={styles.input}
+        />
+        {/* Gender input field */}
+        <input
+          type="text"
+          name="gender"
+          placeholder="Gender"
+          onChange={handleChange}
+          className={styles.input}
+        />
+        <button type="submit" className={styles.button}>Add Health Record</button>
+        {error && <p id='registerError' className={styles.error}>{error}</p>}
       </form>
     </div>
   );

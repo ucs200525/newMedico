@@ -185,13 +185,13 @@
 // export default Patients;
 
 // //with loading 
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import styles from './Patients.module.css';  // Import the CSS module for styling
 
 const Patients = () => {
-  const navigate = useNavigate(); // Fix: 'useNavigate' instead of 'UseNavigate'
+  const navigate = useNavigate();
   const [patientData, setPatientData] = useState({
     uid: '',
     name: '',
@@ -261,23 +261,27 @@ const Patients = () => {
   };
 
   return (
-    <div>
-      <h2>Add Patient</h2>
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="uid" placeholder="UID" onChange={handleChange} required />
-        <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
-        <input type="number" name="age" placeholder="Age" onChange={handleChange} required />
-        <select name="gender" onChange={handleChange} required>
+    <div className={styles['patient-form-container']}>
+      <h2 className={styles.heading}>Add Patient</h2>
+      {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <input type="text" name="uid" placeholder="UID" onChange={handleChange} value={patientData.uid} required className={styles.input} />
+        <input type="text" name="name" placeholder="Name" onChange={handleChange} value={patientData.name} required className={styles.input} />
+        <input type="number" name="age" placeholder="Age" onChange={handleChange} value={patientData.age} required className={styles.input} />
+        
+        {/* Gender select input */}
+        <select name="gender" onChange={handleChange} value={patientData.gender} required className={styles.input}>
           <option value="">Select Gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Other">Other</option>
         </select>
-        <input type="text" name="otherFields[address]" placeholder="Address" onChange={handleChange} />
-        <input type="text" name="otherFields[email]" placeholder="Email" onChange={handleChange} />
-        <input type="text" name="otherFields[phone]" placeholder="Phone" onChange={handleChange} />
-        <button type="submit" disabled={loading}>
+
+        <input type="text" name="otherFields[address]" placeholder="Address" onChange={handleChange} value={patientData.otherFields.address} className={styles.input} />
+        <input type="text" name="otherFields[email]" placeholder="Email" onChange={handleChange} value={patientData.otherFields.email} className={styles.input} />
+        <input type="text" name="otherFields[phone]" placeholder="Phone" onChange={handleChange} value={patientData.otherFields.phone} className={styles.input} />
+        
+        <button type="submit" disabled={loading} className={styles.button}>
           {loading ? 'Adding...' : 'Add Patient'}
         </button>
       </form>

@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const morgan = require('morgan');
-const cors = require('cors'); // Import cors
+
 const WebSocket = require('ws'); // Import WebSocket
 const http = require('http'); // Import http
 
@@ -16,15 +16,15 @@ const dbUrl = process.env.MONGO_URL;
 const port = process.env.PORT;
 
 const app = express();
+const cors = require('cors');
 
-// Enable CORS for all routes
-const front = ['https://new-medico.vercel.app', 'http://localhost:3000'];
-app.use(cors({
-  origin:  front, // Frontend domain
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-  credentials: true, // Enable sending cookies with cross-origin requests
-}));
+const corsOptions = {
+  origin:'*', // allowed origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // allowed methods
+  credentials: true, // allow credentials (cookies, authorization headers, etc.)
+};
 
+app.use(cors(corsOptions)); // apply CORS middleware
 
 app.get("/", (req, res) => {
   res.json("Server Running Successful");

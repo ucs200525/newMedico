@@ -55,45 +55,43 @@
 // };
 
 // export default VerifyUIDPage;
+
+
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import LoadingSpinner from '../components/LoadingSpinner'; // Import the spinner component
+import LoadingSpinner from '../components/LoadingSpinner';
+import styles from './VerifyUIDPage.module.css';
 
 const VerifyUIDPage = () => {
-  const [uidInput, setUidInput] = useState(''); // State to store UID from WebSocket
-  const { setUidContext, role,LoginUserName } = useContext(AuthContext);
+  const [uidInput, setUidInput] = useState('');
+  const { setUidContext, role, LoginUserName } = useContext(AuthContext);
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const [socket, setSocket] = useState(null); // State to manage WebSocket instance
+  const [socket, setSocket] = useState(null);
 
   useEffect(() => {
     const connectWebSocket = () => {
-      const ws = new WebSocket(`${process.env.REACT_APP_wsPORT}`); // Assuming WebSocket server is on port 8080
+      const ws = new WebSocket(`${process.env.REACT_APP_wsPORT}`);
 
       ws.onopen = () => {
         console.log('Connected to WebSocket');
       };
 
       ws.onmessage = async (message) => {
-        const blob = message.data; // Retrieve the Blob from the WebSocket message
-        const receivedUid = await blob.text(); // Convert Blob to text
-        
-        // Remove the "Card UID: " part and trim whitespace
+        const blob = message.data;
+        const receivedUid = await blob.text();
         const uid = receivedUid.replace('Card UID: ', '').trim();
-        
-        console.log('Received UID from WebSocket:', uid);
-        setUidInput(uid); // Auto-fill UID received from WebSocket
+        setUidInput(uid);
       };
       
-      setSocket(ws); // Save socket instance
+      setSocket(ws);
     };
 
-    connectWebSocket(); // Establish WebSocket connection
+    connectWebSocket();
 
-    // Cleanup WebSocket connection when component is unmounted
     return () => {
       if (socket) {
         socket.close();
@@ -103,68 +101,62 @@ const VerifyUIDPage = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setLoading(true); // Set loading to true when the request starts
-    setError(''); // Reset error state before verification
-    
+    setLoading(true);
+    setError('');
 
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/patients/verify-uid`, { uid: uidInput });
-      console.log('UID verification successful', response);
-      LoginUserName(response.data.name)
+      LoginUserName(response.data.name);
 
       if (response.status === 200) {
-        setUidContext(uidInput); // Set UID in AuthContext
-        if (role === 'admin') {
-          navigate('/dashboard'); // Redirect admin to dashboard
-        } else {
-          navigate('/dashboardUser'); // Redirect user to their dashboard
-        }
+        setUidContext(uidInput);
+        role === 'admin' ? navigate('/dashboard') : navigate('/dashboardUser');
       } else {
         throw new Error('Failed to verify UID');
       }
     } catch (err) {
-      setError(`UID verification failed,Check UID.`);
-      console.error('UID verification error:', err.message);
-    }
-    finally {
-      setLoading(false); // Set loading to false after the API call completes
+      setError(`UID verification failed, check UID.`);
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleAddPatient = () => {
-    navigate('/patients'); // Replace with the correct route for adding a patient
+    navigate('/patients');
   };
+
   if (loading) {
-    return <LoadingSpinner />; // Show spinner when loading
+    return <LoadingSpinner />;
   }
 
   return (
-    <div>
-      <h2>Verify UID</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
+    <div className={styles.container}>
+      
+      <form onSubmit={handleSubmit} className={styles.form}>
+      <h2 className={styles.heading}>Verify UID</h2>
+        <label className={styles.label}>
           UID received from Arduino:
           <input
             type="text"
             value={uidInput}
-            // readOnly // Make input read-only since UID is auto-filled by WebSocket
+            className={styles.input}
             onChange={(e) => setUidInput(e.target.value)}
             required
           />
         </label>
-        <button type="submit">Verify</button>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <button type="submit" className={styles.button}>Verify</button>
+        {error && <p className={styles.errorMessage}>{error}</p>}
       </form>
-      {role === 'admin' ? (
-        <>
-          <p>Want to add patient? <button onClick={handleAddPatient}>Add Patient</button></p>
-          
-        </>
-      ) : null}
+      {role === 'admin' && (
+        <div className={styles.addPatientContainer}>
+          <button onClick={handleAddPatient} className={styles.addPatientButton}>Add Patient</button>
+        </div>
+      )}
     </div>
   );
 };
 
 export default VerifyUIDPage;
+
 
 // // ///////////////////////////////////////////////// For WS socket// with loading

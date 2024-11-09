@@ -1,50 +1,66 @@
 [
     {
-        "uid": 10001,
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
         "medication": "Salbutamol Inhaler",
         "dosage": "1 puff as needed for wheezing",
-        "duration": "Until symptoms resolve"
+        "instructions": "Use as needed for wheezing relief",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        "uid": 10002,
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
         "medication": "Cetirizine",
         "dosage": "10 mg once daily",
-        "duration": "As needed for allergies"
+        "instructions": "As needed for allergies",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        "uid": 10003,
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
         "medication": "Amlodipine",
         "dosage": "5 mg once daily",
-        "duration": "Indefinitely for hypertension"
+        "instructions": "Indefinitely for hypertension",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        "uid": 10004,
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
         "medication": "Oseltamivir",
         "dosage": "75 mg twice daily",
-        "duration": "5 days for flu"
+        "instructions": "5 days for flu",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        "uid": 10005,
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
         "medication": "Atorvastatin",
         "dosage": "10 mg once daily",
-        "duration": "As prescribed for cholesterol"
+        "instructions": "As prescribed for cholesterol",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        "uid": 10006,
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
         "medication": "Iron supplements",
         "dosage": "Iron 65 mg once daily",
-        "duration": "Until blood levels are normal"
+        "instructions": "Until blood levels are normal",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        "uid": 10007,
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
         "medication": "Ibuprofen",
         "dosage": "400 mg as needed for pain",
-        "duration": "As needed"
+        "instructions": "As needed",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     },
     {
-        "uid": 10008,
+        "patientId": { "$oid": "66f02940b1b144c0e6500073" },
         "medication": "Eye drops",
         "dosage": "1 drop in each eye twice daily",
-        "duration": "Until symptoms improve"
+        "instructions": "Until symptoms improve",
+        "createdAt": "2024-11-08T20:16:22.001+00:00",
+        "updatedAt": "2024-11-08T20:16:22.001+00:00"
     }
 ]

@@ -1,0 +1,86 @@
+/* Prescriptions.module.css */
+
+.pr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f4f6;
+  }
+  
+  
+ 
+  .h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .prescriptionList {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  
+  .prescriptionItem {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .prescriptionItem button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: white;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .prescriptionDetails {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .prescriptionItem.showDetails .prescriptionDetails {
+    display: block;
+  }
+  .toggleButton {
+    padding: 10px;
+    background-color: #fff; /* White background */
+    color: #d9534f; /* Red text */
+    border: 1px solid #d9534f; /* Red border */
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 160px;
+    text-align: center;
+  }
+  
+  .toggleButton:hover {
+    background-color: #d9534f; /* Red background on hover */
+    color: #fff; /* White text on hover */
+  }
+  
+  .prescriptionDetails {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .prescriptionItem.showDetails .prescriptionDetails {
+    display: block;
+  }
+  
+  

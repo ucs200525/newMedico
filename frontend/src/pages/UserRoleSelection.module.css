@@ -1,0 +1,87 @@
+/* Outer container styling */
+.outerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7eaea;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #ffcccc;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navTitle {
+    color: #b30000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Inner box styling */
+  .container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Header styling */
+  .header {
+    color: #b30000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Description styling */
+  .description {
+    color: #333333;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Button container styling */
+  .buttonContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Button styling */
+  .button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .adminButton {
+    background-color: #b30000;
+  }
+  
+  .userButton {
+    background-color: #ff6666;
+  }
+  
+  .button:hover {
+    background-color: #cc3333;
+  }
+  
+  .button:active {
+    transform: translateY(1px);
+  }
+  

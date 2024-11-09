@@ -1,0 +1,78 @@
+/* PrescriptionListUser.module.css */
+
+/* Container styling for the prescription list */
+.prescriptionList {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Message styling when there are no prescriptions */
+.noPrescriptions {
+  text-align: center;
+  color: #666;
+  font-size: 1.1em;
+  padding: 10px;
+}
+
+/* Individual prescription item styling */
+.prescriptionItem {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: background-color 0.2s;
+}
+
+.prescriptionItem:hover {
+  background-color: #f1f1f1;
+}
+
+/* Header for medication name */
+.prescriptionItem h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin: 0;
+}
+
+/* Date styling */
+.prescriptionItem p {
+  color: #555;
+  font-size: 1em;
+  margin: 8px 0;
+}
+
+/* Toggle button styling */
+.toggleButton {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleButton:hover {
+  background-color: #0056b3;
+}
+
+.toggleButton:active {
+  background-color: #004080;
+}
+
+/* Additional styling when details are visible */
+.hideDetails {
+  background-color: #d9534f;
+}
+
+.hideDetails:hover {
+  background-color: #c9302c;
+}
+
+.hideDetails:active {
+  background-color: #ac2925;
+}

@@ -1,24 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styles from './PrescriptionList.module.css';
 
 const PrescriptionList = ({ prescriptions, onPrescriptionEdit, onPrescriptionDelete }) => {
+  const [expandedPrescriptionId, setExpandedPrescriptionId] = useState(null);
+
+  const togglePrescriptionDetails = (id) => {
+    setExpandedPrescriptionId(prevId => (prevId === id ? null : id));
+  };
+
   return (
-    <div>
-     
+    <div className={styles.prescriptionList}>
       {prescriptions.length === 0 ? (
         <p>No prescriptions available.</p>
       ) : (
-        <ul>
-          {prescriptions.map((prescription) => (
-            <li key={prescription._id}>
-              <h3>Medication: {prescription.medication}</h3>
-              <h3>Dosage: {prescription.dosage}</h3>
-              <h3>Instructions: {prescription.instructions}</h3>
-              <p>Date: {new Date(prescription.createdAt).toLocaleDateString()}</p>
-              <button onClick={() => onPrescriptionEdit(prescription)}>Edit</button>
-              <button onClick={() => onPrescriptionDelete(prescription._id)}>Delete</button>
-            </li>
-          ))}
-        </ul>
+        prescriptions.map((prescription) => (
+          <div key={prescription._id} className={styles.prescriptionItem}>
+            <p className={styles.date}>Date: {new Date(prescription.createdAt).toLocaleDateString()}</p>
+
+            <button 
+              className={styles.toggleButton} 
+              onClick={() => togglePrescriptionDetails(prescription._id)}
+            >
+              {expandedPrescriptionId === prescription._id ? 'Hide Details' : 'See Prescription'}
+            </button>
+
+            {expandedPrescriptionId === prescription._id && (
+              <div className={styles.details}>
+                <h3>Medication: {prescription.medication}</h3>
+                <h3>Dosage: {prescription.dosage}</h3>
+                <h3>Instructions: {prescription.instructions}</h3>
+              </div>
+            )}
+
+            <div className={styles.buttonGroup}>
+              <button 
+                className={styles.editButton} 
+                onClick={() => onPrescriptionEdit(prescription)}
+              >
+                Edit
+              </button>
+              <button 
+                className={styles.deleteButton} 
+                onClick={() => onPrescriptionDelete(prescription._id)}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        ))
       )}
     </div>
   );

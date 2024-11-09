@@ -113,6 +113,7 @@ router.delete('/by-uid/:uid', async (req, res) => {
 
   try {
     // Find the patient by UID
+    logger.info("uid",uid);
     const patient = await Patients.findOne({ uid });
     if (!patient) {
       logger.warn(`Patient not found for UID: ${uid}`);
