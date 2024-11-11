@@ -19,7 +19,7 @@ const app = express();
 const cors = require('cors');
 
 const corsOptions = {
-  origin:'*', // allowed origins
+  origin:'https://new-medico-iwlc.vercel.app/', // allowed origins
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // allowed methods
   credentials: true, // allow credentials (cookies, authorization headers, etc.)
 };
