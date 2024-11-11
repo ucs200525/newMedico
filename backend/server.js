@@ -19,12 +19,12 @@ const app = express();
 const cors = require('cors');
 
 const corsOptions = {
-  origin:'https://new-medico.vercel.app/', // allowed origins
+  origin:'*', // allowed origins
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // allowed methods
   credentials: true, // allow credentials (cookies, authorization headers, etc.)
 };
 
-app.use(cors()); // apply CORS middleware
+app.use(cors(corsOptions)); // apply CORS middleware
 
 app.get("/", (req, res) => {
   res.json("Server Running Successful");
