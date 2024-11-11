@@ -24,7 +24,7 @@ const corsOptions = {
   credentials: true, // allow credentials (cookies, authorization headers, etc.)
 };
 
-app.use(cors(corsOptions)); // apply CORS middleware
+app.use(cors()); // apply CORS middleware
 
 app.get("/", (req, res) => {
   res.json("Server Running Successful");
