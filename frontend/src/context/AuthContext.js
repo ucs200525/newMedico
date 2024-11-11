@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
+import axios from 'axios'; // Import axios
 
 // Create the AuthContext
 export const AuthContext = createContext();
@@ -30,7 +31,8 @@ export const AuthProvider = ({ children }) => {
   const LoginUserName = (name) =>{
     setUsername(name);
   };
-  const loginUser = (newToken,newRole) =>{
+
+  const loginUser = (newToken, newRole) =>{
     setIsLoggedIn(true);
     setToken(newToken); // Set token
     setRole(newRole); // Set Role
@@ -38,9 +40,18 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('role', newRole); // Store Role in local storage
   };
 
-
-
   const logout = () => {
+    // Make a post request to the logout endpoint
+    axios.post(`${process.env.REACT_APP_API_URL}/api/auth/logout`)
+      .then(response => {
+        // You can handle the response if necessary
+        console.log("Logout successful:", response.data);
+      })
+      .catch(error => {
+        console.error("Error during logout:", error);
+      });
+
+    // Clean up local storage and reset state
     localStorage.removeItem('token');
     localStorage.removeItem('uid'); // Remove UID from local storage
     localStorage.removeItem('role'); // Remove Role from local storage
@@ -63,9 +74,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, login,loginUser,LoginUserName, username, logout, uid, setUidContext, role, setRoleContext,setIsLoggedIn }}>
+    <AuthContext.Provider value={{ isLoggedIn, login, loginUser, LoginUserName, username, logout, uid, setUidContext, role, setRoleContext, setIsLoggedIn }}>
       {children}
     </AuthContext.Provider>
   );
 };
-

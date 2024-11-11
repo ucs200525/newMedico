@@ -7760,3 +7760,102 @@
 2024-11-10T18:25:28.281Z [WARN]: No prescriptions found for UID: 93a9501c
 2024-11-10T18:25:29.096Z [INFO]: Fetched reports for UID: 93a9501c
 2024-11-10T18:25:29.107Z [INFO]: Fetched reports for UID: 93a9501c
+2024-11-11T12:48:43.180Z [INFO]: User logged in successfully
+2024-11-11T12:49:59.462Z [INFO]: User logged in successfully
+2024-11-11T12:50:06.793Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:50:09.533Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:50:18.304Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:50:35.146Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:54:46.449Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:55:30.848Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:55:37.754Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:55:38.029Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:56:01.534Z [WARN]: Registration attempt failed: User with email testUser1@gmail.com already exists
+2024-11-11T12:56:10.475Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:56:45.426Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:57:37.265Z [WARN]: Login attempt failed: Invalid credentials for email testUser1@gmail.com
+2024-11-11T12:57:37.270Z [WARN]: Login attempt failed: Invalid credentials for email testPass
+2024-11-11T12:57:37.271Z [WARN]: Login attempt failed: Invalid credentials for email teastPass
+2024-11-11T12:58:05.445Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-11-11T12:58:25.401Z [INFO]: UID verified: 93a9501c
+2024-11-11T12:58:25.841Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:25.856Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:28.210Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:28.228Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:31.841Z [INFO]: Fetched reports for UID: 93a9501c
+2024-11-11T12:58:31.850Z [INFO]: Fetched reports for UID: 93a9501c
+2024-11-11T12:58:33.148Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:33.162Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:34.793Z [INFO]: Fetched reports for UID: 93a9501c
+2024-11-11T12:58:34.802Z [INFO]: Fetched reports for UID: 93a9501c
+2024-11-11T12:58:35.426Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:35.431Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:36.102Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:36.127Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:39.675Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:39.684Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:40.462Z [INFO]: Fetched reports for UID: 93a9501c
+2024-11-11T12:58:40.466Z [INFO]: Fetched reports for UID: 93a9501c
+2024-11-11T12:58:41.991Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:42.004Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:47.009Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:47.019Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:52.913Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:52.941Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:53.642Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:53.654Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:58:55.608Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:58:55.626Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:59:02.687Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:59:02.696Z [INFO]: Fetched prescriptions for UID: 93a9501c
+2024-11-11T12:59:03.706Z [INFO]: Fetched reports for UID: 93a9501c
+2024-11-11T12:59:03.731Z [INFO]: Fetched reports for UID: 93a9501c
+2024-11-11T12:59:05.792Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T12:59:05.814Z [INFO]: Fetched health records for UID: 93a9501c
+2024-11-11T13:06:58.589Z [INFO]: User logged in successfully and session started
+2024-11-11T13:07:05.216Z [INFO]: User logged in successfully and session started
+2024-11-11T13:07:11.545Z [INFO]: UID verified: uid001
+2024-11-11T13:07:11.741Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:07:11.756Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:07:15.327Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:07:15.369Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:08:10.982Z [INFO]: User logged in successfully and session started
+2024-11-11T13:08:14.781Z [INFO]: User logged in successfully and session started
+2024-11-11T13:08:20.683Z [INFO]: UID verified: uid001
+2024-11-11T13:08:20.891Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:08:20.906Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:08:24.040Z [WARN]: No prescriptions found for UID: uid001
+2024-11-11T13:08:24.050Z [WARN]: No prescriptions found for UID: uid001
+2024-11-11T13:08:24.734Z [INFO]: Fetched reports for UID: uid001
+2024-11-11T13:08:24.741Z [INFO]: Fetched reports for UID: uid001
+2024-11-11T13:08:26.039Z [WARN]: No prescriptions found for UID: uid001
+2024-11-11T13:08:26.056Z [WARN]: No prescriptions found for UID: uid001
+2024-11-11T13:08:26.713Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:08:26.722Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:08:27.684Z [WARN]: No prescriptions found for UID: uid001
+2024-11-11T13:08:27.703Z [WARN]: No prescriptions found for UID: uid001
+2024-11-11T13:08:28.974Z [INFO]: Fetched reports for UID: uid001
+2024-11-11T13:08:28.988Z [INFO]: Fetched reports for UID: uid001
+2024-11-11T13:08:29.590Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:08:29.654Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:10:39.731Z [INFO]: User logged in successfully: testUser1@gmail.com
+2024-11-11T13:10:44.524Z [INFO]: UID verified: uid001
+2024-11-11T13:10:44.719Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:10:44.800Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:10:51.222Z [INFO]: User logged in successfully and session started
+2024-11-11T13:10:58.064Z [INFO]: UID verified: uid001
+2024-11-11T13:10:58.240Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:10:58.261Z [INFO]: Fetched health records for UID: uid001
+2024-11-11T13:13:04.290Z [INFO]: User logged in successfully and session started
+2024-11-11T13:13:17.666Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:31.468Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:33.230Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:33.679Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:33.798Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:33.939Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:34.124Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:34.232Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:34.363Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:34.485Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:34.724Z [INFO]: User logged in successfully and session started
+2024-11-11T13:17:39.888Z [INFO]: User logged in successfully and session started

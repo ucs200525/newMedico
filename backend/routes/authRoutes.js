@@ -4,10 +4,19 @@ const Admin = require('../models/Admins');
 const router = express.Router(); // Use express.Router() instead of express()
 const { validateRegister, validateLogin } = require('../middleware/validationMiddleware');
 const logger = require('../utils/logger.js');
+const session = require('express-session');
 const dotenv = require('dotenv');
 dotenv.config();
 
 const JWT_SECRET=process.env.JWT_SECRET;
+
+// Configure session
+router.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 60 * 60 * 1000 } // Session expiration time (1 hour)
+}));
 
 // @route   POST /api/auth/register
 // @desc    Register a new admin
@@ -51,8 +60,47 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// // @route   POST /api/auth/login
+// // @desc    Login user and return token and username
+// // @access  Public
+// router.post('/login', validateLogin, async (req, res) => {
+//   const { email, password } = req.body;
+
+//   try {
+//     // Check if user exists
+//     const admin = await Admin.findOne({ email });
+//     // Direct comparison for plain text password
+//     if (password !== admin.password) {
+//       logger.warn(`Login attempt failed: Invalid credentials for email ${email}`);
+//       logger.warn(`Login attempt failed: Invalid credentials for email ${admin.password}`);
+//       logger.warn(`Login attempt failed: Invalid credentials for email ${password}`);
+//       return res.status(400).json({ message: 'Invalid credentials' });
+//     }
+
+//     // Generate JWT token
+//     const token = jwt.sign({ id: admin._id, name: admin.name }, JWT_SECRET, {
+//       expiresIn: '1h' // Token expiration time
+//     });
+
+//     logger.info(`User logged in successfully: ${email}`);
+    
+//     // Respond with token, uid, role, and username
+//     res.json({
+//       token,
+//       role: 'admin', // Assuming admin role here
+//       name: admin.name // Include the username
+//     });
+//   } catch (error) {
+//     logger.error('JWT_SECRET:', JWT_SECRET);
+//     logger.error(`Error during login: ${error.message}`);
+//     logger.warn(`Entered password: ${password}`);
+//     logger.warn(`Stored password: ${admin ? admin.password : 'N/A'}`); // Ensure admin exists
+//     res.status(500).json({ message: 'Server error', error });
+//   }
+// });
+
 // @route   POST /api/auth/login
-// @desc    Login user and return token and username
+// @desc    Login user and return session and username
 // @access  Public
 router.post('/login', validateLogin, async (req, res) => {
   const { email, password } = req.body;
@@ -60,8 +108,7 @@ router.post('/login', validateLogin, async (req, res) => {
   try {
     // Check if user exists
     const admin = await Admin.findOne({ email });
-
-    if (!admin) { // User not found
+    if (!admin) {
       logger.warn(`Login attempt failed: User not found for email ${email}`);
       return res.status(400).json({ message: 'Invalid credentials' });
     }
@@ -72,51 +119,65 @@ router.post('/login', validateLogin, async (req, res) => {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    // Generate JWT token
-    const token = jwt.sign({ id: admin._id, name: admin.name }, JWT_SECRET, {
-      expiresIn: '1h' // Token expiration time
-    });
+    // Store session information
+    req.session.user = {
+      id: admin._id,
+      role: 'admin', // Assuming admin role here
+      name: admin.name
+    };
 
     logger.info(`User logged in successfully: ${email}`);
-    
-    // Respond with token, uid, role, and username
+
+    // Respond with role and username (no token)
     res.json({
-      token,
-      role: 'admin', // Assuming admin role here
-      name: admin.name // Include the username
+      role: 'admin',
+      name: admin.name
     });
   } catch (error) {
-    logger.error('JWT_SECRET:', JWT_SECRET);
     logger.error(`Error during login: ${error.message}`);
-    logger.warn(`Entered password: ${password}`);
-    logger.warn(`Stored password: ${admin ? admin.password : 'N/A'}`); // Ensure admin exists
     res.status(500).json({ message: 'Server error', error });
   }
 });
 
+
+// // @route   POST /api/auth/loginUser
+// // @desc    Login user and return token
+// // @access  Public
+// router.post('/loginUser', async (req, res) => {
+//   try {
+//     // Generate JWT token
+//     const token = jwt.sign({ role: 'user' }, JWT_SECRET, {
+//       expiresIn: '1h' // Set expiration time for the token
+//     });
+
+//     // Here you can add logic to handle user data, e.g., saving user info in a database if needed
+
+//     logger.info(`User logged in successfully`);
+//     res.json({ token,role: 'user' });
+//   } catch (error) {
+//     logger.error('JWT_SECRET:', JWT_SECRET);
+//     res.status(500).json({ message: 'Server error', error });
+//   }
+// });
 
 
 // @route   POST /api/auth/loginUser
-// @desc    Login user and return token
+// @desc    Login user and start session
 // @access  Public
 router.post('/loginUser', async (req, res) => {
   try {
-    // Generate JWT token
-    const token = jwt.sign({ role: 'user' }, JWT_SECRET, {
-      expiresIn: '1h' // Set expiration time for the token
-    });
-
-    // Here you can add logic to handle user data, e.g., saving user info in a database if needed
-
-    logger.info(`User logged in successfully`);
-    res.json({ token,role: 'user' });
+    // Example: If you want to set specific user data, you can save it here
+    req.session.role = 'user';
+    
+    logger.info(`User logged in successfully and session started`);
+    
+    // Send response with role information
+    res.json({ role: req.session.role });
   } catch (error) {
-    logger.error('JWT_SECRET:', JWT_SECRET);
+    logger.error(`Error during login: ${error.message}`);
     res.status(500).json({ message: 'Server error', error });
   }
 });
-
-
 
 // // Secret key for token validation (replace with your own secret key)
 // const secretKey = JWT_SECRET;
@@ -152,14 +213,28 @@ router.post('/loginUser', async (req, res) => {
 
 
 
+// // @route   POST /api/auth/logout
+// // @desc    Logout user (client-side handling required)
+// // @access  Public
+// router.post('/logout', (req, res) => {
+//   // Here, you might want to handle token invalidation on the client side
+//   // For example, by instructing the client to remove the token from local storage
+//   logger.info('Logout request received');
+//   res.json({ message: 'Logout successful. Please remove the token from client-side storage.' });
+// });
+
 // @route   POST /api/auth/logout
 // @desc    Logout user (client-side handling required)
 // @access  Public
 router.post('/logout', (req, res) => {
-  // Here, you might want to handle token invalidation on the client side
-  // For example, by instructing the client to remove the token from local storage
-  logger.info('Logout request received');
-  res.json({ message: 'Logout successful. Please remove the token from client-side storage.' });
+  // Destroy session on logout
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).json({ message: 'Error logging out' });
+    }
+    logger.info('User logged out successfully');
+    res.json({ message: 'Logout successful' });
+  });
 });
 
 module.exports = router;
