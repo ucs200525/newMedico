@@ -1,41 +1,46 @@
 import { createContext, useState, useEffect } from 'react';
-import axios from 'axios'; // Import axios
+import axios from 'axios';
+import Cookies from 'js-cookie'; // Import js-cookie
 
 // Create the AuthContext
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [uid, setUid] = useState(localStorage.getItem('uid') || ''); // Retrieve UID from local storage
-  const [role, setRole] = useState(localStorage.getItem('role') || ''); // Retrieve Role from local storage
-  const [username, setUsername] = useState(localStorage.getItem('username') || ''); // Retrieve Username from local storage
-  const [token, setToken] = useState(localStorage.getItem('token') || ''); // Add token state
+  const [uid, setUid] = useState(Cookies.get('uid') || ''); // Retrieve UID from cookies
+  const [role, setRole] = useState(Cookies.get('role') || ''); // Retrieve Role from cookies
+  const [username, setUsername] = useState(Cookies.get('username') || ''); // Retrieve Username from cookies
+  const [token, setToken] = useState(Cookies.get('token') || ''); // Retrieve token from cookies
 
   useEffect(() => {
-    // Check if token exists in local storage
-    if (role ) {
+    // Check if token exists in cookies
+    if (token) {
       setIsLoggedIn(true);
     }
-  }, [role]);
+  }, [token]);
 
-  const login = (newToken, newRole, newUsername) => {
+  const login = (newToken, newRole, newUsername, newUid) => {
     setIsLoggedIn(true);
     setToken(newToken); // Set token
     setRole(newRole); // Set Role
     setUsername(newUsername); // Set Username
-    localStorage.setItem('token', newToken); // Store token in local storage
-    localStorage.setItem('role', newRole); // Store Role in local storage
-    localStorage.setItem('username', newUsername); // Store Username in local storage
+    setUid(newUid); // Set UID
+    // Store token, role, username, and uid in cookies
+    Cookies.set('token', newToken, { secure: true, sameSite: 'Strict' });
+    Cookies.set('role', newRole, { secure: true, sameSite: 'Strict' });
+    Cookies.set('username', newUsername, { secure: true, sameSite: 'Strict' });
+    Cookies.set('uid', newUid, { secure: true, sameSite: 'Strict' });
   };
 
-  const LoginUserName = (name) =>{
+  const LoginUserName = (name) => {
     setUsername(name);
+    Cookies.set('username', name, { secure: true, sameSite: 'Strict' });
   };
 
-  const loginUser = (newRole) =>{
+  const loginUser = (newRole) => {
     setIsLoggedIn(true);
     setRole(newRole); // Set Role
-    localStorage.setItem('role', newRole); // Store Role in local storage
+    Cookies.set('role', newRole, { secure: true, sameSite: 'Strict' }); // Store Role in cookies
   };
 
   const logout = () => {
@@ -49,11 +54,11 @@ export const AuthProvider = ({ children }) => {
         console.error("Error during logout:", error);
       });
 
-    // Clean up local storage and reset state
-    localStorage.removeItem('token');
-    localStorage.removeItem('uid'); // Remove UID from local storage
-    localStorage.removeItem('role'); // Remove Role from local storage
-    localStorage.removeItem('username'); // Remove Username from local storage
+    // Clean up cookies and reset state
+    Cookies.remove('token');
+    Cookies.remove('uid');
+    Cookies.remove('role');
+    Cookies.remove('username');
     setIsLoggedIn(false);
     setUid(''); // Reset UID
     setRole(''); // Reset Role
@@ -63,12 +68,12 @@ export const AuthProvider = ({ children }) => {
 
   const setUidContext = (newUid) => {
     setUid(newUid);
-    localStorage.setItem('uid', newUid); // Store UID in local storage
+    Cookies.set('uid', newUid, { secure: true, sameSite: 'Strict' }); // Store UID in cookies
   };
 
   const setRoleContext = (newRole) => {
     setRole(newRole);
-    localStorage.setItem('role', newRole); // Store Role in local storage
+    Cookies.set('role', newRole, { secure: true, sameSite: 'Strict' }); // Store Role in cookies
   };
 
   return (
