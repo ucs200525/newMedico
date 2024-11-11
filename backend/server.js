@@ -26,9 +26,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions)); // apply CORS middleware
 
-app.get("/", (req, res) => {
-  res.json("Server Running Successful");
-});
 
 // Middleware to parse JSON bodies
 app.use(express.json());
