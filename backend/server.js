@@ -19,12 +19,21 @@ const app = express();
 const cors = require('cors');
 
 const corsOptions = {
-  origin:'*', // allowed origins
+  origin: '*', // allowed origins
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // allowed methods
   credentials: true, // allow credentials (cookies, authorization headers, etc.)
 };
 
 app.use(cors(corsOptions)); // apply CORS middleware
+
+const errorHandler = (err, req, res, next) => {
+  console.error(err); // Log the full error to the server console for debugging
+  const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+  res.status(statusCode).json({
+    message: err.message,
+    stack: process.env.NODE_ENV === 'production' ? null : err.stack, // Hide stack trace in production
+  });
+};
 
 
 // Middleware to parse JSON bodies
