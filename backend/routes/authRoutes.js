@@ -103,6 +103,7 @@ router.delete('/:id', async (req, res) => {
 // @desc    Login user and return session and username
 // @access  Public
 router.post('/login', validateLogin, async (req, res) => {
+  
   const { email, password } = req.body;
 
   try {

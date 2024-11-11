@@ -37,9 +37,11 @@ export const AuthProvider = ({ children }) => {
     Cookies.set('username', name, { secure: true, sameSite: 'Strict' });
   };
 
-  const loginUser = (newRole) => {
+  const loginUser = (newToken,newRole) => {
     setIsLoggedIn(true);
     setRole(newRole); // Set Role
+    setToken(newToken); // Set token
+    Cookies.set('token', newToken, { secure: true, sameSite: 'Strict', expires: 7 });
     Cookies.set('role', newRole, { secure: true, sameSite: 'Strict' }); // Store Role in cookies
   };
 
