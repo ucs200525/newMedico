@@ -13,10 +13,10 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     // Check if token exists in local storage
-    if (token) {
+    if (role ) {
       setIsLoggedIn(true);
     }
-  }, [token]);
+  }, [role]);
 
   const login = (newToken, newRole, newUsername) => {
     setIsLoggedIn(true);
@@ -32,11 +32,9 @@ export const AuthProvider = ({ children }) => {
     setUsername(name);
   };
 
-  const loginUser = (newToken, newRole) =>{
+  const loginUser = (newRole) =>{
     setIsLoggedIn(true);
-    setToken(newToken); // Set token
     setRole(newRole); // Set Role
-    localStorage.setItem('token', newToken); // Store token in local storage
     localStorage.setItem('role', newRole); // Store Role in local storage
   };
 

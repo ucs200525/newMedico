@@ -19,7 +19,7 @@ const UserRoleSelection = () => {
     } else {
       try {
         const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/loginUser`);
-        loginUser(response.data.token, response.data.role);
+        loginUser( response.data.role);
         setLoading(false);
         navigate('/dashboardUser');
       } catch (error) {

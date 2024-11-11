@@ -12,7 +12,7 @@ const JWT_SECRET=process.env.JWT_SECRET;
 
 // Configure session
 router.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.JWT_SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: { maxAge: 60 * 60 * 1000 } // Session expiration time (1 hour)
