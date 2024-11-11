@@ -8032,3 +8032,7 @@
 2024-11-11T14:19:20.469Z [INFO]: User logged out successfully
 2024-11-11T14:21:29.793Z [INFO]: User logged in successfully and session started
 2024-11-11T14:21:35.626Z [INFO]: User logged out successfully
+2024-11-11T14:33:57.059Z [WARN]: Registration attempt failed: User with email testUser1@gmail.com already exists
+2024-11-11T14:33:59.868Z [WARN]: Registration attempt failed: User with email testUser@gmail.com already exists
+2024-11-11T14:34:01.639Z [WARN]: Registration attempt failed: User with email testUser@gmail.com already exists
+2024-11-11T14:34:06.289Z [INFO]: User registered successfully: testUser12@gmail.com

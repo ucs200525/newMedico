@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true }
 });
-
+userSchema.index({ email: 1 });
 
 // Create the User model
 const Admins = mongoose.model('Admins', userSchema);
