@@ -275,12 +275,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from './Dashboard.module.css'; // Import the CSS module
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = ({ uid }) => {
   const [patient, setPatient] = useState(null);
   const [updatedData, setUpdatedData] = useState({});
   const [health, setHealth] = useState(null);
   const [updatedHealthData, setUpdatedHealthData] = useState({});  // State for health updates
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPatientData = async () => {
@@ -291,6 +293,9 @@ const Dashboard = ({ uid }) => {
           
           const health_response = await axios.get(`${process.env.REACT_APP_API_URL}/api/health/by-uid/${uid}`);
           setHealth(health_response.data);
+          if(health_response.data===null){
+            navigate('/HealthPage');
+          }
           
           setUpdatedData({
             ...response.data,

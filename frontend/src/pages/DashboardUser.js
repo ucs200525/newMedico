@@ -2,6 +2,7 @@ import React, { useEffect, useState,useRef  } from 'react';
 import axios from 'axios';
 import styles from './DashboardUser.module.css'; // Import CSS module
 import LoadingSpinner from '../components/LoadingSpinner';
+import { useNavigate } from 'react-router-dom';
 
 const DashboardUser = ({ uid }) => {
   const [patient, setPatient] = useState(null);
@@ -11,7 +12,8 @@ const DashboardUser = ({ uid }) => {
   const [isBMIModalOpen, setBMIModalOpen] = useState(false);
   const [isSugarModalOpen, setSugarModalOpen] = useState(false);
   const [isBpModalOpen, setBpModalOpen] = useState(false);
-
+  const navigate = useNavigate();
+  
   const modalRef = useRef(); // Create a reference for the modal'
   
   useEffect(() => {
@@ -20,6 +22,9 @@ const DashboardUser = ({ uid }) => {
         const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/patients/${uid}`);
         setPatient(response.data);
         const health_response = await axios.get(`${process.env.REACT_APP_API_URL}/api/health/by-uid/${uid}`);
+        if(health_response.data===null){
+          navigate('/HealthPage');
+        }
         setHealth(health_response.data);
       } catch (error) {
         setError('Error fetching patient data: ' + error.message);
